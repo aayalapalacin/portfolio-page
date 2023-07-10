@@ -7,9 +7,10 @@ import Navbar from './component/navbar';
       ReactDOM.render(
         <React.StrictMode>
           <Router>
+            <Navbar />
           <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/navbar" element={<Navbar />} />
+          <Route path="*" element={<h1>Not found!</h1>} />
           </Routes>
             {/* Define other routes here */}
           </Router>
