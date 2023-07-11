@@ -5,9 +5,9 @@ import React from "react";
 //create your first component
 const Footer = () => {
 	return (
-		<nav class="navbar bg-light">
-  <form class="container-fluid justify-content-center">
-    <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+		<nav className="navbar bg-light">
+  <form className="container-fluid justify-content-center">
+    <button className="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
   </form>
 </nav>
 	);

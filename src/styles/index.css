@@ -1,12 +1,32 @@
-
-/* 
-
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+/* color palette  */
+.army-green{
+    color: #2C4001;
+}
+.bg-army-green{
+    background-color: #2C4001;
+}
+.dark-green{
+    color: #1A2601;
+}
+.bg-dark-green{
+    background-color: #1A2601;
+}
+.avo-green{
+    color: #B2BF50;
+}
+.bg-avo-green{
+    background-color: #B2BF50;
+}
+.beige{
+    color: #D9CFA0;
+}
+.bg-beige{
+    background-color: #D9CFA0;
+}
+.wood{
+    color: #A65746;
+}
+.bg-wood{
+    background-color: #A65746;
+}
+/* color palette  */

@@ -6,7 +6,7 @@ import Navbar from './component/navbar';
 import Portfolio from './pages/portfolio';
 import About from './pages/about';
 import Footer from './component/footer';
-
+import "../styles/index.css"
       ReactDOM.render(
         <React.StrictMode>
           <Router>
