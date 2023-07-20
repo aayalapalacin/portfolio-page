@@ -3,10 +3,10 @@ import React from "react";
 //include images into your bundle
 
 //create your first component
-const Portfolio = () => {
+const Projects = () => {
 	return (
-		<div>Portfolio</div>
+		<div>Projects</div>
 	);
 };
 
-export default Portfolio;
+export default Projects;

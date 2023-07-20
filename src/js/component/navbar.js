@@ -1,21 +1,29 @@
 import React from "react";
 import "../../styles/index.css"
-//include images into your bundle
-
-//create your first component
+import avocado from "../../img/avo.png"
+import { Link } from "react-router-dom";
 const Navbar = () => {
 	return (
-		<nav className="bg-dark-green navbar navbar-expand-lg ">
+		<nav className=" navbar navbar-expand-lg ">
   <div className="container-fluid">
-    <a className="navbar-brand avo-green" href="#">Navbar</a>
+  <a class="navbar-brand" href="#">
+      <img src={avocado} alt="avocado" />
+    </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
       <div className="navbar-nav">
-        <a className="nav-link active" aria-current="page" href="#">Home</a>
-        <a className="nav-link" href="#">Features</a>
-        <a className="nav-link" href="#">Pricing</a>
+        <Link to="/">
+        <p className="nav-link active" aria-current="page" href="#">Home</p>
+        </Link>
+        <Link to="projects/">
+        <p className="nav-link" href="#">Projects</p>
+        </Link>
+        <p className="nav-link" href="#">Resume</p>
+        <Link to="/about">
+        <p className="nav-link" href="#">About</p>
+        </Link>
         
       </div>
     </div>
