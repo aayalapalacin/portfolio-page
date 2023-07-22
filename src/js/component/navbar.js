@@ -1,6 +1,6 @@
 import React from "react";
 import "../../styles/index.css"
-import avocado from "../../img/avo.png"
+import avocado from "../../utils/img/avo.png"
 import { Link } from "react-router-dom";
 const Navbar = () => {
 	return (
