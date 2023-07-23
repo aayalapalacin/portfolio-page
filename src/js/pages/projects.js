@@ -64,33 +64,19 @@ const Projects = () => {
 						let projectTitleNoSpaces = project.title.replace(/\s/g, '')
 						return(
 							<>
-					<div className={`tab-pane fade  ${index == active ? 'show active' : ''}`} id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabindex="0">{project.title}</div>
-							</>
-						);
-					})}
-					
-				</div>
-			</div>
-			<div className="row">
-				<div className="col-4 ">
-					<div className=" projects-photo row ">row1</div>
-					<div className=" projects-list row">row2</div>
-				</div>
-				<div className="project-content col-8 bg-secondary ">{projectContent.map((item, i) => {
-
-					return (
-						<div className="d-flex align-items-center " key={i}>
+					<div className={`tab-pane fade   ${index == active ? 'show active' : ''}`} key={index}id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabindex="0">
+					<div className="d-flex align-items-center " >
 							<div className=" col-6 project-content-date">
 
 								<div className=" d-flex project-title">
-									<h5>Title:</h5> {item.title}
+									<h5>Title:</h5> {project.title}
 								</div>
 								<div className=" d-flex project-description">
-									<h5>Description: </h5>{item.description}
+									<h5>Description: </h5>{project.description}
 								</div>
 								<div className=" d-flex project-languages">
 									<h5>Languages/Libraries:</h5>
-									{item.languages.map((language, i) => {
+									{project.languages.map((language, i) => {
 										return (
 											<div className="d-flex" key={i}>
 												<p>
@@ -101,20 +87,24 @@ const Projects = () => {
 									})}
 								</div>
 								<div className=" d-flex project-link">
-									<h5>Link: <a href={item.link} target="_blank">live link</a></h5>
+									<h5>Link: <a href={project.link} target="_blank">Click Here</a></h5>
 								</div>
 								<div className=" d-flex project-code">
-									<h5>Code:</h5>{item.code}
+									<h5>Code:</h5>{project.code}
 								</div>
 							</div>
 							<div className="project-content-photo text-center col-6">
-								<img className="w-75" src={item.photo} alt={item.title} />
+								<img className="w-75" src={project.photo} alt={project.title} />
 							</div>
-						</div>
-					)
-				})}</div>
-
+						</div>	
+					</div>
+							</>
+						);
+					})}
+					
+				</div>
 			</div>
+		
 		</div>
 	);
 };
