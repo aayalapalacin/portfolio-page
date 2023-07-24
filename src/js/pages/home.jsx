@@ -1,7 +1,7 @@
 import React from "react";
 import AudioPlayer from 'react-h5-audio-player';
 //include images into your bundle
-import sonrisa from "../../utils/audio/tu-sonrisa.mp3"
+import sonrisa from "../../assets/audio/tu-sonrisa.mp3"
 import "../../styles/index.css"
 
 //create your first component
