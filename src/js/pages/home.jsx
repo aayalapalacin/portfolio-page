@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
 import AudioPlayer from 'react-h5-audio-player';
-//include images into your bundle
 import sonrisa from "../../assets/audio/tu-sonrisa.mp3"
 import "../../styles/index.css"
-import imgArray from "../../../imgArrayData.json"
 
+// programming languages imgs
+import boostrap from "../../assets/img/prog-languages/bootstrap.png"
+import css from "../../assets/img/prog-languages/css.png"
+import html from "../../assets/img/prog-languages/html.png"
+import javascript from "../../assets/img/prog-languages/javascript.png"
+import jekyll from "../../assets/img/prog-languages/jekyll.png"
+import materialUi from "../../assets/img/prog-languages/materialUi.png"
+import python from "../../assets/img/prog-languages/python.png"
+import reactNativePaper from "../../assets/img/prog-languages/reactNativePaper.jpg"
+import reactNative from "../../assets/img/prog-languages/reactNative.png"
+import sql from "../../assets/img/prog-languages/sql.png"
 //create your first component
 const Home = () => {
-	const [imgURL, setImgURL] = useState([]);
-
-	console.log(imgArray)
-	useEffect(() => {
-		fetch('/api/imgArray')
-			.then(response => response.json())
-			.then(data => setImgArray(data))
-			.catch(error => console.error('Error fetching imgArray:', error));
-	}, []);
+let imgArray = [boostrap,css,html,javascript,jekyll,materialUi,python,reactNative,reactNativePaper,sql]
 
 	return (
 		<div className="container ">
@@ -49,6 +50,7 @@ const Home = () => {
 						<div className=" home-prog-languages col-7 ">
 							<div id="carouselExampleFade" class="carousel slide carousel-fade">
 								<div class="carousel-inner">
+									
 									{imgArray.map((item,i)=>{
 										return(
 									<div class={`carousel-item ${i == 0 ? 'active' : ''}`}>
