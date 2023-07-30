@@ -13,10 +13,11 @@ import materialUi from "../../assets/img/prog-languages/materialUi.png"
 import python from "../../assets/img/prog-languages/python.png"
 import reactNativePaper from "../../assets/img/prog-languages/reactNativePaper.jpg"
 import reactNative from "../../assets/img/prog-languages/reactNative.png"
+import react from "../../assets/img/prog-languages/react.png"
 import sql from "../../assets/img/prog-languages/sql.png"
 //create your first component
 const Home = () => {
-let imgArray = [boostrap,css,html,javascript,jekyll,materialUi,python,reactNative,reactNativePaper,sql]
+	let imgArray = [javascript,boostrap, reactNative,  css, react,html,  jekyll, materialUi, python, reactNativePaper, sql]
 
 	return (
 		<div className="container ">
@@ -48,26 +49,26 @@ let imgArray = [boostrap,css,html,javascript,jekyll,materialUi,python,reactNativ
 					<div className="row">
 						<div className=" home-img col-5">row1</div>
 						<div className=" home-prog-languages col-7 ">
-							<div id="carouselExampleFade" class="carousel slide carousel-fade">
-								<div class="carousel-inner">
-									
-									{imgArray.map((item,i)=>{
-										return(
-									<div class={`carousel-item ${i == 0 ? 'active' : ''}`}>
-										<img src={item} class="d-block w-100" alt="..." />
-									</div>
-											
+							<div id="carouselExampleFade" data-bs-ride="carousel" className="carousel slide carousel-fade">
+								<div className="carousel-inner">
+
+									{imgArray.map((item, i) => {
+										return (
+											<div className={`carousel-item  data-bs-interval="400" ${i == 0 ? 'active' : ''}`}>
+												<img src={item} className="d-block w-100" alt="..." />
+											</div>
+
 										);
 									})}
-									
+
 								</div>
-								<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Previous</span>
+								<button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+									<span className="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span className="visually-hidden">Previous</span>
 								</button>
-								<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-									<span class="carousel-control-next-icon" aria-hidden="true"></span>
-									<span class="visually-hidden">Next</span>
+								<button className="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+									<span className="carousel-control-next-icon" aria-hidden="true"></span>
+									<span className="visually-hidden">Next</span>
 								</button>
 							</div>
 						</div>
