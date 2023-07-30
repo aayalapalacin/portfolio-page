@@ -1,4 +1,6 @@
 import React,{useState} from "react";
+import benchcrop from "../../assets/img/portrait/benchcrop.jpg"
+// project img
 import archive from "../../assets/img/projects/archive.png"
 import ambee from "../../assets/img/projects/ambee.jpg"
 import cna from "../../assets/img/projects/cna.png"
@@ -45,26 +47,33 @@ const Projects = () => {
 	console.log(active)
 	return (
 		<div className="container">
-			<div className="d-flex align-items-start">
-				<div className="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-					{projectContent.map((item, i) => {
-						let titleNoSpaces = item.title.replace(/\s/g, '')
+			<div className="row">
+				<div className="col-4">
+					<img className="w-75" src={benchcrop} alt="bench-pic"/>
+					<div className="d-flex align-items-start">
+						<div className="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+							{projectContent.map((item, i) => {
+								let titleNoSpaces = item.title.replace(/\s/g, '')
 
-						return (
-							<>
-								<button onClick={()=> setActive(i)}className={`nav-link ${i == 0 ? 'active}' : ''}`} id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill" data-bs-target={`#v-pills-${titleNoSpaces}`} type="button" role="tab" aria-controls={`v-pills-${titleNoSpaces}`} aria-selected="true">{item.title}</button>
-							</>
-						);
-					})
-					}
+								return (
+									<>
+										<button key={i} onClick={()=> setActive(i)}className={`nav-link ${i == 0 ? 'active}' : ''}`} id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill" data-bs-target={`#v-pills-${titleNoSpaces}`} type="button" role="tab" aria-controls={`v-pills-${titleNoSpaces}`} aria-selected="true">{item.title}</button>
+									</>
+								);
+							})
+							}
 
+						</div>
+						
+					</div>
 				</div>
+				<div className="col-8">
 				<div className="tab-content" id="v-pills-tabContent">
 					{projectContent.map((project,index) =>{
 						let projectTitleNoSpaces = project.title.replace(/\s/g, '')
 						return(
 							<>
-					<div className={`tab-pane fade   ${index == active ? 'show active' : ''}`} key={index}id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabindex="0">
+					<div className={`tab-pane fade   ${index == active ? 'show active' : ''}`} key={index}id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabIndex="0">
 					<div className="d-flex align-items-center " >
 							<div className=" col-6 project-content-date">
 
@@ -102,6 +111,8 @@ const Projects = () => {
 						);
 					})}
 					
+				</div>
+
 				</div>
 			</div>
 		
