@@ -16,8 +16,10 @@ import reactNative from "../../assets/img/prog-languages/reactNative.png"
 import react from "../../assets/img/prog-languages/react.png"
 import sql from "../../assets/img/prog-languages/sql.png"
 //create your first component
+
+import point from "../../assets/img/portrait/point.png"
 const Home = () => {
-	let imgArray = [javascript,boostrap, reactNative,  css, react,html,  jekyll, materialUi, python, reactNativePaper, sql]
+	let imgArray = [javascript, boostrap, reactNative, css, react, html, jekyll, materialUi, python, reactNativePaper, sql]
 
 	return (
 		<div className="container ">
@@ -47,14 +49,22 @@ const Home = () => {
 				</div>
 				<div className="col">
 					<div className="row">
-						<div className=" home-img col-5">row1</div>
+						<div className=" home-img col-5">
+							<img
+								className=" position-relative w-100 "
+								src={point} alt="point" 
+							style={{
+								bottom: "72px"
+							}}
+							/>
+						</div>
 						<div className=" home-prog-languages col-7 ">
 							<div id="carouselExampleFade" data-bs-ride="carousel" className="carousel slide carousel-fade">
 								<div className="carousel-inner">
 
 									{imgArray.map((item, i) => {
 										return (
-											<div className={`carousel-item  data-bs-interval="400" ${i == 0 ? 'active' : ''}`}>
+											<div key={i} className={`carousel-item  data-bs-interval="400" ${i == 0 ? 'active' : ''}`}>
 												<img src={item} className="d-block w-100" alt="..." />
 											</div>
 
