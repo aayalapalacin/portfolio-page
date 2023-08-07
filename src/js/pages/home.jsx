@@ -40,11 +40,10 @@ const Home = () => {
 						</p>
 					</div>
 					<div className=" home-music-player row">
-						<AudioPlayer
-							// autoPlay
-							src={sonrisa}
-							onPlay={e => console.log("onPlay")}
-						/>
+						<div className="w-25">
+	
+
+						</div>
 					</div>
 				</div>
 				<div className="col">
