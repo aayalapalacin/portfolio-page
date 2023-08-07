@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import Xarrow from "react-xarrows";
+import AboutModal from "../component/aboutModal";
+// about images imports
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSuitcase } from '@fortawesome/free-solid-svg-icons'
 import funFact from "../../assets/img/webpage/funFact.png"
@@ -14,7 +16,6 @@ const About = () => {
 	return (
 		<div className="container " style={{ marginTop: "6rem" }}>
 			<div className="content my-5">
-
 				<div className=" top-row d-flex text-center " style={{ height: "25vh" }}>
 					<div className="about-work-container w-50"  >
 						<p id="about-work" className="invisible" >test</p>
@@ -64,7 +65,7 @@ const About = () => {
 				endAnchor="middle"
 			/>
 			<div className="photos" style={{ width: "59%" }}>
-				<FontAwesomeIcon
+				{/* <FontAwesomeIcon
 					className="about-work position-relative "
 					icon={faSuitcase}
 					size="6x"
@@ -72,7 +73,8 @@ const About = () => {
 						left: "865px",
 						bottom: "228px"
 					}}
-				/>
+				/> */}
+				<AboutModal />
 				<img
 					className=" about-fun-fact position-relative w-25"
 					src={funFact} alt="fun-fact"
