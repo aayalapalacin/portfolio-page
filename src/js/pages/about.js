@@ -75,14 +75,14 @@ const About = () => {
 					}}
 				/> */}
 				<AboutModal />
-				<img
+				{/* <img
 					className=" about-fun-fact position-relative w-25"
 					src={funFact} alt="fun-fact"
 					style={{
 						bottom: "235px",
 						left: "19px"
 					}}
-				/>
+				/> */}
 				<img
 					className=" about-photo position-relative rounded-circle w-25"
 					src={profile}

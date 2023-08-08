@@ -1,6 +1,42 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSuitcase } from '@fortawesome/free-solid-svg-icons'
+import funFact from "../../assets/img/webpage/funFact.png"
+import puertoRico from "../../assets/img/webpage/puertoRico.png"
+import profile from "../../assets/img/portrait/profile.png"
+import performingArts from "../../assets/img/webpage/performingArts.png"
+import avoKeys from "../../assets/img/webpage/avoKeys.jpg"
+import bomba from "../../assets/img/webpage/bomba.mp4"
+
+const modalContent = [
+  {
+  img:funFact,
+  title:"Fun Fact", 
+  text:"Avocado is my spirit vegetable, something I identify with culturally and aesthetically. My musician name is AvoKeys (Avcado + Keys). ",
+  contentImg: avoKeys,
+  contentImgTxt:"Here is a logo that a collegue made for me, representing 'AvoKeys'"
+},
+  {
+  img:puertoRico, 
+  title:"Culture",
+  text:"I identify with being a latino, of Puertorican descent. It was actually in my later years when I made an effort to connect with my culture. Now, I am familiar with cooking latin cuisine, playing latin music, and dancing several latin genres. Also, becoming fluent in Spanish is another goal I'm very content with reaching.  ",
+  contentImg: bomba,
+  contentImgTxt:"Me dancing Bomba, an afro-puertrican dance where there is a connection between the dancer and drummer."
+},
+  {
+  img:faSuitcase,
+  title:"Non-tech Career", 
+  text:"Prior to making my transition to the tech industry, I was a very passionate educator. After seeing all the potential of technology when my school was virtual- I decided to see what impact I can make via web and other applications. I taught ESL, math and music. I can talk for hours about teaching methodology and behavior management!",
+  contentImg: "change the world video",
+  contentImgTxt:"Song I dedicated to students on the first day of virtual classes."
+},
+  {
+  img:performingArts, 
+  text:"I initially dedicated my studies to music peformance, at community college. Afterwards I would participate in several dance performance groups in my undergrad at Umass Amherst. It's a big part of who I am.",
+  contentImg: "vibrations",
+  contentImgTxt: "my band covering a song by Roy Ayers, 'Vibrations'."
+},
+]
 function AboutModal() {
   return (
     <div>
