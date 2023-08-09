@@ -15,6 +15,7 @@ const About = () => {
 
 	return (
 		<div className="container " style={{ marginTop: "6rem" }}>
+			
 			<div className="content my-5">
 				<div className=" top-row d-flex text-center " style={{ height: "25vh" }}>
 					<div className="about-work-container w-50"  >

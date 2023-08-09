@@ -6,7 +6,7 @@ import puertoRico from "../../assets/img/webpage/puertoRico.png"
 import profile from "../../assets/img/portrait/profile.png"
 import performingArts from "../../assets/img/webpage/performingArts.png"
 import avoKeys from "../../assets/img/webpage/avoKeys.jpg"
-import bomba from "../../assets/img/webpage/bomba.mp4"
+// import bomba from "../../assets/img/webpage/bomba.mp4"
 
 const modalContent = [
   {
@@ -20,20 +20,20 @@ const modalContent = [
   img:puertoRico, 
   title:"Culture",
   text:"I identify with being a latino, of Puertorican descent. It was actually in my later years when I made an effort to connect with my culture. Now, I am familiar with cooking latin cuisine, playing latin music, and dancing several latin genres. Also, becoming fluent in Spanish is another goal I'm very content with reaching.  ",
-  contentImg: bomba,
+  contentImg: <iframe width="560" height="315" src="https://www.youtube.com/embed/ysmhfLM8rZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>,
   contentImgTxt:"Me dancing Bomba, an afro-puertrican dance where there is a connection between the dancer and drummer."
 },
   {
   img:faSuitcase,
   title:"Non-tech Career", 
   text:"Prior to making my transition to the tech industry, I was a very passionate educator. After seeing all the potential of technology when my school was virtual- I decided to see what impact I can make via web and other applications. I taught ESL, math and music. I can talk for hours about teaching methodology and behavior management!",
-  contentImg: "change the world video",
+  contentImg: <iframe width="560" height="315" src="https://www.youtube.com/embed/w7KgsxIbMvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>,
   contentImgTxt:"Song I dedicated to students on the first day of virtual classes."
 },
   {
   img:performingArts, 
   text:"I initially dedicated my studies to music peformance, at community college. Afterwards I would participate in several dance performance groups in my undergrad at Umass Amherst. It's a big part of who I am.",
-  contentImg: "vibrations",
+  contentImg: <iframe width="560" height="315" src="https://www.youtube.com/embed/8dw3gVgrl78?clip=UgkxW4v8fP4bQO_cPLFJpTHgx76ACIO_Af1n&amp;clipt=EInTBRjdtAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>,
   contentImgTxt: "my band covering a song by Roy Ayers, 'Vibrations'."
 },
 ]
@@ -61,146 +61,7 @@ function AboutModal() {
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
-                here is content
+                content
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
