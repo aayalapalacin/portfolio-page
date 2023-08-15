@@ -66,51 +66,20 @@ const About = () => {
 				endAnchor="middle"
 			/>
 			<div className="photos" style={{ width: "59%" }}>
-				{/* <FontAwesomeIcon
-					className="about-work position-relative "
-					icon={faSuitcase}
-					size="6x"
-					style={{
-						left: "865px",
-						bottom: "228px"
-					}}
-				/> */}
+				
 				<AboutModal />
-				{/* <img
-					className=" about-fun-fact position-relative w-25"
-					src={funFact} alt="fun-fact"
-					style={{
-						bottom: "235px",
-						left: "19px"
-					}}
-				/> */}
+				
 				<img
 					className=" about-photo position-relative rounded-circle w-25"
 					src={profile}
 					alt="profile"
 					style={{
-						bottom: "397px",
-						left: "211px"
+						bottom: "568px",
+						left: "476px"
 					}}
 				/>
-				<img
-					className="about-culture position-relative w-25"
-					src={puertoRico}
-					alt="puerto-rico"
-					style={{
-						bottom: "548px",
-						right: "324px"
-					}}
-				/>
-				<img
-					className="about-arts position-relative w-25"
-					src={performingArts}
-					alt="performingArts"
-					style={{
-						bottom: "700px",
-						left: "853px"
-					}}
-				/>
+				
+				
 
 			</div>
 		</div>

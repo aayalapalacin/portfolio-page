@@ -42,16 +42,41 @@ function AboutModal() {
     <div>
 
 <div  data-bs-toggle="modal" data-bs-target="#exampleModal">
-        
+<img
+					className=" about-fun-fact position-relative w-25"
+					src={funFact} alt="fun-fact"
+					style={{
+            bottom: "247px",
+            left: "82px"
+					}}
+				/> 
 		<FontAwesomeIcon
 					className="about-work position-relative "
 					icon={faSuitcase}
 					size="6x"
 					style={{
-						left: "865px",
+						left: "750px",
 						bottom: "228px"
 					}}
 				/> 
+        <img
+					className="about-culture position-relative w-25"
+					src={puertoRico}
+					alt="puerto-rico"
+					style={{
+						bottom: "548px",
+						right: "173px"
+					}}
+				/>
+        <img
+					className="about-arts position-relative w-25"
+					src={performingArts}
+					alt="performingArts"
+					style={{
+						bottom: "534px",
+						left: "455px"
+					}}
+				/>
         </div>
         <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable">
