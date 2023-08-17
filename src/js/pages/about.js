@@ -41,25 +41,28 @@ const About = () => {
 
 			</div>
 			<Xarrow
-				color="green"
+				color="#2C4001"
 				start={homeRef} //can be react ref
 				end="about-work" //or an id
 				startAnchor="top"
 				endAnchor="middle"
 			/>
 			<Xarrow
+				color="#2C4001"
 				start={homeRef} //can be react ref
 				end="about-fun-fact" //or an id
 				startAnchor="top"
 				endAnchor="middle"
 			/>
 			<Xarrow
+				color="#2C4001"
 				start={homeRef} //can be react ref
 				end="about-arts" //can be react ref
 				startAnchor="bottom"
 				endAnchor="middle"
 			/>
 			<Xarrow
+				color="#2C4001"
 				start={homeRef} //can be react ref
 				end="about-culture" //or an id
 				startAnchor="bottom"
