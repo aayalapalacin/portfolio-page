@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 import benchcrop from "../../assets/img/portrait/benchcrop.jpg"
 // project img
 import archive from "../../assets/img/projects/archive.png"
@@ -9,7 +9,7 @@ import skillshop from "../../assets/img/projects/skillshop.png"
 
 //create your first component
 const Projects = () => {
-	const [active,setActive] = useState(0)
+	const [active, setActive] = useState(0)
 	let projectContent = [
 		{
 			"title": "The Archive",
@@ -17,7 +17,7 @@ const Projects = () => {
 			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
 			"link": "https://levis-the-archive.vercel.app/",
 			"code": "https://github.com/aayalapalacin/theArchive",
-			"photo": archive
+			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
 		},
 		{
 			"title": "Ambee",
@@ -25,7 +25,7 @@ const Projects = () => {
 			"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
 			"link": "https://expo.dev/@alexayala91/Ambee?serviceType=classic&distribution=expo-go",
 			"code": "https://github.com/aayalapalacin/Ambee",
-			"photo": ambee
+			"photo": <img src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " cover" }} />
 		},
 		{
 			"title": "Miami Dade College CNA Page",
@@ -33,7 +33,7 @@ const Projects = () => {
 			"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 			"link": "https://ce.mdc.edu/contentManagement.do?method=load&code=CM000007",
 			"code": "n/a",
-			"photo": cna
+			"photo": <img src={cna} alt="cna" style={{ height: "228px", objectFit: " cover" }} />
 		},
 		{
 			"title": "Miami Dade College Skillshop Page",
@@ -41,15 +41,17 @@ const Projects = () => {
 			"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 			"link": "https://www.mdc.edu/skillshop/",
 			"code": "n/a",
-			"photo": skillshop
+			"photo": <img src={skillshop} alt="skillshop" style={{ height: "252px", objectFit: " cover" }} />
 		},
 	]
-	console.log(active)
+
 	return (
 		<div className="container">
 			<div className="row">
-				<div className="col-4">
-					<img className="w-75" src={benchcrop} alt="bench-pic"/>
+				<div className="col-3 text-center">
+					<div className="benchPhoto">
+						<img className="w-100 " src={benchcrop} alt="bench-pic" />
+					</div>
 					<div className="d-flex align-items-start">
 						<div className="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
 							{projectContent.map((item, i) => {
@@ -57,65 +59,67 @@ const Projects = () => {
 
 								return (
 									<>
-										<button key={i} onClick={()=> setActive(i)}className={`nav-link ${i == 0 ? 'active}' : ''}`} id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill" data-bs-target={`#v-pills-${titleNoSpaces}`} type="button" role="tab" aria-controls={`v-pills-${titleNoSpaces}`} aria-selected="true">{item.title}</button>
+										<button key={i} onClick={() => setActive(i)} className={`nav-link ${i == 0 ? 'active}' : ''}`} id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill" data-bs-target={`#v-pills-${titleNoSpaces}`} type="button" role="tab" aria-controls={`v-pills-${titleNoSpaces}`} aria-selected="true">{item.title}</button>
 									</>
 								);
 							})
 							}
 
 						</div>
-						
-					</div>
-				</div>
-				<div className="col-8">
-				<div className="tab-content" id="v-pills-tabContent">
-					{projectContent.map((project,index) =>{
-						let projectTitleNoSpaces = project.title.replace(/\s/g, '')
-						return(
-							<>
-					<div className={`tab-pane fade   ${index == active ? 'show active' : ''}`} key={index}id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabIndex="0">
-					<div className="d-flex align-items-center " >
-							<div className=" col-6 project-content-date">
 
-								<div className=" d-flex project-title">
-									<h5>Title:</h5> {project.title}
-								</div>
-								<div className=" d-flex project-description">
-									<h5>Description: </h5>{project.description}
-								</div>
-								<div className=" d-flex project-languages">
-									<h5>Languages/Libraries:</h5>
-									{project.languages.map((language, i) => {
-										return (
-											<div className="d-flex" key={i}>
-												<p>
-													{language}
-												</p>
-											</div>
-										);
-									})}
-								</div>
-								<div className=" d-flex project-link">
-									<h5>Link: <a href={project.link} target="_blank">Click Here</a></h5>
-								</div>
-								<div className=" d-flex project-code">
-									<h5>Code:</h5>{project.code}
-								</div>
-							</div>
-							<div className="project-content-photo text-center col-6">
-								<img className="w-75" src={project.photo} alt={project.title} />
-							</div>
-						</div>	
 					</div>
-							</>
-						);
-					})}
-					
 				</div>
+				<div className="col-9">
+					<div className="tab-content " id="v-pills-tabContent">
+						{projectContent.map((project, index) => {
+							let projectTitleNoSpaces = project.title.replace(/\s/g, '')
+							return (
+								<>
+									<div className={`tab-pane fade   ${index == active ? 'show active' : ''}`} key={index} id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabIndex="0">
+										<div className="d-flex align-items-center " >
+											<div className=" col-7 project-content-date px-5">
+
+												<div className=" d-flex project-title">
+													<h5 className="me-2">Title:</h5> {project.title}
+												</div>
+												<div className=" d-flex project-description">
+													<h5 className="me-2">Description: </h5>{project.description}
+												</div>
+												<div className=" d-flex project-languages">
+													<h5 className="me-2">Languages/Libraries:</h5>
+													<div className="d-flex w-100 overflow-auto text-nowrap" >
+														{project.languages.map((language, i) => {
+															return (
+																<>
+																	<p className="me-1">
+																		{language + ","}
+																	</p>
+																</>
+															);
+														})}
+													</div>
+												</div>
+												<div className=" d-flex project-link">
+													<h5>Link: <a href={project.link} target="_blank">Click Here</a></h5>
+												</div>
+												<div className=" d-flex project-code">
+													<h5 className="me-2">Code:</h5>{project.code}
+												</div>
+											</div>
+											<div className="project-content-photo text-center align-items-center d-flex justify-content-center col-5" style={{ height: "394px" }}>
+												{project.photo}
+											</div>
+										</div>
+									</div>
+								</>
+							);
+						})}
+
+					</div>
 
 				</div>
 			</div>
-		
+
 		</div>
 	);
 };
