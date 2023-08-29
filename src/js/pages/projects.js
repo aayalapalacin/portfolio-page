@@ -9,54 +9,7 @@ import "../../styles/projects.css"
 const Projects = () => {
 	const [active, setActive] = useState(0)
 	let projectContent = [
-		{
-			"title": "The Archive",
-			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
-			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
-			"link": "https://levis-the-archive.vercel.app/",
-			"code": "https://github.com/aayalapalacin/theArchive",
-			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
-		},
-		{
-			"title": "The Archive",
-			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
-			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
-			"link": "https://levis-the-archive.vercel.app/",
-			"code": "https://github.com/aayalapalacin/theArchive",
-			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
-		},
-		{
-			"title": "The Archive",
-			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
-			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
-			"link": "https://levis-the-archive.vercel.app/",
-			"code": "https://github.com/aayalapalacin/theArchive",
-			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
-		},
-		{
-			"title": "The Archive",
-			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
-			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
-			"link": "https://levis-the-archive.vercel.app/",
-			"code": "https://github.com/aayalapalacin/theArchive",
-			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
-		},
-		{
-			"title": "The Archive",
-			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
-			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
-			"link": "https://levis-the-archive.vercel.app/",
-			"code": "https://github.com/aayalapalacin/theArchive",
-			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
-		},
-		{
-			"title": "The Archive",
-			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
-			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
-			"link": "https://levis-the-archive.vercel.app/",
-			"code": "https://github.com/aayalapalacin/theArchive",
-			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
-		},
+		
 		{
 			"title": "The Archive",
 			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
@@ -95,17 +48,17 @@ const Projects = () => {
 		<div className="container">
 			<div className="row">
 				<div className="col-3 text-center">
-					<div className="benchPhoto">
+					<div className="benchPhoto mb-2">
 						<img className="w-100 " src={benchcrop} alt="bench-pic" />
 					</div>
-					<div className=" titleScroll text-nowrap">
-						<div className="nav flex-column nav-pills h-100  " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<div className=" titleScroll text-nowrap ">
+						<div className="nav  nav-pills h-100 d-block " id="v-pills-tab" role="tablist" aria-orientation="vertical">
 							{projectContent.map((item, i) => {
 								let titleNoSpaces = item.title.replace(/\s/g, '')
 
 								return (
 									<>
-										<button key={i} onClick={() => setActive(i)} className={`nav-link ${i == 0 ? 'active}' : ''}`} id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill" data-bs-target={`#v-pills-${titleNoSpaces}`} type="button" role="tab" aria-controls={`v-pills-${titleNoSpaces}`} aria-selected="true">{item.title}</button>
+										<button key={i} onClick={() => setActive(i)} className={`nav-link m-auto ${i == 0 ? 'active}' : ''}`} id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill" data-bs-target={`#v-pills-${titleNoSpaces}`} type="button" role="tab" aria-controls={`v-pills-${titleNoSpaces}`} aria-selected="true">{item.title}</button>
 									</>
 								);
 							})
