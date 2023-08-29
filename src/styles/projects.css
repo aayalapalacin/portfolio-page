@@ -10,3 +10,25 @@
     border-radius: 5px;
     
   }
+
+  .title{
+    margin-top:2px;
+  }
+  .titleScroll{
+    height:225px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .titleScroll::-webkit-scrollbar {
+    /* background: #8ed8a2; */
+    background: white;
+    width: 9px;
+    border-radius: 5px;
+
+  }
+  .titleScroll::-webkit-scrollbar-thumb {
+    background: #2C4001;
+    border-radius: 5px;
+    
+  }

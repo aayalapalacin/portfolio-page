@@ -18,6 +18,54 @@ const Projects = () => {
 			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
 		},
 		{
+			"title": "The Archive",
+			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
+			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
+			"link": "https://levis-the-archive.vercel.app/",
+			"code": "https://github.com/aayalapalacin/theArchive",
+			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
+		},
+		{
+			"title": "The Archive",
+			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
+			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
+			"link": "https://levis-the-archive.vercel.app/",
+			"code": "https://github.com/aayalapalacin/theArchive",
+			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
+		},
+		{
+			"title": "The Archive",
+			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
+			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
+			"link": "https://levis-the-archive.vercel.app/",
+			"code": "https://github.com/aayalapalacin/theArchive",
+			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
+		},
+		{
+			"title": "The Archive",
+			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
+			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
+			"link": "https://levis-the-archive.vercel.app/",
+			"code": "https://github.com/aayalapalacin/theArchive",
+			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
+		},
+		{
+			"title": "The Archive",
+			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
+			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
+			"link": "https://levis-the-archive.vercel.app/",
+			"code": "https://github.com/aayalapalacin/theArchive",
+			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
+		},
+		{
+			"title": "The Archive",
+			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
+			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
+			"link": "https://levis-the-archive.vercel.app/",
+			"code": "https://github.com/aayalapalacin/theArchive",
+			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
+		},
+		{
 			"title": "Ambee",
 			"description": "Mobile app to help users find new movie to watch based on genre, process of elimination with tinder swiping feature, and movies available on netflix via Movies of the Night API.",
 			"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
@@ -50,8 +98,8 @@ const Projects = () => {
 					<div className="benchPhoto">
 						<img className="w-100 " src={benchcrop} alt="bench-pic" />
 					</div>
-					<div className="d-flex align-items-start">
-						<div className="nav flex-column nav-pills " id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<div className=" titleScroll text-nowrap">
+						<div className="nav flex-column nav-pills h-100  " id="v-pills-tab" role="tablist" aria-orientation="vertical">
 							{projectContent.map((item, i) => {
 								let titleNoSpaces = item.title.replace(/\s/g, '')
 
@@ -74,20 +122,23 @@ const Projects = () => {
 							return (
 								<>
 									<div className={`tab-pane fade   ${index == active ? 'show active' : ''}`} key={index} id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabIndex="0">
-										<div className="d-flex align-items-center " >
+										<div className="d-flex align-items-center border " >
 											<div className=" col-7 project-content-date px-5">
 
 												<div className=" d-flex project-title">
-													<h6 className="me-2 ">Title:</h6>
+													<h6 className="me-2  title" >Title:</h6>
 													<p className="">
 														{project.title}
 													</p>
 												</div>
 												<div className=" d-flex project-description">
-													<h6 className="me-2">Description: </h6>{project.description}
+													<h6 className="me-2 title" >Description: </h6>
+													<p>
+														{project.description}
+													</p>
 												</div>
 												<div className=" d-flex project-languages">
-													<h6 className="me-2">Languages/Libraries:</h6>
+													<h6 className="me-2 title" >Languages/Libraries:</h6>
 
 													<div className="d-flex w-100 overflow-auto text-nowrap" >
 														{project.languages.map((language, i) => {
@@ -102,10 +153,10 @@ const Projects = () => {
 													</div>
 												</div>
 												<div className=" d-flex project-link">
-													<h6>Link: <a href={project.link} target="_blank">Click Here</a></h6>
+													<h6>Link: <a href={project.link} target="_blank" className="text-success text-decoration-underline-hover">Click Here</a></h6>
 												</div>
 												<div className=" d-flex project-code">
-													<h6 className="me-2">Code:</h6>{project.code}
+													<h6 className="me-2 title" >Code:</h6>{project.code}
 												</div>
 											</div>
 											<div className="project-content-photo text-center align-items-center d-flex justify-content-center col-5" style={{ height: "394px" }}>
