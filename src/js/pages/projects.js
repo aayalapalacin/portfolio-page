@@ -5,9 +5,7 @@ import archive from "../../assets/img/projects/archive.png"
 import ambee from "../../assets/img/projects/ambee.jpg"
 import cna from "../../assets/img/projects/cna.png"
 import skillshop from "../../assets/img/projects/skillshop.png"
-//include images into your bundle
-
-//create your first component
+import "../../styles/projects.css"
 const Projects = () => {
 	const [active, setActive] = useState(0)
 	let projectContent = [
@@ -80,13 +78,17 @@ const Projects = () => {
 											<div className=" col-7 project-content-date px-5">
 
 												<div className=" d-flex project-title">
-													<h5 className="me-2">Title:</h5> {project.title}
+													<h6 className="me-2 ">Title:</h6>
+													<p className="">
+														{project.title}
+													</p>
 												</div>
 												<div className=" d-flex project-description">
-													<h5 className="me-2">Description: </h5>{project.description}
+													<h6 className="me-2">Description: </h6>{project.description}
 												</div>
 												<div className=" d-flex project-languages">
-													<h5 className="me-2">Languages/Libraries:</h5>
+													<h6 className="me-2">Languages/Libraries:</h6>
+
 													<div className="d-flex w-100 overflow-auto text-nowrap" >
 														{project.languages.map((language, i) => {
 															return (
@@ -100,10 +102,10 @@ const Projects = () => {
 													</div>
 												</div>
 												<div className=" d-flex project-link">
-													<h5>Link: <a href={project.link} target="_blank">Click Here</a></h5>
+													<h6>Link: <a href={project.link} target="_blank">Click Here</a></h6>
 												</div>
 												<div className=" d-flex project-code">
-													<h5 className="me-2">Code:</h5>{project.code}
+													<h6 className="me-2">Code:</h6>{project.code}
 												</div>
 											</div>
 											<div className="project-content-photo text-center align-items-center d-flex justify-content-center col-5" style={{ height: "394px" }}>

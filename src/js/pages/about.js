@@ -2,12 +2,7 @@ import React, { useRef } from "react";
 import Xarrow from "react-xarrows";
 import AboutModal from "../component/aboutModal";
 // about images imports
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSuitcase } from '@fortawesome/free-solid-svg-icons'
-import funFact from "../../assets/img/webpage/funFact.png"
-import puertoRico from "../../assets/img/webpage/puertoRico.png"
 import profile from "../../assets/img/portrait/profile.png"
-import performingArts from "../../assets/img/webpage/performingArts.png"
 
 import "../../styles/about.css"
 const About = () => {

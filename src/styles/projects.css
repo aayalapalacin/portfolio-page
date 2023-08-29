@@ -1,0 +1,12 @@
+.overflow-auto::-webkit-scrollbar {
+    /* background: #8ed8a2; */
+    background: white;
+    height: 5.8px;
+    border-radius: 5px;
+
+  }
+  .overflow-auto::-webkit-scrollbar-thumb {
+    background: #2C4001;
+    border-radius: 5px;
+    
+  }
