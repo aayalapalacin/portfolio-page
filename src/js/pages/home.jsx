@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
+// audio player imports
 import AudioPlayer from 'react-h5-audio-player';
+import 'react-h5-audio-player/lib/styles.css'
 import sonrisa from "../../assets/audio/tu-sonrisa.mp3"
+
 import "../../styles/index.css"
 
 // programming languages imgs
@@ -15,9 +18,10 @@ import reactNativePaper from "../../assets/img/prog-languages/reactNativePaper.j
 import reactNative from "../../assets/img/prog-languages/reactNative.png"
 import react from "../../assets/img/prog-languages/react.png"
 import sql from "../../assets/img/prog-languages/sql.png"
-//create your first component
+
 
 import point from "../../assets/img/portrait/point.png"
+
 const Home = () => {
 	let imgArray = [javascript, boostrap, reactNative, css, react, html, jekyll, materialUi, python, reactNativePaper, sql]
 
@@ -39,8 +43,8 @@ const Home = () => {
 							and well-being.
 						</p>
 					</div>
-					<div className=" home-music-player row">
-						<div className="w-25">
+					<div className=" home-music-player">
+						<div className="">
 	
 						<AudioPlayer
     src={sonrisa}
