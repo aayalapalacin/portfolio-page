@@ -42,7 +42,11 @@ const Home = () => {
 					<div className=" home-music-player row">
 						<div className="w-25">
 	
-
+						<AudioPlayer
+    src={sonrisa}
+    onPlay={e => console.log("onPlay")}
+    // other props here
+  />
 						</div>
 					</div>
 				</div>
