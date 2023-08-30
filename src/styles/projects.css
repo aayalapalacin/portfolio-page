@@ -32,3 +32,15 @@
     border-radius: 5px;
     
   }
+  .project-container{
+    background:#0070ff38;
+  }
+  .nav-pills .nav-link{
+    background: #0070ff14;
+  }
+
+.nav-pills .nav-link.active, .nav-pills .show.nav-link {
+    background-color: #0070ff38;
+    color: white !important;
+  }
+  

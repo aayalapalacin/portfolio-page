@@ -9,7 +9,7 @@ import "../../styles/projects.css"
 const Projects = () => {
 	const [active, setActive] = useState(0)
 	let projectContent = [
-		
+
 		{
 			"title": "The Archive",
 			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
@@ -27,7 +27,7 @@ const Projects = () => {
 			"photo": <img src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " cover" }} />
 		},
 		{
-			"title": "Miami Dade College CNA Page",
+			"title": "Miami Dade College CNA ",
 			"description": "Miami Dade College website for nursing students executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes",
 			"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 			"link": "https://ce.mdc.edu/contentManagement.do?method=load&code=CM000007",
@@ -35,7 +35,7 @@ const Projects = () => {
 			"photo": <img src={cna} alt="cna" style={{ height: "228px", objectFit: " cover" }} />
 		},
 		{
-			"title": "Miami Dade College Skillshop Page",
+			"title": "Miami Dade College Skillshop ",
 			"description": "Miami Dade College website for enrolled sign up for courses. executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes.",
 			"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 			"link": "https://www.mdc.edu/skillshop/",
@@ -58,7 +58,7 @@ const Projects = () => {
 
 								return (
 									<>
-										<button key={i} onClick={() => setActive(i)} className={`nav-link m-auto ${i == 0 ? 'active}' : ''}`} id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill" data-bs-target={`#v-pills-${titleNoSpaces}`} type="button" role="tab" aria-controls={`v-pills-${titleNoSpaces}`} aria-selected="true">{item.title}</button>
+										<button key={i} onClick={() => setActive(i)} className={`nav-link text-dark m-auto ${i == 0 ? 'active' : ''}`} id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill" data-bs-target={`#v-pills-${titleNoSpaces}`} type="button" role="tab" aria-controls={`v-pills-${titleNoSpaces}`} aria-selected="true">{item.title}</button>
 									</>
 								);
 							})
@@ -75,7 +75,7 @@ const Projects = () => {
 							return (
 								<>
 									<div className={`tab-pane fade   ${index == active ? 'show active' : ''}`} key={index} id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabIndex="0">
-										<div className="d-flex align-items-center border " >
+										<div className=" project-container d-flex align-items-center  rounded p-3 mb-5 " >
 											<div className=" col-7 project-content-date px-5">
 
 												<div className=" d-flex project-title">
@@ -98,7 +98,7 @@ const Projects = () => {
 															return (
 																<>
 																	<p className="me-1">
-																		{language + ","}
+																		{i == project.languages.length - 1 ? language + "." : language + ","}
 																	</p>
 																</>
 															);
