@@ -43,14 +43,13 @@ const Home = () => {
 							and well-being.
 						</p>
 					</div>
-					<div className=" home-music-player">
-						<div className="">
+					<div className=" home-music-player row mt-5">
+						<div className="w-50">
 	
 						<AudioPlayer
-    src={sonrisa}
-    onPlay={e => console.log("onPlay")}
-    // other props here
-  />
+							src={sonrisa}
+							className="audio"
+ 						 />
 						</div>
 					</div>
 				</div>

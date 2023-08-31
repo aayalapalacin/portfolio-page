@@ -43,4 +43,18 @@
     background-color: #0070ff38;
     color: white !important;
   }
-  
+  .audio{
+    background-color: #000000;
+    border-radius: 11px;
+    box-shadow: 0px 2px 5px 2px white;
+  }
+  .rhap_time,.rhap_repeat-button, .rhap_main-controls-button, .rhap_volume-button {
+    color:#C6D93B;
+  }
+ .rhap_download-progress,.rhap_progress-filled,.rhap_volumbe-bar{
+  background-color: #7A43B6;
+
+ }
+ .rhap_progress-indicator,.rhap_volume-bar,.rhap_volume-indicator{
+  background: #7A43B6;
+ }

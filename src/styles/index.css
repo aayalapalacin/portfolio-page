@@ -12,10 +12,10 @@
     background-color: #1A2601;
 }
 .avo-green{
-    color: #B2BF50;
+    color: #C6D93B;
 }
 .bg-avo-green{
-    background-color: #B2BF50;
+    background-color: #C6D93B;
 }
 .beige{
     color: #D9CFA0;
@@ -28,6 +28,12 @@
 }
 .bg-wood{
     background-color: #A65746;
+}
+.blue{
+    color:#417CF2;
+}
+.bg-blue{
+    color:#417CF2;
 }
 /* color palette  */
 a{
