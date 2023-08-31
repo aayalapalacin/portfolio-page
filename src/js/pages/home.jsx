@@ -64,14 +64,15 @@ const Home = () => {
 							}}
 							/>
 						</div>
-						<div className=" home-prog-languages col-7 ">
-							<div id="carouselExampleFade" data-bs-ride="carousel" className="carousel slide carousel-fade">
+						<div className=" home-prog-languages col-7 d-flex align-items-center ">
+							<div id="carouselExampleFade" data-bs-ride="carousel" className="carousel slide carousel-fade ">
 								<div className="carousel-inner">
 
 									{imgArray.map((item, i) => {
+										
 										return (
-											<div key={i} className={`carousel-item  data-bs-interval="400" ${i == 0 ? 'active' : ''}`}>
-												<img src={item} className="d-block w-100" alt="..." />
+											<div key={i} className={`carousel-item  data-bs-interval="10000" ${i == 0 ? 'active' : ''}`}>
+												<img src={item} className=" object-fit-contain d-block w-100 " alt={item.split("/")[1]} style={{height:"220px"}} />
 											</div>
 
 										);
