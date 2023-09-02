@@ -35,6 +35,13 @@
 .bg-blue{
     color:#417CF2;
 }
+
+.bg-faint-blue{
+    background:#0070ff12;
+}
+.bg-soft-blue{
+    background:#0070ff21;
+}
 /* color palette  */
 a{
     text-decoration: none;

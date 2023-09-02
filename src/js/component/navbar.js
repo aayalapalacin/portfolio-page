@@ -4,7 +4,7 @@ import avocado from "../../assets/img/webpage/avo.png"
 import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
-    <nav className=" navbar navbar-expand-lg mb-5 ">
+    <nav className=" navbar navbar-expand-lg mb-4 ">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img src={avocado} alt="avocado" />
