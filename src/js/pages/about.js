@@ -9,7 +9,11 @@ const About = () => {
 	const homeRef = useRef(null);
 
 	return (
-		<div className="container " style={{ marginTop: "6rem" }}>
+		<div className="container " >
+			<div className="about-title text-center">
+				<h1>About Me</h1>
+				<p>Click to learn more about my personal life</p>
+			</div>
 			
 			<div className="content my-5">
 				<div className=" top-row d-flex text-center " style={{ height: "25vh" }}>
@@ -23,6 +27,9 @@ const About = () => {
 				<div className=" mid-row  text-center" style={{ height: "25vh" }}>
 					<div className="about-photo-container "  >
 						<p ref={homeRef} className="invisible" >test</p>
+					</div>
+					<div className="about-photo-container "  >
+						<p ref={homeRef} className="" >test</p>
 					</div>
 				</div>
 				<div className=" low-row d-flex text-center  " style={{ height: "25vh" }}>

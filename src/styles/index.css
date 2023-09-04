@@ -43,6 +43,11 @@
     background:#0070ff21;
 }
 /* color palette  */
+
+/* 844 908 2544 */
+.glow{
+   box-shadow :  1px 2px 9px 4px white;
+}
 a{
     text-decoration: none;
 }

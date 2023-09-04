@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSuitcase } from '@fortawesome/free-solid-svg-icons'
 import funFact from "../../assets/img/webpage/funFact.png"
+import briefcase from "../../assets/img/webpage/briefcase.png"
 import puertoRico from "../../assets/img/webpage/puertoRico.png"
 import performingArts from "../../assets/img/webpage/performingArts.png"
 import avoKeys from "../../assets/img/webpage/avoKeys.jpg"
@@ -41,41 +42,41 @@ function AboutModal() {
       <div data-bs-toggle="modal" data-bs-target="#exampleModal">
         <img
           onClick={() => setModalID(0)}
-          className=" about-fun-fact position-relative w-25"
+          className=" rounded-circle glow about-fun-fact position-relative w-25 p-1"
           src={funFact} alt="fun-fact"
           style={{
-            bottom: "247px",
+            bottom: "262px",
             left: "82px"
           }}
         />
-        <FontAwesomeIcon
+        <img
           onClick={() => setModalID(2)}
-          className="about-work position-relative "
-          icon={faSuitcase}
-          size="6x"
+          className=" rounded-circle glow about-work position-relative w-25 p-1 "
+          src={briefcase}
           style={{
-            left: "750px",
-            bottom: "228px"
+            left: "717px",
+            bottom: "264px"
           }}
         />
+        
         <img
           onClick={() => setModalID(1)}
-          className="about-culture position-relative w-25"
+          className=" rounded-circle glow about-culture position-relative w-25"
           src={puertoRico}
           alt="puerto-rico"
           style={{
             bottom: "548px",
-            right: "173px"
+            right: "243px"
           }}
         />
         <img
           onClick={() => setModalID(3)}
-          className="about-arts position-relative w-25"
+          className=" rounded-circle glow about-arts position-relative w-25"
           src={performingArts}
           alt="performingArts"
           style={{
-            bottom: "534px",
-            left: "455px"
+            bottom: "544px",
+            left: "381px"
           }}
         />
       </div>
