@@ -20,6 +20,7 @@ const About = () => {
 					<div className="about-work-container w-50"  >
 						<p id="about-work" className="invisible" >test</p>
 					</div>
+					
 					<div className="about-fun-fact-container w-50" >
 						<p id="about-fun-fact" className="invisible" >test</p>
 					</div>
@@ -28,9 +29,7 @@ const About = () => {
 					<div className="about-photo-container "  >
 						<p ref={homeRef} className="invisible" >test</p>
 					</div>
-					<div className="about-photo-container "  >
-						<p ref={homeRef} className="" >test</p>
-					</div>
+					
 				</div>
 				<div className=" low-row d-flex text-center  " style={{ height: "25vh" }}>
 					<div className="about-culture-container w-50" >

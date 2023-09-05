@@ -48,6 +48,9 @@
 .glow{
    box-shadow :  1px 2px 9px 4px white;
 }
+.glow:hover{
+   box-shadow :  1px 2px 9px 4px rgb(0, 0, 0);
+}
 a{
     text-decoration: none;
 }

@@ -38,6 +38,7 @@ function AboutModal() {
   const [modalID, setModalID] = useState(0)
   return (
     <div>
+      
 
       <div data-bs-toggle="modal" data-bs-target="#exampleModal">
         <img
@@ -49,6 +50,7 @@ function AboutModal() {
             left: "82px"
           }}
         />
+        
         <img
           onClick={() => setModalID(2)}
           className=" rounded-circle glow about-work position-relative w-25 p-1 "
@@ -115,6 +117,46 @@ function AboutModal() {
           </div>
         </div>
       </div>
+      <span
+          onClick={() => setModalID(0)}
+          className=" about-fun-fact-title position-relative  p-1 fw-bold fs-4"
+          
+          style={{
+            bottom: "254px",
+            left: "116px"
+          }}>
+           Fun Fact 
+        </span>
+      <span
+          onClick={() => setModalID(0)}
+          className=" about-work-title position-relative  p-1 fw-bold fs-4"
+          
+          style={{
+            left: "765px",
+            bottom: "270px"
+          }}>
+           Non-Tech Career 
+        </span>
+      <span
+          onClick={() => setModalID(0)}
+          className=" about-culture-title position-relative  p-1 fw-bold fs-4"
+          
+          style={{
+            bottom: "544px",
+            right: "172px"
+          }}>
+           Culture 
+        </span>
+      <span
+          onClick={() => setModalID(0)}
+          className=" about-arts-title position-relative  p-1 fw-bold fs-4"
+          
+          style={{
+            bottom: "544px",
+            left: "474px"
+          }}>
+           Performing Arts 
+        </span>
     </div>
   )
 }
