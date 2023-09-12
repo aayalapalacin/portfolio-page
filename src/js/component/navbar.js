@@ -2,6 +2,8 @@ import React from "react";
 import "../../styles/index.css"
 import avocado from "../../assets/img/webpage/avo.png"
 import { Link } from "react-router-dom";
+
+const resumeLink = "https://docs.google.com/document/d/1I-mOHTXc_QFSnbGZAiFSDvcoQgbyPKpg1Sa6f8YrI0w/edit?usp=sharing"
 const Navbar = () => {
   return (
     <nav className=" navbar navbar-expand-lg mb-4 ">
@@ -20,7 +22,7 @@ const Navbar = () => {
             <Link to="projects/">
               <p className="nav-link" href="#">Projects</p>
             </Link>
-            <Link to="https://docs.google.com/document/d/1I-mOHTXc_QFSnbGZAiFSDvcoQgbyPKpg1Sa6f8YrI0w/edit?usp=sharing">
+            <Link  to={resumeLink} target="_blank">
             <p className="nav-link" >Resume</p>
             </Link>
             <Link to="/about">
