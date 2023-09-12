@@ -20,7 +20,9 @@ const Navbar = () => {
             <Link to="projects/">
               <p className="nav-link" href="#">Projects</p>
             </Link>
-            <p className="nav-link" href="#">Resume</p>
+            <Link to="https://docs.google.com/document/d/1I-mOHTXc_QFSnbGZAiFSDvcoQgbyPKpg1Sa6f8YrI0w/edit?usp=sharing">
+            <p className="nav-link" >Resume</p>
+            </Link>
             <Link to="/about">
               <p className="nav-link" href="#">About</p>
             </Link>
