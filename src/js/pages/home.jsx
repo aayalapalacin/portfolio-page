@@ -32,11 +32,11 @@ const Home = () => {
 				<div className="col ">
 					<div className="name-title-desc-container border rounded  p-3 "> 
 						<div className=" home-name row ">
-							<h1>Alexander Ayala Palacin</h1>
+							<h2>Alexander Ayala Palacin</h2>
 
 						</div>
 						<div className=" home-title row">
-							<h2>Front End Developer</h2>
+							<h4>Front End Developer</h4>
 						</div>
 						<div className=" home-description row">
 							<p>

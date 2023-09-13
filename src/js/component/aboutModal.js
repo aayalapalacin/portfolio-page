@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSuitcase } from '@fortawesome/free-solid-svg-icons'
+
 import funFact from "../../assets/img/webpage/funFact.png"
 import briefcase from "../../assets/img/webpage/briefcase.png"
 import puertoRico from "../../assets/img/webpage/puertoRico.png"
@@ -119,41 +118,41 @@ function AboutModal() {
       </div>
       <span
           onClick={() => setModalID(0)}
-          className=" about-fun-fact-title position-relative  p-1 fw-bold fs-4"
+          className=" about-fun-fact-title position-relative  p-1 fw-bold fs-4 text-nowrap"
           
           style={{
             bottom: "254px",
-            left: "116px"
+            left:"105px"
           }}>
            Fun Fact 
         </span>
       <span
           onClick={() => setModalID(0)}
-          className=" about-work-title position-relative  p-1 fw-bold fs-4"
+          className=" about-work-title position-relative  p-1 fw-bold fs-4 text-nowrap"
           
           style={{
-            left: "765px",
-            bottom: "270px"
+            left: "734px",
+            bottom: "267px"
           }}>
            Non-Tech Career 
         </span>
       <span
           onClick={() => setModalID(0)}
-          className=" about-culture-title position-relative  p-1 fw-bold fs-4"
+          className=" about-culture-title position-relative  p-1 fw-bold fs-4 text-nowrap"
           
           style={{
-            bottom: "544px",
-            right: "172px"
+            bottom: "541px",
+            right: "231px"
           }}>
            Culture 
         </span>
       <span
           onClick={() => setModalID(0)}
-          className=" about-arts-title position-relative  p-1 fw-bold fs-4"
+          className=" about-arts-title position-relative  fw-bold fs-4 text-nowrap"
           
           style={{
-            bottom: "544px",
-            left: "474px"
+            bottom: "539px",
+            left: "393px"
           }}>
            Performing Arts 
         </span>

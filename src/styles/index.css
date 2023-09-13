@@ -1,3 +1,7 @@
+body{
+    font-family: 'Victor Mono', monospace;
+}
+
 /* color palette  */
 .army-green{
     color: #2C4001;

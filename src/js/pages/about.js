@@ -78,7 +78,7 @@ const About = () => {
 					src={profile}
 					alt="profile"
 					style={{
-						bottom: "568px",
+						bottom: "612px",
 						left: "476px"
 					}}
 				/>
