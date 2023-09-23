@@ -76,28 +76,28 @@ const Projects = () => {
 								<>
 									<div className={`tab-pane fade   ${index == active ? 'show active' : ''}`} key={index} id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabIndex="0">
 										<div className=" project-container d-flex align-items-center  rounded p-3 mb-5 " >
-											<div className=" col-7 project-content-date px-5">
+											<div className=" col-6 project-content-date ps-2 pe-5">
 
 												<div className=" d-flex project-title">
-													<h6 className="me-2  title" >Title:</h6>
-													<p className="">
+													<h6 className="me-2 fw-bold title" >Title:</h6>
+													<p className="projectText">
 														{project.title}
 													</p>
 												</div>
 												<div className=" d-flex project-description">
-													<h6 className="me-2 title" >Description: </h6>
-													<p>
+													<h6 className="me-2 title fw-bold" >Description: </h6>
+													<p className="projectText">
 														{project.description}
 													</p>
 												</div>
 												<div className=" d-flex project-languages">
-													<h6 className="me-2 title" >Languages/Libraries:</h6>
+													<h6 className="me-2 title fw-bold" >Languages/Libraries:</h6>
 
 													<div className="d-flex w-100 overflow-auto text-nowrap" >
 														{project.languages.map((language, i) => {
 															return (
 																<>
-																	<p className="me-1">
+																	<p className="me-1 projectText">
 																		{i == project.languages.length - 1 ? language + "." : language + ","}
 																	</p>
 																</>
@@ -105,14 +105,20 @@ const Projects = () => {
 														})}
 													</div>
 												</div>
-												<div className=" d-flex project-link">
-													<h6>Link: <a href={project.link} target="_blank" className="text-success text-decoration-underline-hover">Click Here</a></h6>
+												<div className=" d-flex  project-link">
+													<h6 className="me-2 title fw-bold">Link: </h6>
+													<p className="projectText">
+														<a href={project.link} target="_blank" className="text-success text-decoration-underline-hover">Click Here</a>
+													</p>
 												</div>
 												<div className=" d-flex project-code">
-													<h6 className="me-2 title" >Code:</h6>{project.code}
+													<h6 className="me-2 title fw-bold" >Code:</h6>
+													<p className="projectText">
+														{project.code}
+													</p>
 												</div>
 											</div>
-											<div className="project-content-photo text-center align-items-center d-flex justify-content-center col-5" style={{ height: "394px" }}>
+											<div className="project-content-photo text-center align-items-center d-flex justify-content-center col-6" style={{ height: "394px" }}>
 												{project.photo}
 											</div>
 										</div>

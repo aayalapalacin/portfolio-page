@@ -16,6 +16,9 @@
   .title{
     margin-top:2px;
   }
+  .projectText{
+    font-size:.9rem;
+  }
   .titleScroll{
     height:170px;
     overflow-y: scroll;
