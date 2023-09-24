@@ -5,6 +5,7 @@ import briefcase from "../../assets/img/webpage/briefcase.png"
 import puertoRico from "../../assets/img/webpage/puertoRico.png"
 import performingArts from "../../assets/img/webpage/performingArts.png"
 import avoKeys from "../../assets/img/webpage/avoKeys.jpg"
+import travel from "../../assets/img/webpage/travel.jpg"
 
 
 const modalContent = [
@@ -16,30 +17,33 @@ const modalContent = [
   }],
   [
   {
-    title: "Performing Arts",
-    text: "I initially dedicated my studies to music peformance, at community college. Afterwards I would participate in several dance performance groups in my undergrad at Umass Amherst. It's a big part of who I am.",
-    contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/8dw3gVgrl78?clip=UgkxW4v8fP4bQO_cPLFJpTHgx76ACIO_Af1n&amp;clipt=EInTBRjdtAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>,
-    contentImgTxt: "My band covering a song by Roy Ayers, 'Vibrations'."
+    title: "Teaching to Tech",
+    text: "Prior to pursuing a career as a developer, I taught in public school for nearly 5 years. During the pandemic, teaching remotely, my school used many innovative educational platforms that made a great impression on me. Some of the features creating incredibly engaging and effective virtual lessons or intuitive and powerful tools for grading and tracking students progress. After some research and talking to others in the tech industry, I decided to pursue a career as a computer programmer, and make others feel the same as I did as an educator",
+    contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/anTtMRaQLsM?si=eC0-eIzFwdpJcqTt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>,
+    contentImgTxt: "A demo video of one of the education tools that inspired my transition into tech, Nearpod"
   }
 ],
   [{
-    title: "Non-tech Career",
-    text: "Prior to making my transition to the tech industry, I was a very passionate educator. After seeing all the potential of technology when my school was virtual- I decided to see what impact I can make via web and other applications. I taught ESL, math and music. I can talk for hours about teaching methodology and behavior management!",
-    contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/w7KgsxIbMvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>,
-    contentImgTxt: "Song and video submission I dedicated to my students on the first day of virtual classes for the school year."
-  }],
-  [{
-    title: "Culture",
+    title: "Puerto Rico",
     text: "I identify with being a latino, of Puertorican descent. It was actually in my later years when I made an effort to connect with my culture. Now, I am familiar with cooking latin cuisine, playing latin music, and dancing several latin genres. Also, becoming fluent in Spanish is another goal I'm very content with reaching.  ",
     contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/ysmhfLM8rZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>,
     contentImgTxt: "Me dancing Bomba, an afro-puertrican dance where there is a connection between the dancer and drummer."
-  },
+  }],
+  [
     {
-    title: "Performing Arts",
+    title: "Music",
     text: "I initially dedicated my studies to music peformance, at community college. Afterwards I would participate in several dance performance groups in my undergrad at Umass Amherst. It's a big part of who I am.",
     contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/8dw3gVgrl78?clip=UgkxW4v8fP4bQO_cPLFJpTHgx76ACIO_Af1n&amp;clipt=EInTBRjdtAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>,
     contentImgTxt: "My band covering a song by Roy Ayers, 'Vibrations'."
-  }],
+  },
+    {
+      title: "Travel",
+      text: "I have been fortunte to travel both domestically and internationally. My favorite places I have visited are New Orleans, and the Amazon river. I have been to Latin American countries such as Colombia, Guatemala, Mexico, Panama. My goal is to travel to a country where I don't know the native language. ",
+      contentImg: <img className="w-100" src={travel} alt="travel" />,
+      contentImgTxt: "Me participating in an amazing tour of the Amazon river, where Brazil, Ecuador, and Colombia align!"
+    }
+    
+],
 ]
 
 const onClickPhotoArray = [
@@ -50,20 +54,20 @@ const onClickPhotoArray = [
     left: "82px"
   },
   {
-    title:"about-culture",
-    img:performingArts,
+    title:"about-path",
+    img:briefcase,
     bottom: "548px",
     right: "80px"
   },
   {
-    title:"about-work",
-    img:briefcase,
+    title:"about-culture",
+    img:puertoRico,
     left: "553px",
     bottom: "264px"
   },
   {
     title:"about-performing-arts",
-    img:puertoRico,
+    img:performingArts,
     bottom: "544px",
     left: "381px"
   },
@@ -72,22 +76,22 @@ const onClickPhotoTitleArray = [
   {
     title:"Fun Fact",
     bottom: "254px",
-    left:"105px"
-  },
-  {
-    title:"Non-Tech Career",
-    left: "734px",
-    bottom: "267px"
+    left:"106px"
   },
   {
     title:"Culture",
-    bottom: "541px",
-    right: "235px"
+    left: "789px",
+    bottom: "267px"
   },
   {
-    title:"Performing Arts",
+    title:"Path to Tech",
+    bottom: "541px",
+    right: "154px"
+  },
+  {
+    title:"Hobbies",
     bottom: "539px",
-    left: "393px"
+    left: "490px"
   },
 ]
 function AboutModal() {
@@ -134,7 +138,7 @@ function AboutModal() {
             style["right"] = titleInfo.right;
           }
           
-          return(
+          return( 
             <>
               <span
                 className={` about-${titleInfo.title.toLowerCase()}-title position-relative  p-1 fw-bold fs-4 text-nowrap`}
@@ -176,7 +180,7 @@ function AboutModal() {
                         </small>
 
                       </div>
-                      <div className=''>
+                      <div className='contentImgContainer d-flex justify-content-center'>
                         {modalArray.contentImg}
 
                       </div>
