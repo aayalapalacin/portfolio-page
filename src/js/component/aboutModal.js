@@ -14,12 +14,7 @@ const modalContent = [
     contentImg: <img className="w-100" src={avoKeys} alt="avokeys" />,
     contentImgTxt: "Here is a logo that a collegue made for me, representing 'AvoKeys'"
   }],
-  [{
-    title: "Culture",
-    text: "I identify with being a latino, of Puertorican descent. It was actually in my later years when I made an effort to connect with my culture. Now, I am familiar with cooking latin cuisine, playing latin music, and dancing several latin genres. Also, becoming fluent in Spanish is another goal I'm very content with reaching.  ",
-    contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/ysmhfLM8rZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>,
-    contentImgTxt: "Me dancing Bomba, an afro-puertrican dance where there is a connection between the dancer and drummer."
-  },
+  [
   {
     title: "Performing Arts",
     text: "I initially dedicated my studies to music peformance, at community college. Afterwards I would participate in several dance performance groups in my undergrad at Umass Amherst. It's a big part of who I am.",
@@ -34,6 +29,12 @@ const modalContent = [
     contentImgTxt: "Song and video submission I dedicated to my students on the first day of virtual classes for the school year."
   }],
   [{
+    title: "Culture",
+    text: "I identify with being a latino, of Puertorican descent. It was actually in my later years when I made an effort to connect with my culture. Now, I am familiar with cooking latin cuisine, playing latin music, and dancing several latin genres. Also, becoming fluent in Spanish is another goal I'm very content with reaching.  ",
+    contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/ysmhfLM8rZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>,
+    contentImgTxt: "Me dancing Bomba, an afro-puertrican dance where there is a connection between the dancer and drummer."
+  },
+    {
     title: "Performing Arts",
     text: "I initially dedicated my studies to music peformance, at community college. Afterwards I would participate in several dance performance groups in my undergrad at Umass Amherst. It's a big part of who I am.",
     contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/8dw3gVgrl78?clip=UgkxW4v8fP4bQO_cPLFJpTHgx76ACIO_Af1n&amp;clipt=EInTBRjdtAY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>,
@@ -50,7 +51,7 @@ const onClickPhotoArray = [
   },
   {
     title:"about-culture",
-    img:puertoRico,
+    img:performingArts,
     bottom: "548px",
     right: "80px"
   },
@@ -62,9 +63,31 @@ const onClickPhotoArray = [
   },
   {
     title:"about-performing-arts",
-    img:performingArts,
+    img:puertoRico,
     bottom: "544px",
     left: "381px"
+  },
+]
+const onClickPhotoTitleArray = [
+  {
+    title:"Fun Fact",
+    bottom: "254px",
+    left:"105px"
+  },
+  {
+    title:"Non-Tech Career",
+    left: "734px",
+    bottom: "267px"
+  },
+  {
+    title:"Culture",
+    bottom: "541px",
+    right: "235px"
+  },
+  {
+    title:"Performing Arts",
+    bottom: "539px",
+    left: "393px"
   },
 ]
 function AboutModal() {
@@ -100,46 +123,29 @@ function AboutModal() {
         </div>
 
         {/* modal onClick photos titles */}
-            <span
-              onClick={() => setModalID(0)}
-              className=" about-fun-fact-title position-relative  p-1 fw-bold fs-4 text-nowrap"
-              
-              style={{
-                bottom: "254px",
-                left:"105px"
-              }}>
-              Fun Fact 
-            </span>
-          <span
-              onClick={() => setModalID(0)}
-              className=" about-work-title position-relative  p-1 fw-bold fs-4 text-nowrap"
-              
-              style={{
-                left: "734px",
-                bottom: "267px"
-              }}>
-              Non-Tech Career 
-            </span>
-          <span
-              onClick={() => setModalID(0)}
-              className=" about-culture-title position-relative  p-1 fw-bold fs-4 text-nowrap"
-              
-              style={{
-                bottom: "541px",
-                right: "231px"
-              }}>
-              Culture 
-            </span>
-          <span
-              onClick={() => setModalID(0)}
-              className=" about-arts-title position-relative  fw-bold fs-4 text-nowrap"
-              
-              style={{
-                bottom: "539px",
-                left: "393px"
-              }}>
-              Performing Arts 
-            </span>
+        {onClickPhotoTitleArray.map((titleInfo,index)=>{
+          let style={};
+          style["bottom"] = titleInfo.bottom;
+
+          if(titleInfo.left){
+            style["left"] = titleInfo.left;
+          }
+          else if(titleInfo.right){
+            style["right"] = titleInfo.right;
+          }
+          
+          return(
+            <>
+              <span
+                className={` about-${titleInfo.title.toLowerCase()}-title position-relative  p-1 fw-bold fs-4 text-nowrap`}
+                style={style}
+                >
+                {titleInfo.title}
+              </span>
+            </>
+          );
+        })}
+        
         
 {/* modal content */}
 
