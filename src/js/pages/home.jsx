@@ -4,6 +4,7 @@ import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css'
 import sonrisa from "../../assets/audio/tu-sonrisa.mp3"
 import precious from "../../assets/audio/Precious.mp3"
+import blue from "../../assets/audio/Blue.mp3"
 
 import "../../styles/index.css"
 
@@ -27,7 +28,7 @@ const Home = () => {
 	const [showPopover, setShowPopver] = useState(false)
 	const [songIndex, setSongIndex] = useState(0)
 	let imgArray = [javascript, boostrap, reactNative, css, react, html, jekyll, materialUi, python, reactNativePaper, sql]
-	let songArray = [sonrisa, precious]
+	let songArray = [sonrisa, precious, blue]
 	return (
 		<div className="container bg-faint-blue rounded py-3 px-4">
 			<div className="row">
