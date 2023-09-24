@@ -40,53 +40,63 @@ const modalContent = [
     contentImgTxt: "My band covering a song by Roy Ayers, 'Vibrations'."
   }],
 ]
+
+const onClickPhotoArray = [
+  {
+    title:"about-fun-fact",
+    img:funFact,
+    bottom: "262px",
+    left: "82px"
+  },
+  {
+    title:"about-culture",
+    img:puertoRico,
+    bottom: "548px",
+    right: "80px"
+  },
+  {
+    title:"about-work",
+    img:briefcase,
+    left: "553px",
+    bottom: "264px"
+  },
+  {
+    title:"about-performing-arts",
+    img:performingArts,
+    bottom: "544px",
+    left: "381px"
+  },
+]
 function AboutModal() {
   const [modalID, setModalID] = useState(0)
   return (
       <div>
         
           {/* onClick photos to open modal */}
-                <div data-bs-toggle="modal" data-bs-target="#exampleModal">
-                  <img
-                    onClick={() => setModalID(0)}
-                    className=" rounded-circle glow about-fun-fact position-relative w-25 p-1"
-                    src={funFact} alt="fun-fact"
-                    style={{
-                      bottom: "262px",
-                      left: "82px"
-                    }}
-                  />
-                  
-                  <img
-                    onClick={() => setModalID(2)}
-                    className=" rounded-circle glow about-work position-relative w-25 p-1 "
-                    src={briefcase}
-                    style={{
-                      left: "717px",
-                      bottom: "264px"
-                    }}
-                  />
-                  
-                  <img
-                    onClick={() => setModalID(1)}
-                    className=" rounded-circle glow about-culture position-relative w-25"
-                    src={puertoRico}
-                    alt="puerto-rico"
-                    style={{
-                      bottom: "548px",
-                      right: "243px"
-                    }}
-                  />
-                  <img
-                    onClick={() => setModalID(3)}
-                    className=" rounded-circle glow about-arts position-relative w-25"
-                    src={performingArts}
-                    alt="performingArts"
-                    style={{
-                      bottom: "544px",
-                      left: "381px"
-                    }}
-                  />
+        <div data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  {onClickPhotoArray.map((onClickImgData,index)=>{
+                    let style = {}
+                    style["bottom"] = onClickImgData.bottom;
+
+                    if(onClickImgData.left){
+                      style["left"] = onClickImgData.left
+                    }
+                    else if( onClickImgData.right){
+                      style["right"]= onClickImgData.right
+                    }
+                    return(
+                      <>
+                        <img
+                          onClick={() => setModalID(index)}
+                          className={` rounded-circle glow position-relative w-25 p-1 ${onClickImgData.title}`}
+                          src={onClickImgData.img} 
+                          alt={onClickImgData.title}
+                          style={style}
+                        />
+                      
+                      </>
+                    );
+                  })}
         </div>
 
         {/* modal onClick photos titles */}
