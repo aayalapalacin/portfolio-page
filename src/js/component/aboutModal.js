@@ -10,11 +10,18 @@ import travel from "../../assets/img/webpage/travel.jpg"
 
 const modalContent = [
   [{
-    title: "Fun Fact",
+    title: "Movie reference",
+    text: 'As many people do, I enjoy movies and comedy; so much to a point where I am contantly making references to jokes or movie scenes from virtually any conversation topic. -Friend "Man medicine is expensive" -Me "Have you seen Dallas Buyers Club ',
+    contentImg: <iframe width="545" height="300"src="https://www.youtube.com/embed/JsGZAN0ol3U?si=4hY16IN3EfYCmbXb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>,
+    contentImgTxt: "One of my favorite scenes from Ghost, where Whoopi Goldberg's characters is forced to donate money"
+  },
+  {
+    title: "Spirit Vegetable",
     text: "Avocado is my spirit vegetable, something I identify with culturally and aesthetically. My musician name is AvoKeys (Avcado + Keyboard).To expand, avocdoes are a big stable of latin cuisine, being a key acompaniment to most popular dishes. Avocadoes are also assosciated with health, like using avocado oil for cooking, using products with avocado for the skin. It is a very positive force that I wanted to emulate in my music. ",
     contentImg: <img className="w-100" src={avoKeys} alt="avokeys" />,
     contentImgTxt: "Here is a logo that a collegue made for me, representing 'AvoKeys'"
-  }],
+  }
+],
   [
   {
     title: "Teaching to Tech",
