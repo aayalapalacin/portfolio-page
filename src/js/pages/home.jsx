@@ -110,7 +110,7 @@ const Home = () => {
 
 										return (
 											<div key={i} className={`carousel-item  data-bs-interval="1" ${i == 0 ? 'active' : ''}`}>
-												<img src={item} className=" object-fit-contain d-block w-100 " alt={item.split("/")[1]} style={{ height: "220px" }} />
+												<img src={item} className=" object-fit-contain d-block w-100 " alt={item.split("/")[1]} style={{ height: "170px" }} />
 											</div>
 
 										);
