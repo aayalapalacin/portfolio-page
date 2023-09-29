@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const resumeLink = "https://docs.google.com/document/d/1I-mOHTXc_QFSnbGZAiFSDvcoQgbyPKpg1Sa6f8YrI0w/edit?usp=sharing"
 const Navbar = () => {
   return (
-    <nav className=" navbar navbar-expand-lg mb-4 ">
+    <nav className=" navbar navbar-expand-lg mb-md-4 mb-1 ">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img src={avocado} alt="avocado" />

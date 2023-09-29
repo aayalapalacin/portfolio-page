@@ -29,28 +29,41 @@ const Home = () => {
 	const [songIndex, setSongIndex] = useState(0)
 	let imgArray = [javascript, boostrap, reactNative, css, react, html, jekyll, materialUi, python, reactNativePaper, sql]
 	let songArray = [sonrisa, precious, blue]
+	
 	return (
-		<div className="container bg-faint-blue rounded py-3 px-4">
+		<div className="container bg-faint-blue rounded py-md-3 py-2 ps-2 px-md-4">
 			<div className="row">
-				<div className="col ">
-					<div className="name-title-desc-container border rounded  p-3 ">
-						<div className=" home-name row ">
-							<h2>Alexander Ayala Palacin</h2>
+				<div className="col-6 ">
+					<div className="name-title-desc-container border rounded p-md-3 p-2 ">
+						<div className=" home-name row  ">
+							{/* laptop view */}
+							<h2 className="d-none d-md-block  ">Alexander Ayala Palacin</h2>
+							{/* mobile view */}
+							<p className="d-block d-md-none fw-bold mb-1">Alexander Ayala Palacin</p>
 
 						</div>
 						<div className=" home-title row">
-							<h4>Front End Developer</h4>
+							{/* laptop view */}
+							<h4 className="d-none d-md-block">Front End Developer</h4>
+							{/* mobile view */}
+							<p className="d-block d-md-none mb-2">Front End Developer</p>
 						</div>
 						<div className=" home-description row">
-							<p>
+							{/* laptop view */}
+							<p className="d-none d-md-block">
 								Passionate about making an impact by making resources
 								accessible to enhance peoples lives professionally, socially,
 								and well-being.
 							</p>
+							{/* mobile view */}
+							<small className="d-block d-md-none">
+								Passionate about making an impact on community through app development
+							</small>
+							 
 						</div>
-
 					</div>
-					<div className=" home-music-player row mt-5">
+					{/* music player laptop view */}
+					<div className=" home-music-player d-none d-md-block row mt-5">
 						<h5 className="mb-3 ms-1">Original Music</h5>
 						<div className="audioPopver d-flex">
 
@@ -88,19 +101,8 @@ const Home = () => {
 							</div>
 						</div>
 					</div>
-				</div>
-				<div className="col">
-					<div className="row">
-						<div className=" home-img col-5">
-							<img
-								className=" position-relative w-100 "
-								src={point} alt="point"
-								style={{
-									bottom: "72px"
-								}}
-							/>
-						</div>
-						<div className=" home-prog-languages col-7 d-flex align-items-center ">
+					{/* program languages  mobile view */}
+					<div className=" home-prog-languages d-flex d-md-none w-75 m-auto align-items-center mb-3">
 							<div id="programmingLanguage" data-bs-ride="carousel" className="carousel slide carousel-fade ">
 								<div className="carousel-inner">
 
@@ -125,10 +127,96 @@ const Home = () => {
 								</button>
 							</div>
 						</div>
+				</div>
+				<div className="col-6">
+					<div className="row">
+						{/* point  img laptop view */}
+						<div className=" home-img d-md-block d-none col-5">
+							<img
+								className="  position-relative w-100 "
+								src={point} alt="point"
+								
+								/>
+						</div>
+								{/* point  img  mobile view */}
+						<div className=" home-img d-md-none text-center  ">
+						<img
+								className="   w-75    "
+								src={point} alt="point"
+							/>
+						</div>
+							
+						{/* programming languages laptop view */}
+						<div className=" home-prog-languages col-7 d-none d-md-flex  align-items-center ">
+							<div id="programmingLanguage" data-bs-ride="carousel" className="carousel slide carousel-fade ">
+								<div className="carousel-inner">
+
+									{imgArray.map((item, i) => {
+
+										return (
+											<div key={i} className={`carousel-item  data-bs-interval="1" ${i == 0 ? 'active' : ''}`}>
+												<img src={item} className=" object-fit-contain d-block w-100 " alt={item.split("/")[1]} style={{ height: "220px" }} />
+											
+											</div>
+
+										);
+									})}
+
+								</div>
+								<button className="carousel-control-prev" type="button" data-bs-target="#programmingLanguage" data-bs-slide="prev">
+									<span className="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span className="visually-hidden">Previous</span>
+								</button>
+								<button className="carousel-control-next" type="button" data-bs-target="#programmingLanguage" data-bs-slide="next">
+									<span className="carousel-control-next-icon" aria-hidden="true"></span>
+									<span className="visually-hidden">Next</span>
+								</button>
+							</div>
+						</div>
+					</div>
+						{/* music player mobile view */}
+						
+						<div className=" home-music-player d-block d-md-none row text-center">
+						<h6 className="my-2 ">Original Music</h6>
+						<div className="audioPopver d-flex">
+							<div className="w-100"
+								onMouseEnter={() => setShowPopver(!showPopover)}
+								onMouseLeave={() => setShowPopver(!showPopover)}
+							>
+
+								<AudioPlayer
+									showJumpControls={false}
+									showSkipControls 
+									
+									onClickNext={(e) => {
+										if (songIndex != songArray.length - 1) {
+											setSongIndex(songIndex + 1)
+										}
+										else {
+											setSongIndex(0)
+										}
+									}}
+									onClickPrevious={(e) => {
+										console.log(songIndex, "previous")
+										if (songIndex != 0) {
+											setSongIndex(songIndex - 1)
+										}
+										else {
+											setSongIndex(songArray.length - 1)
+										}
+									}}
+									src={songArray[songIndex]}
+									className="audio"
+								/>
+							</div>
+							<div className={` ${showPopover ? "d-block" : "d-none"} popover bg-info w-25 text-center m-2`} style={{ boxShadow: "0px 1px 7px 0px white" }}>
+								<div className="p-2 "> Recordings of my original music </div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+			</div>
 	);
 };
 
