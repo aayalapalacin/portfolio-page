@@ -46,12 +46,47 @@ const Projects = () => {
 
 	return (
 		<div className="container">
+			{/* dropdown mobile */}
+			<div className="dropdown-mobile text-center d-block d-md-none">
+
+				<div className="dropdown">
+					<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Dropdown button
+					</button>
+					<ul className="dropdown-menu">
+
+						{projectContent.map((item, i) => {
+							let titleNoSpaces = item.title.replace(/\s/g, '')
+
+							return (
+								<>
+
+									<li
+										key={i}
+										onClick={() => setActive(i)}
+										className={`dropdown-item text-dark m-auto ${i == 0 ? 'active' : ''}`}
+										id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill"
+										data-bs-target={`#v-pills-${titleNoSpaces}`}
+										role="tab" aria-controls={`v-pills-${titleNoSpaces}`}
+										aria-selected="true">
+										<a className="dropdown-item">
+											{item.title}
+										</a>
+									</li>
+								</>
+							);
+						})
+						}
+
+					</ul>
+				</div>
+			</div>
 			<div className="row">
-				<div className="col-3 text-center">
-					<div className="benchPhoto mb-2">
+				<div className="col-3 text-center d-none d-md-block">
+					<div className="benchPhoto mb-2 ">
 						<img className="w-100 " src={benchcrop} alt="bench-pic" />
 					</div>
-					<div className=" titleScroll text-nowrap ">
+					<div className=" titleScroll text-nowrap  ">
 						<div className="nav  nav-pills h-100 d-block " id="v-pills-tab" role="tablist" aria-orientation="vertical">
 							{projectContent.map((item, i) => {
 								let titleNoSpaces = item.title.replace(/\s/g, '')
@@ -68,13 +103,19 @@ const Projects = () => {
 
 					</div>
 				</div>
-				<div className="col-9">
+				<div className="col-12 col-md-9">
 					<div className="tab-content " id="v-pills-tabContent">
 						{projectContent.map((project, index) => {
 							let projectTitleNoSpaces = project.title.replace(/\s/g, '')
 							return (
 								<>
-									<div className={`tab-pane fade   ${index == active ? 'show active' : ''}`} key={index} id={`v-pills-${projectTitleNoSpaces}`} role="tabpanel" aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`} tabIndex="0">
+									<div 
+									className={`tab-pane fade   ${index == active ? 'show active' : ''}`}
+									 key={index} 
+									 id={`v-pills-${projectTitleNoSpaces}`} 
+									 role="tabpanel" 
+									 aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`}
+									  tabIndex="0">
 										<div className=" project-container d-flex align-items-center  rounded p-3 mb-5 " >
 											<div className=" col-6 project-content-date ps-2 pe-5">
 
@@ -97,7 +138,7 @@ const Projects = () => {
 														{project.languages.map((language, i) => {
 															return (
 																<>
-																	<p className="me-1 projectText">
+																	<p key={i} className="me-1 projectText">
 																		{i == project.languages.length - 1 ? language + "." : language + ","}
 																	</p>
 																</>
