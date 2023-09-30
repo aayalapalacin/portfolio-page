@@ -4,49 +4,52 @@ import benchcrop from "../../assets/img/portrait/benchcrop.jpg"
 import archive from "../../assets/img/projects/archive.png"
 import ambee from "../../assets/img/projects/ambee.jpg"
 import cna from "../../assets/img/projects/cna.png"
+import cnaMobile from "../../assets/img/projects/cnaMobile.png"
 import skillshop from "../../assets/img/projects/skillshop.png"
+import skillshopMobile from "../../assets/img/projects/skillshopMobile.png"
 import "../../styles/projects.css"
+let projectContent = [
+
+	{
+		"title": "The Archive",
+		"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
+		"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
+		"link": "https://levis-the-archive.vercel.app/",
+		"code": "https://github.com/aayalapalacin/theArchive",
+		"photo": <img className="d-none d-md-block" src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />,
+		"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{  height: "86%", objectFit: " cover" }} />
+	},
+	{
+		"title": "Ambee",
+		"description": "Mobile app to help users find new movie to watch based on genre, process of elimination with tinder swiping feature, and movies available on netflix via Movies of the Night API.",
+		"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
+		"link": "https://expo.dev/@alexayala91/Ambee?serviceType=classic&distribution=expo-go",
+		"code": "https://github.com/aayalapalacin/Ambee",
+		"photo": <img className="d-none d-md-block" src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " cover" }} />,
+		"photoMobileView": <img className="w-100 d-block d-md-none" src={ambee} alt="ambee" style={{height: "93%", objectFit: " cover" }} />
+	},
+	{
+		"title": "Miami Dade College CNA ",
+		"description": "Miami Dade College website for nursing students executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes",
+		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
+		"link": "https://ce.mdc.edu/contentManagement.do?method=load&code=CM000007",
+		"code": "n/a",
+		"photo": <img className="d-none d-md-block" src={cna} alt="cna" style={{ height: "228px", objectFit: " cover" }} />,
+		"photoMobileView": <img className="d-block d-md-none w-100" src={cnaMobile} alt="cna mobile" style={{ height: "75%", objectFit: " cover" }} />
+	},
+	{
+		"title": "Miami Dade College Skillshop ",
+		"description": "Miami Dade College website for enrolled sign up for courses. executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes.",
+		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
+		"link": "https://www.mdc.edu/skillshop/",
+		"code": "n/a",
+		"photo": <img className="d-none d-md-block" src={skillshop} alt="skillshop" style={{ height: "252px", objectFit: " cover" }} />,
+		"photoMobileView": <img className="d-block d-md-none w-100" src={skillshopMobile} alt="skillshop mobile" style={{ height: "75%", objectFit: " cover" }} />
+	},
+]
 const Projects = () => {
 	const [active, setActive] = useState(0)
-	let projectContent = [
-
-		{
-			"title": "The Archive",
-			"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
-			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
-			"link": "https://levis-the-archive.vercel.app/",
-			"code": "https://github.com/aayalapalacin/theArchive",
-			"photo": <img className="d-none d-md-block" src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />,
-			"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{ width: "100%", height: "82%", objectFit: " cover" }} />
-		},
-		{
-			"title": "Ambee",
-			"description": "Mobile app to help users find new movie to watch based on genre, process of elimination with tinder swiping feature, and movies available on netflix via Movies of the Night API.",
-			"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
-			"link": "https://expo.dev/@alexayala91/Ambee?serviceType=classic&distribution=expo-go",
-			"code": "https://github.com/aayalapalacin/Ambee",
-			"photo": <img className="d-none d-md-block" src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " cover" }} />,
-			"photoMobileView": <img className="d-block d-md-none" src={ambee} alt="ambee" style={{ width: "100%", height: "82%", objectFit: " cover" }} />
-		},
-		{
-			"title": "Miami Dade College CNA ",
-			"description": "Miami Dade College website for nursing students executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes",
-			"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
-			"link": "https://ce.mdc.edu/contentManagement.do?method=load&code=CM000007",
-			"code": "n/a",
-			"photo": <img className="d-none d-md-block" src={cna} alt="cna" style={{ height: "228px", objectFit: " cover" }} />,
-			"photoMobileView": <img className="d-block d-md-none" src={cna} alt="cna" style={{ height: "28%", objectFit: "cover" ,marginTop: "50%",marginRight: "14%" }} />
-		},
-		{
-			"title": "Miami Dade College Skillshop ",
-			"description": "Miami Dade College website for enrolled sign up for courses. executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes.",
-			"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
-			"link": "https://www.mdc.edu/skillshop/",
-			"code": "n/a",
-			"photo": <img className="d-none d-md-block" src={skillshop} alt="skillshop" style={{ height: "252px", objectFit: " cover" }} />,
-			"photoMobileView": <img className="d-block d-md-none" src={skillshop} alt="skillshop" style={{ height: "28%", objectFit: "cover" ,marginTop: "50%",marginRight: "14%" }} />
-		},
-	]
+	const [projectTitle, setProjectTitle] = useState(projectContent[0].title)
 
 	return (
 		<div className="container">
@@ -55,7 +58,7 @@ const Projects = () => {
 
 				<div className="dropdown">
 					<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-						Dropdown button
+						{projectTitle}
 					</button>
 					<ul className="dropdown-menu">
 
@@ -67,7 +70,9 @@ const Projects = () => {
 
 									<li
 										key={i}
-										onClick={() => setActive(i)}
+										onClick={() => {
+											setProjectTitle(item.title)
+											setActive(i)}}
 										className={`dropdown-item text-dark m-auto ${i == 0 ? 'active' : ''}`}
 										id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill"
 										data-bs-target={`#v-pills-${titleNoSpaces}`}
