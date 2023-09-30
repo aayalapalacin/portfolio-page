@@ -16,7 +16,8 @@ const Projects = () => {
 			"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
 			"link": "https://levis-the-archive.vercel.app/",
 			"code": "https://github.com/aayalapalacin/theArchive",
-			"photo": <img src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />
+			"photo": <img className="d-none d-md-block" src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />,
+			"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{ width: "100%", height: "82%", objectFit: " cover" }} />
 		},
 		{
 			"title": "Ambee",
@@ -24,7 +25,8 @@ const Projects = () => {
 			"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
 			"link": "https://expo.dev/@alexayala91/Ambee?serviceType=classic&distribution=expo-go",
 			"code": "https://github.com/aayalapalacin/Ambee",
-			"photo": <img src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " cover" }} />
+			"photo": <img className="d-none d-md-block" src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " cover" }} />,
+			"photoMobileView": <img className="d-block d-md-none" src={ambee} alt="ambee" style={{ width: "100%", height: "82%", objectFit: " cover" }} />
 		},
 		{
 			"title": "Miami Dade College CNA ",
@@ -32,7 +34,8 @@ const Projects = () => {
 			"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 			"link": "https://ce.mdc.edu/contentManagement.do?method=load&code=CM000007",
 			"code": "n/a",
-			"photo": <img src={cna} alt="cna" style={{ height: "228px", objectFit: " cover" }} />
+			"photo": <img className="d-none d-md-block" src={cna} alt="cna" style={{ height: "228px", objectFit: " cover" }} />,
+			"photoMobileView": <img className="d-block d-md-none" src={cna} alt="cna" style={{ height: "28%", objectFit: "cover" ,marginTop: "50%",marginRight: "14%" }} />
 		},
 		{
 			"title": "Miami Dade College Skillshop ",
@@ -40,7 +43,8 @@ const Projects = () => {
 			"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 			"link": "https://www.mdc.edu/skillshop/",
 			"code": "n/a",
-			"photo": <img src={skillshop} alt="skillshop" style={{ height: "252px", objectFit: " cover" }} />
+			"photo": <img className="d-none d-md-block" src={skillshop} alt="skillshop" style={{ height: "252px", objectFit: " cover" }} />,
+			"photoMobileView": <img className="d-block d-md-none" src={skillshop} alt="skillshop" style={{ height: "28%", objectFit: "cover" ,marginTop: "50%",marginRight: "14%" }} />
 		},
 	]
 
@@ -119,22 +123,36 @@ const Projects = () => {
 										<div className=" project-container d-flex align-items-center  rounded p-3 mb-5 " >
 											<div className=" col-6 project-content-date ps-2 pe-5">
 
-												<div className=" d-flex project-title">
-													<h6 className="me-2 fw-bold title" >Title:</h6>
-													<p className="projectText">
+												<div className=" d-block d-md-flex project-title">
+													{/* title laptop */}
+													<h6 className=" d-none d-md-block me-2 fw-bold title" >Title:</h6>
+													{/* title mobile */}
+													<p className=" d-block d-md-none me-2 fw-bold projectText  title" >Title:</p>
+													<p className="projectText mb-3 mb-md-1">
 														{project.title}
 													</p>
 												</div>
-												<div className=" d-flex project-description">
-													<h6 className="me-2 title fw-bold" >Description: </h6>
-													<p className="projectText">
+												<div className=" d-block d-md-flex project-description">
+														{/* title laptop */}
+													<h6 className=" d-none d-md-block me-2 title fw-bold" >Description: </h6>
+													{/* title mobile */}
+													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Descripton: </p>
+													{/* content laptop */}
+													<p className="projectText d-none d-md-block">
+														{project.description}
+													</p>
+											    	{/* content mobile */}
+													<p className="projectText d-block d-md-none overflow-y-scroll mb-3" style={{height:"106px"}}>
 														{project.description}
 													</p>
 												</div>
-												<div className=" d-flex project-languages">
-													<h6 className="me-2 title fw-bold" >Languages/Libraries:</h6>
+												<div className=" d-block d-md-flex project-languages">
+														{/* title laptop */}
+													<h6 className=" d-none d-md-block me-2 title fw-bold" >Languages/Libraries:</h6>
+													{/* title mobile */}
+													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Language4/Libraries:</p>
 
-													<div className="d-flex w-100 overflow-auto text-nowrap" >
+													<div className="d-flex w-100 overflow-auto text-nowrap mb-3 mb-md-1" >
 														{project.languages.map((language, i) => {
 															return (
 																<>
@@ -146,21 +164,28 @@ const Projects = () => {
 														})}
 													</div>
 												</div>
-												<div className=" d-flex  project-link">
-													<h6 className="me-2 title fw-bold">Link: </h6>
-													<p className="projectText">
+												<div className=" d-block d-md-flex  project-link">
+														{/* title laptop */}
+													<h6 className=" d-none d-md-block me-2 title fw-bold">Link: </h6>
+													{/* title mobile */}
+													<p className=" d-block d-md-none me-2 title projectText fw-bold">Link: </p>
+													<p className="projectText mb-2 mb-md-1">
 														<a href={project.link} target="_blank" className="text-success text-decoration-underline-hover">Click Here</a>
 													</p>
 												</div>
-												<div className=" d-flex project-code">
-													<h6 className="me-2 title fw-bold" >Code:</h6>
+												<div className=" d-block d-md-flex project-code">
+														{/* title laptop */}
+													<h6 className=" d-none d-md-block me-2 title  fw-bold" >Code:</h6>
+													{/* title mobile */}
+													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Code:</p>
 													<p className="projectText">
 														{project.code}
 													</p>
 												</div>
 											</div>
-											<div className="project-content-photo text-center align-items-center d-flex justify-content-center col-6" style={{ height: "394px" }}>
+											<div className="project-content-photo text-center align-items-md-center align-items-start d-flex justify-content-center col-6" style={{ height: "394px" }}>
 												{project.photo}
+												{project.photoMobileView}
 											</div>
 										</div>
 									</div>

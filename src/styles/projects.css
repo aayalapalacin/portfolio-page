@@ -66,11 +66,15 @@
  }
 
  /* mobile view */
- @media screen and (min-width: 425px) {
+ @media screen and (max-width: 380px) {
   .rhap_additional-controls, .rhap_volume-controls{
     display: none;
   }
   .rhap_controls-section{
     justify-content: center;
+  }
+  .projectText{
+    font-size: .7rem;
+    margin-bottom: 3px;
   }
 }
