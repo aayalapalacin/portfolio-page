@@ -16,8 +16,8 @@ let projectContent = [
 		"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
 		"link": "https://levis-the-archive.vercel.app/",
 		"code": "https://github.com/aayalapalacin/theArchive",
-		"photo": <img className="d-none d-md-block" src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " cover" }} />,
-		"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{  height: "86%", objectFit: " cover" }} />
+		"photo": <img className="d-none d-md-block" src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " contain" }} />,
+		"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{  height: "86%", objectFit: " contain" }} />
 	},
 	{
 		"title": "Ambee",
@@ -25,8 +25,8 @@ let projectContent = [
 		"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
 		"link": "https://expo.dev/@alexayala91/Ambee?serviceType=classic&distribution=expo-go",
 		"code": "https://github.com/aayalapalacin/Ambee",
-		"photo": <img className="d-none d-md-block" src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " cover" }} />,
-		"photoMobileView": <img className="w-100 d-block d-md-none" src={ambee} alt="ambee" style={{height: "93%", objectFit: " cover" }} />
+		"photo": <img className="d-none d-md-block" src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " contain" }} />,
+		"photoMobileView": <img className="w-100 d-block d-md-none" src={ambee} alt="ambee" style={{height: "93%", objectFit: " contain" }} />
 	},
 	{
 		"title": "Miami Dade College CNA ",
@@ -34,8 +34,8 @@ let projectContent = [
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 		"link": "https://ce.mdc.edu/contentManagement.do?method=load&code=CM000007",
 		"code": "n/a",
-		"photo": <img className="d-none d-md-block" src={cna} alt="cna" style={{ height: "228px", objectFit: " cover" }} />,
-		"photoMobileView": <img className="d-block d-md-none w-100" src={cnaMobile} alt="cna mobile" style={{ height: "75%", objectFit: " cover" }} />
+		"photo": <img className="d-none d-md-block" src={cna} alt="cna" style={{ height: "228px", objectFit: " contain" }} />,
+		"photoMobileView": <img className="d-block d-md-none w-100" src={cnaMobile} alt="cna mobile" style={{ height: "75%", objectFit: " contain" }} />
 	},
 	{
 		"title": "Miami Dade College Skillshop ",
@@ -43,8 +43,8 @@ let projectContent = [
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 		"link": "https://www.mdc.edu/skillshop/",
 		"code": "n/a",
-		"photo": <img className="d-none d-md-block" src={skillshop} alt="skillshop" style={{ height: "252px", objectFit: " cover" }} />,
-		"photoMobileView": <img className="d-block d-md-none w-100" src={skillshopMobile} alt="skillshop mobile" style={{ height: "75%", objectFit: " cover" }} />
+		"photo": <img className="d-none d-md-block" src={skillshop} alt="skillshop" style={{ height: "252px", objectFit: " contain" }} />,
+		"photoMobileView": <img className="d-block d-md-none w-100" src={skillshopMobile} alt="skillshop mobile" style={{ height: "75%", objectFit: " contain" }} />
 	},
 ]
 const Projects = () => {
@@ -57,10 +57,15 @@ const Projects = () => {
 			<div className="dropdown-mobile text-center d-block d-md-none">
 
 				<div className="dropdown">
-					<button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+					<button className="btn bg-avo-green dropdown-toggle mb-2 " 
+					type="button" 
+					data-bs-toggle="dropdown" 
+					aria-expanded="false"
+					style={{boxShadow: "0px 1px 4px 1px"}}
+					>
 						{projectTitle}
 					</button>
-					<ul className="dropdown-menu">
+					<ul className="dropdown-menu bg-soft-green " >
 
 						{projectContent.map((item, i) => {
 							let titleNoSpaces = item.title.replace(/\s/g, '')
@@ -73,11 +78,13 @@ const Projects = () => {
 										onClick={() => {
 											setProjectTitle(item.title)
 											setActive(i)}}
-										className={`dropdown-item text-dark m-auto ${i == 0 ? 'active' : ''}`}
+										className={`dropdown-item  m-auto rounded px-0 ${i == 0 ? 'active' : ''}`}
 										id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill"
 										data-bs-target={`#v-pills-${titleNoSpaces}`}
 										role="tab" aria-controls={`v-pills-${titleNoSpaces}`}
-										aria-selected="true">
+										aria-selected="true"
+										style={{boxShadow: "-1px 4px 5px 0px #00000066"}}
+									>
 										<a className="dropdown-item">
 											{item.title}
 										</a>

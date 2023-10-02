@@ -9,6 +9,9 @@ body{
 .bg-army-green{
     background-color: #2C4001;
 }
+.bg-soft-army-green{
+    background-color: #727c5d;
+}
 .dark-green{
     color: #1A2601;
 }
@@ -20,6 +23,9 @@ body{
 }
 .bg-avo-green{
     background-color: #C6D93B;
+}
+.bg-soft-green{
+    background-color: #bac5a4c9;
 }
 .beige{
     color: #D9CFA0;
@@ -39,6 +45,9 @@ body{
 }
 .bg-blue{
     background-color:#417CF2;
+}
+.bg-soft-blue{
+    background-color:#417cf26e;
 }
 
 .bg-faint-blue{
