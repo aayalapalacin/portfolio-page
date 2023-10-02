@@ -93,7 +93,7 @@
 }
 
 .btn-check:checked+.btn, .btn.active, .btn.show, .btn:hover .btn:first-child:active, :not(.btn-check)+.btn:active{
-  background-color:#c6d93b5c !important;
+  background-color:#dae5888f !important;
 }
 
 .dropdown-item.active {
