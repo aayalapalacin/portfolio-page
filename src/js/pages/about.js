@@ -7,7 +7,28 @@ import profile from "../../assets/img/portrait/profile.png"
 import "../../styles/about.css"
 const About = () => {
 	const homeRef = useRef(null);
+let arrowData = [
+	{
+		end:"about-work",
+		startAnchor:"top"
 
+},
+	{
+		end:"about-fun-fact",
+		startAnchor:"top"
+
+},
+	{
+		end:"about-arts",
+		startAnchor:"bottom"
+
+},
+	{
+		end:"about-culture",
+		startAnchor:"bottom"
+
+},
+]
 	return (
 		<div className="container " >
 			<div className="about-title text-center">
@@ -41,34 +62,23 @@ const About = () => {
 				</div>
 
 			</div>
-			<Xarrow
-				color="#2C4001"
-				start={homeRef} //can be react ref
-				end="about-work" //or an id
-				startAnchor="top"
-				endAnchor="middle"
-			/>
-			<Xarrow
-				color="#2C4001"
-				start={homeRef} //can be react ref
-				end="about-fun-fact" //or an id
-				startAnchor="top"
-				endAnchor="middle"
-			/>
-			<Xarrow
-				color="#2C4001"
-				start={homeRef} //can be react ref
-				end="about-arts" //can be react ref
-				startAnchor="bottom"
-				endAnchor="middle"
-			/>
-			<Xarrow
-				color="#2C4001"
-				start={homeRef} //can be react ref
-				end="about-culture" //or an id
-				startAnchor="bottom"
-				endAnchor="middle"
-			/>
+			<div className="d-none d-md-block">
+				{arrowData.map((item,i)=>{
+					return(
+						<div key={i}>
+							<Xarrow
+								divContainerStyle
+								color="#2C4001"
+								start={homeRef} 
+								end={item.end} 
+								startAnchor={item.startAnchor}
+								endAnchor="middle"
+							/>
+						</div>
+					);
+				})}
+			</div>
+			
 			<div className="photos" style={{ width: "59%" }}>
 				
 				<AboutModal />
