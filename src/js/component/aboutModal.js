@@ -57,48 +57,48 @@ const onClickPhotoArray = [
   {
     title: "about-fun-fact",
     img: funFact,
+    left: "12%",
     bottom: "262px",
-    left: "82px"
   },
   {
     title: "about-path",
     img: briefcase,
     bottom: "548px",
-    right: "80px"
+    right: "12%"
   },
   {
     title: "about-culture",
     img: puertoRico,
-    left: "553px",
-    bottom: "264px"
+    bottom: "264px",
+    left: "84%",
   },
   {
     title: "about-performing-arts",
     img: performingArts,
     bottom: "544px",
-    left: "381px"
+    left: "58%"
   },
 ]
 const onClickPhotoTitleArray = [
   {
     title: "Fun Fact",
     bottom: "254px",
-    left: "106px"
+    left: "16%"
   },
   {
     title: "Culture",
-    left: "789px",
+    left: "120%",
     bottom: "267px"
   },
   {
     title: "Path to Tech",
     bottom: "541px",
-    right: "154px"
+    right: "23%"
   },
   {
     title: "Hobbies",
     bottom: "539px",
-    left: "490px"
+    left: "75%"
   },
 ]
 function AboutModal() {

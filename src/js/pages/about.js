@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import Xarrow from "react-xarrows";
 import AboutModal from "../component/aboutModal";
 // about images imports
@@ -6,7 +6,7 @@ import profile from "../../assets/img/portrait/profile.png"
 
 import "../../styles/about.css"
 const About = () => {
-	const homeRef = useRef(null);
+
 let arrowData = [
 	{
 		end:"about-work",
@@ -29,26 +29,79 @@ let arrowData = [
 
 },
 ]
+let arrowRows = [
+	
+		{
+			level:"top-row",
+			display:"d-flex",
+			content:[
+				{
+					about:"about-work",
+					width:"w-50"
+				},
+				{
+					about:"about-fun-fact",
+					width:"w-50"
+				},
+					]
+		},
+		{
+			level:"mid-row",
+			display:"",
+			content:[
+				{
+					about:"about-photo",
+					width:""
+				}
+					]
+		},
+		{
+			level:"low-row",
+			display:"d-flex",
+			content:[
+				{
+					about:"about-culture",
+					width:"w-50"
+				},
+				{
+					about:"about-arts",
+					width:"w-50"
+				},
+					]
+		},
+		
+	
+]
 	return (
-		<div className="container " >
+		<div className="container d-none d-md-block " >
 			<div className="about-title text-center">
 				<h1>About Me</h1>
 				<p>Click to learn more about my personal life</p>
 			</div>
 			
 			<div className="content my-5">
-				<div className=" top-row d-flex text-center " style={{ height: "25vh" }}>
-					<div className="about-work-container w-50"  >
-						<p id="about-work" className="invisible" >test</p>
-					</div>
-					
-					<div className="about-fun-fact-container w-50" >
-						<p id="about-fun-fact" className="invisible" >test</p>
-					</div>
-				</div>
-				<div className=" mid-row  text-center" style={{ height: "25vh" }}>
+				{arrowRows.map((item,i)=>{
+					return(
+						<div key={i} className={` ${item.level} ${item.display} text-center `} style={{ height: "25vh" }}>
+							{item.content.map((contentItem,i)=>{
+								return(
+									<>		
+										<div key={i} className={`${contentItem.about}-container ${contentItem.width}`} >
+											<p id={contentItem.about} className="invisible" >test</p>
+										</div>
+									</>
+								);
+							})}
+							
+							
+						</div>
+				
+					);
+				})}
+
+				{/* <div className=" mid-row  text-center" style={{ height: "25vh" }}>
 					<div className="about-photo-container "  >
-						<p ref={homeRef} className="invisible" >test</p>
+						<p id="about-photo" className="invisible" >test</p>
 					</div>
 					
 				</div>
@@ -59,7 +112,7 @@ let arrowData = [
 					<div className="about-arts-container w-50" >
 						<p id="about-arts" className="invisible" >test</p>
 					</div>
-				</div>
+				</div> */}
 
 			</div>
 			<div className="d-none d-md-block">
@@ -69,7 +122,7 @@ let arrowData = [
 							<Xarrow
 								divContainerStyle
 								color="#2C4001"
-								start={homeRef} 
+								start="about-photo" 
 								end={item.end} 
 								startAnchor={item.startAnchor}
 								endAnchor="middle"
