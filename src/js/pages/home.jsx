@@ -31,7 +31,10 @@ const Home = () => {
 	let songArray = [sonrisa, precious, blue]
 	
 	return (
-		<div className="container bg-faint-blue rounded py-md-3 py-2 ps-2 px-md-4">
+		<div 
+		className="container bg-faint-blue d-flex align-items-center  rounded py-md-3 py-2 ps-2 px-md-4"
+		style={{height:"75vh"}}
+		>
 			<div className="row">
 				<div className="col-6 ">
 					<div className="name-title-desc-container border rounded p-md-3 p-2 ">

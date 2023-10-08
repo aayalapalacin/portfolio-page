@@ -119,22 +119,22 @@ const About = () => {
 				})}
 			</div>
 
-			<div className="photos" style={{ width: "59%" }}>
-
+			<div className=" d-none d-md-block photos" style={{ width: "59%" }}>
 				<AboutModal />
-
 				<img
 					className=" about-photo position-relative rounded-circle w-25"
 					src={profile}
 					alt="profile"
 					style={{
-						bottom: "612px",
-						left: "476px"
+						bottom: "649px",
+						left: "72%"
 					}}
 				/>
-
-
-
+			</div>
+			<div
+				className="mobilePhotos d-flex d-md-none"
+			>
+				<AboutModal />
 			</div>
 		</div>
 	);

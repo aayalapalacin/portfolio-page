@@ -17,7 +17,7 @@ let projectContent = [
 		"link": "https://levis-the-archive.vercel.app/",
 		"code": "https://github.com/aayalapalacin/theArchive",
 		"photo": <img className="d-none d-md-block" src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " contain" }} />,
-		"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{  height: "86%", objectFit: " contain" }} />
+		"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{ height: "86%", objectFit: " contain" }} />
 	},
 	{
 		"title": "Ambee",
@@ -26,7 +26,7 @@ let projectContent = [
 		"link": "https://expo.dev/@alexayala91/Ambee?serviceType=classic&distribution=expo-go",
 		"code": "https://github.com/aayalapalacin/Ambee",
 		"photo": <img className="d-none d-md-block" src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " contain" }} />,
-		"photoMobileView": <img className="w-100 d-block d-md-none" src={ambee} alt="ambee" style={{height: "93%", objectFit: " contain" }} />
+		"photoMobileView": <img className="w-100 d-block d-md-none" src={ambee} alt="ambee" style={{ height: "93%", objectFit: " contain" }} />
 	},
 	{
 		"title": "Miami Dade College CNA ",
@@ -57,11 +57,11 @@ const Projects = () => {
 			<div className="dropdown-mobile text-center d-block d-md-none">
 
 				<div className="dropdown">
-					<button className="btn bg-avo-green dropdown-toggle mb-2 " 
-					type="button" 
-					data-bs-toggle="dropdown" 
-					aria-expanded="false"
-					style={{boxShadow: "0px 1px 4px 1px"}}
+					<button className="btn bg-avo-green dropdown-toggle mb-2 "
+						type="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
+						style={{ boxShadow: "0px 1px 4px 1px" }}
 					>
 						{projectTitle}
 					</button>
@@ -77,13 +77,14 @@ const Projects = () => {
 										key={i}
 										onClick={() => {
 											setProjectTitle(item.title)
-											setActive(i)}}
+											setActive(i)
+										}}
 										className={`dropdown-item  m-auto rounded px-0 ${i == 0 ? 'active' : ''}`}
 										id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill"
 										data-bs-target={`#v-pills-${titleNoSpaces}`}
 										role="tab" aria-controls={`v-pills-${titleNoSpaces}`}
 										aria-selected="true"
-										style={{boxShadow: "-1px 4px 5px 0px #00000066"}}
+										style={{ boxShadow: "-1px 4px 5px 0px #00000066" }}
 									>
 										<a className="dropdown-item">
 											{item.title}
@@ -97,6 +98,7 @@ const Projects = () => {
 					</ul>
 				</div>
 			</div>
+			{/* <div className="content d-flex align-items-center" style={{height:"75vh"}}> */}
 			<div className="row">
 				<div className="col-3 text-center d-none d-md-block">
 					<div className="benchPhoto mb-2 ">
@@ -125,13 +127,13 @@ const Projects = () => {
 							let projectTitleNoSpaces = project.title.replace(/\s/g, '')
 							return (
 								<>
-									<div 
-									className={`tab-pane fade   ${index == active ? 'show active' : ''}`}
-									 key={index} 
-									 id={`v-pills-${projectTitleNoSpaces}`} 
-									 role="tabpanel" 
-									 aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`}
-									  tabIndex="0">
+									<div
+										className={`tab-pane fade   ${index == active ? 'show active' : ''}`}
+										key={index}
+										id={`v-pills-${projectTitleNoSpaces}`}
+										role="tabpanel"
+										aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`}
+										tabIndex="0">
 										<div className=" project-container d-flex align-items-center  rounded p-3 mb-5 " >
 											<div className=" col-6 project-content-date ps-2 pe-5">
 
@@ -145,7 +147,7 @@ const Projects = () => {
 													</p>
 												</div>
 												<div className=" d-block d-md-flex project-description">
-														{/* title laptop */}
+													{/* title laptop */}
 													<h6 className=" d-none d-md-block me-2 title fw-bold" >Description: </h6>
 													{/* title mobile */}
 													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Descripton: </p>
@@ -153,13 +155,13 @@ const Projects = () => {
 													<p className="projectText d-none d-md-block">
 														{project.description}
 													</p>
-											    	{/* content mobile */}
-													<p className="projectText d-block d-md-none overflow-y-scroll mb-3" style={{height:"106px"}}>
+													{/* content mobile */}
+													<p className="projectText d-block d-md-none overflow-y-scroll mb-3" style={{ height: "106px" }}>
 														{project.description}
 													</p>
 												</div>
 												<div className=" d-block d-md-flex project-languages">
-														{/* title laptop */}
+													{/* title laptop */}
 													<h6 className=" d-none d-md-block me-2 title fw-bold" >Languages/Libraries:</h6>
 													{/* title mobile */}
 													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Language4/Libraries:</p>
@@ -177,7 +179,7 @@ const Projects = () => {
 													</div>
 												</div>
 												<div className=" d-block d-md-flex  project-link">
-														{/* title laptop */}
+													{/* title laptop */}
 													<h6 className=" d-none d-md-block me-2 title fw-bold">Link: </h6>
 													{/* title mobile */}
 													<p className=" d-block d-md-none me-2 title projectText fw-bold">Link: </p>
@@ -186,7 +188,7 @@ const Projects = () => {
 													</p>
 												</div>
 												<div className=" d-block d-md-flex project-code">
-														{/* title laptop */}
+													{/* title laptop */}
 													<h6 className=" d-none d-md-block me-2 title  fw-bold" >Code:</h6>
 													{/* title mobile */}
 													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Code:</p>
@@ -209,6 +211,8 @@ const Projects = () => {
 
 				</div>
 			</div>
+
+			{/* </div> */}
 
 		</div>
 	);
