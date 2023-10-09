@@ -126,7 +126,7 @@ const About = () => {
 					src={profile}
 					alt="profile"
 					style={{
-						bottom: "649px",
+						bottom: "693px",
 						left: "72%"
 					}}
 				/>
