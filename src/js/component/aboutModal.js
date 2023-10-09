@@ -86,14 +86,14 @@ const onClickPhotoTitleArray = [
     left: "16%"
   },
   {
-    title: "Culture",
-    left: "120%",
-    bottom: "267px"
-  },
-  {
     title: "Path to Tech",
     bottom: "541px",
     right: "23%"
+  },
+  {
+    title: "Culture",
+    left: "120%",
+    bottom: "267px"
   },
   {
     title: "Hobbies",
@@ -106,62 +106,74 @@ const onClickPhotoTitleArray = [
 function AboutModal() {
   const [modalID, setModalID] = useState(0)
   return (
-    <div className='about-container d-flex align-items-center' style={{height:"44vh"} }>
+    <div className='about-container d-flex align-items-center' style={{height:"52vh"} }>
       <div className='row d-flex d-md-none mobileContainer'>
         <div className='col-5 d-flex align-items-center justify-content-center profilePic text-center'>
           <img
             className=" about-photo position-relative rounded-circle "
             src={profile}
             alt="profile"
-            style={{width:"86%", height:"70%"}}
+            style={{width:"86%", height:"60%"}}
           />
         </div>
         <div className='col-7 ps-0 onClick photos'>
-          <div className='photos-row-1 text-center'>
-            {
-            
-            onClickPhotoArray.map((onClickImgData, index) => {
-
-              return (
-                <>
-                  {index < 2 ?
-                    <img
-                      onClick={() => setModalID(index)}
-                      style={{margin:"7px",width:"35%"}}
-                      className={` rounded-circle glow position-relative  p-1 ${onClickImgData.title}`}
-                      src={onClickImgData.img}
-                      alt={onClickImgData.title}
-                      key={index}
-                    />
-                    :
-                    ""}
-
-
-                </>
-              );
-            })}
+          <div className='row'>
+              <div className='col '>
+                {onClickPhotoArray.map((photoData,i)=>{
+                  return(
+                      <>
+                        {i < 2 ? 
+                          <>
+                            <img
+                                onClick={() => setModalID(0)}
+                                style={{width:"65%"}}
+                                className={` my-2 rounded-circle glow position-relative  p-1 ${photoData.title}`}
+                                src={photoData.img}
+                                alt={photoData.title}
+                                key={0}
+                              />
+                            <div>
+                          {onClickPhotoTitleArray[i].title}
+                            </div>        
+                          </>
+                          :""}
+                      </>
+                    );
+                  }
+                )
+              }
+              
+                
+              </div>
+              <div className='col'>
+              {onClickPhotoArray.map((photoData,i)=>{
+                  return(
+                      <>
+                        {i > 1 ? 
+                          <>
+                            <img
+                                onClick={() => setModalID(0)}
+                                style={{width:"65%"}}
+                                className={` my-2 rounded-circle glow position-relative  p-1 ${photoData.title}`}
+                                src={photoData.img}
+                                alt={photoData.title}
+                                key={0}
+                              />
+                            <div>
+                          {onClickPhotoTitleArray[i].title}
+                            </div>        
+                          </>
+                          :""}
+                      </>
+                    );
+                  }
+                )
+              }
+              </div>
           </div>
+
           <div className='photos-row-2 text-center'>
-            {onClickPhotoArray.map((onClickImgData, index) => {
-
-              return (
-                <>
-                  {index > 1 ?
-                    <img
-                      onClick={() => setModalID(index)}
-                      style={{margin:"7px",width:"35%"}}
-                      className={` rounded-circle glow position-relative  p-1 ${onClickImgData.title}`}
-                      src={onClickImgData.img}
-                      alt={onClickImgData.title}
-                      key={index}
-                    />
-                    :
-                    ""}
-
-
-                </>
-              );
-            })}
+            
           </div>
 
         </div>
