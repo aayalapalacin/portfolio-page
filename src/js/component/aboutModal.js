@@ -11,6 +11,15 @@ import travel from "../../assets/img/webpage/travel.jpg"
 import profile from "../../assets/img/portrait/profile.png"
 
 const modalContent = [
+  [
+    {
+      title: "Teaching to Tech",
+      text: "Prior to pursuing a career as a developer, I taught in public school for nearly 5 years. During the pandemic, teaching remotely, my school used many innovative educational platforms that made a great impression on me. Some of the features creating incredibly engaging and effective virtual lessons or intuitive and powerful tools for grading and tracking students progress. After some research and talking to others in the tech industry, I decided to pursue a career as a computer programmer, and make others feel the same as I did as an educator",
+      contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/anTtMRaQLsM?si=eC0-eIzFwdpJcqTt" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
+      mobileContentImg: <iframe className="responsive-iframe" src="https://www.youtube.com/embed/anTtMRaQLsM?si=eC0-eIzFwdpJcqTt" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
+      contentImgTxt: "A demo video of one of the education tools that inspired my transition into tech, Nearpod"
+    }
+  ],
   [{
     title: "Movie reference",
     text: 'As many people do, I enjoy movies and comedy; so much to a point where I am contantly making references to jokes or movie scenes from virtually any conversation topic. -Friend "Man medicine is expensive" -Me "Have you seen Dallas Buyers Club ',
@@ -25,15 +34,6 @@ const modalContent = [
     mobileContentImg: <img className="w-100" src={avoKeys} alt="avokeys" />,
     contentImgTxt: "Here is a logo that a collegue made for me, representing 'AvoKeys'"
   }
-  ],
-  [
-    {
-      title: "Teaching to Tech",
-      text: "Prior to pursuing a career as a developer, I taught in public school for nearly 5 years. During the pandemic, teaching remotely, my school used many innovative educational platforms that made a great impression on me. Some of the features creating incredibly engaging and effective virtual lessons or intuitive and powerful tools for grading and tracking students progress. After some research and talking to others in the tech industry, I decided to pursue a career as a computer programmer, and make others feel the same as I did as an educator",
-      contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/anTtMRaQLsM?si=eC0-eIzFwdpJcqTt" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
-      mobileContentImg: <iframe className="responsive-iframe" src="https://www.youtube.com/embed/anTtMRaQLsM?si=eC0-eIzFwdpJcqTt" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
-      contentImgTxt: "A demo video of one of the education tools that inspired my transition into tech, Nearpod"
-    }
   ],
   [{
     title: "Puerto Rico",
@@ -182,7 +182,7 @@ function AboutModal() {
                                 alt={photoData.title}
                                 key={0}
                               />
-                            <div>
+                            <div className={`${onClickPhotoTitleArray[i].title == "Culture" ? "mb-3" : ""}`}>
                           {onClickPhotoTitleArray[i].title}
                             </div>        
                           </>
