@@ -91,22 +91,22 @@ const onClickPhotoTitleArray = [
   {
     title: "Path to Tech",
     bottom: "537px",
-    left: "11%"
+    left: "14%"
   },
   {
     title: "Fun Fact",
     bottom: "291px",
-    right: "15%"
+    right: "9%"
   },
   {
     title: "Culture",
-    left: "77%",
+    left: "87%",
     bottom: "284px"
   },
   {
     title: "Hobbies",
     bottom: "537px",
-    left: "58%"
+    left: "71%"
   },
 ]
 
