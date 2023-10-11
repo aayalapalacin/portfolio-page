@@ -27,13 +27,14 @@ import point from "../../assets/img/portrait/point.png"
 const Home = () => {
 	const [showPopover, setShowPopver] = useState(false)
 	const [songIndex, setSongIndex] = useState(0)
-	let imgArray = [javascript, boostrap, reactNative, css, react, html, jekyll, materialUi, python, reactNativePaper, sql]
+	const [caroIndex, setCaroIndex] = useState(0)
+	let imgArray = [react,materialUi, boostrap, reactNative, reactNativePaper,javascript, css,  html, jekyll,  python, sql]
 	let songArray = [sonrisa, precious, blue]
 	
 	return (
 		<div 
-		className="container bg-faint-blue d-flex align-items-center  rounded py-md-3 py-2 ps-2 px-md-4"
-		style={{height:"75vh"}}
+		className="container home-container bg-faint-blue d-flex align-items-center  rounded py-md-3 py-2 ps-2 px-md-4"
+		
 		>
 			<div className="row">
 				<div className="col-6 ">
@@ -66,9 +67,9 @@ const Home = () => {
 						</div>
 					</div>
 					{/* music player laptop view */}
-					<div className=" home-music-player d-none d-md-block row mt-5">
+					<div className=" home-music-player d-none d-md-block text-start row mt-4">
 						<h5 className="mb-3 ms-1">Original Music</h5>
-						<div className="audioPopver d-flex">
+						<div className="audioPopver d-flex justify-content-start mb-4">
 
 							<div className="w-50"
 								onMouseEnter={() => setShowPopver(!showPopover)}
@@ -151,13 +152,13 @@ const Home = () => {
 							
 						{/* programming languages laptop view */}
 						<div className=" home-prog-languages col-7 d-none d-md-flex  align-items-center ">
-							<div id="programmingLanguage" data-bs-ride="carousel" className="carousel slide carousel-fade ">
+							<div id="programmingLanguage" data-bs-ride="carousel" className="carousel slide carousel-fade  ">
 								<div className="carousel-inner">
 
 									{imgArray.map((item, i) => {
 
 										return (
-											<div key={i} className={`carousel-item  data-bs-interval="1" ${i == 0 ? 'active' : ''}`}>
+											<div key={i} className={`carousel-item   ${i == caroIndex ? 'active' : ''}`}>
 												<img src={item} className=" object-fit-contain d-block w-100 " alt={item.split("/")[1]} style={{ height: "220px" }} />
 											
 											</div>
@@ -167,19 +168,44 @@ const Home = () => {
 
 								</div>
 								<button className="carousel-control-prev" type="button" data-bs-target="#programmingLanguage" data-bs-slide="prev">
-									<span className="carousel-control-prev-icon" aria-hidden="true"></span>
-									<span className="visually-hidden">Previous</span>
+									<span className="carousel-control-prev-icon"
+									 aria-hidden="true"
+									 onClick={()=> {
+										if(caroIndex == 0){
+											setCaroIndex(imgArray.length-1)
+										}
+										else{
+
+											setCaroIndex(caroIndex-1)
+										}
+							
+										console.log(caroIndex,"caro")
+											}
+										}
+									 ></span>
+									<span className="visually-hidden" >Previous</span>
 								</button>
 								<button className="carousel-control-next" type="button" data-bs-target="#programmingLanguage" data-bs-slide="next">
-									<span className="carousel-control-next-icon" aria-hidden="true"></span>
-									<span className="visually-hidden">Next</span>
+									<span 
+									className="carousel-control-next-icon" 
+									aria-hidden="true"
+									onClick={()=> {
+										if(caroIndex == imgArray.length-1){
+											setCaroIndex(0)
+										}
+										else{
+
+											setCaroIndex(caroIndex+1)}}
+										}
+									></span>
+									<span className="visually-hidden" >Next</span>
 								</button>
 							</div>
 						</div>
 					</div>
 						{/* music player mobile view */}
 						
-						<div className=" home-music-player d-block d-md-none row text-center">
+						<div className=" home-music-player d d-md-none row text-center">
 						<h6 className="my-2 ">Original Music</h6>
 						<div className="audioPopver d-flex">
 							<div className="w-100"

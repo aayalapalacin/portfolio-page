@@ -44,7 +44,7 @@
     margin-top:2px;
   }
   .projectText{
-    font-size:3vw;
+    font-size:.9rem;
   }
   
   .project-container{
@@ -79,7 +79,7 @@
  }
 
  /* mobile view */
- @media screen and (max-width: 380px) {
+ @media screen and (max-width: 415px) {
   .rhap_additional-controls, .rhap_volume-controls{
     display: none;
   }
@@ -87,7 +87,7 @@
     justify-content: center;
   }
   .projectText{
-    /* font-size: .7rem; */
+     font-size: 3vw;
     margin-bottom: 3px;
   }
 }

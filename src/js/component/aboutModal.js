@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 
 import funFact from "../../assets/img/webpage/funFact.png"
 import briefcase from "../../assets/img/webpage/briefcase.png"
@@ -13,12 +15,14 @@ const modalContent = [
     title: "Movie reference",
     text: 'As many people do, I enjoy movies and comedy; so much to a point where I am contantly making references to jokes or movie scenes from virtually any conversation topic. -Friend "Man medicine is expensive" -Me "Have you seen Dallas Buyers Club ',
     contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/JsGZAN0ol3U?si=4hY16IN3EfYCmbXb" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
+    mobileContentImg: <iframe className="responsive-iframe" src="https://www.youtube.com/embed/JsGZAN0ol3U?si=4hY16IN3EfYCmbXb" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
     contentImgTxt: "One of my favorite scenes from Ghost, where Whoopi Goldberg's characters is forced to donate money"
   },
   {
     title: "Spirit Vegetable",
     text: "Avocado is my spirit vegetable, something I identify with culturally and aesthetically. My musician name is AvoKeys (Avcado + Keyboard).To expand, avocdoes are a big stable of latin cuisine, being a key acompaniment to most popular dishes. Avocadoes are also assosciated with health, like using avocado oil for cooking, using products with avocado for the skin. It is a very positive force that I wanted to emulate in my music. ",
     contentImg: <img className="w-100" src={avoKeys} alt="avokeys" />,
+    mobileContentImg: <img className="w-100" src={avoKeys} alt="avokeys" />,
     contentImgTxt: "Here is a logo that a collegue made for me, representing 'AvoKeys'"
   }
   ],
@@ -27,6 +31,7 @@ const modalContent = [
       title: "Teaching to Tech",
       text: "Prior to pursuing a career as a developer, I taught in public school for nearly 5 years. During the pandemic, teaching remotely, my school used many innovative educational platforms that made a great impression on me. Some of the features creating incredibly engaging and effective virtual lessons or intuitive and powerful tools for grading and tracking students progress. After some research and talking to others in the tech industry, I decided to pursue a career as a computer programmer, and make others feel the same as I did as an educator",
       contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/anTtMRaQLsM?si=eC0-eIzFwdpJcqTt" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
+      mobileContentImg: <iframe className="responsive-iframe" src="https://www.youtube.com/embed/anTtMRaQLsM?si=eC0-eIzFwdpJcqTt" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
       contentImgTxt: "A demo video of one of the education tools that inspired my transition into tech, Nearpod"
     }
   ],
@@ -34,6 +39,7 @@ const modalContent = [
     title: "Puerto Rico",
     text: "I identify with being a latino, of Puertorican descent. It was actually in my later years when I made an effort to connect with my culture. Now, I am familiar with cooking latin cuisine, playing latin music, and dancing several latin genres. Also, becoming fluent in Spanish is another goal I'm very content with reaching.  ",
     contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/ysmhfLM8rZk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>,
+    mobileContentImg: <iframe className="responsive-iframe" src="https://www.youtube.com/embed/ysmhfLM8rZk" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen ></iframe>,
     contentImgTxt: "Me dancing Bomba, an afro-puertrican dance where there is a connection between the dancer and drummer."
   }],
   [
@@ -41,12 +47,14 @@ const modalContent = [
       title: "Music",
       text: "I initially dedicated my studies to music peformance, at community college. Afterwards I would participate in several dance performance groups in my undergrad at Umass Amherst. It's a big part of who I am.",
       contentImg: <iframe width="545" height="300" src="https://www.youtube.com/embed/8dw3gVgrl78?clip=UgkxW4v8fP4bQO_cPLFJpTHgx76ACIO_Af1n&amp;clipt=EInTBRjdtAY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
+      mobileContentImg: <iframe className="responsive-iframe" src="https://www.youtube.com/embed/8dw3gVgrl78?clip=UgkxW4v8fP4bQO_cPLFJpTHgx76ACIO_Af1n&amp;clipt=EInTBRjdtAY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>,
       contentImgTxt: "My band covering a song by Roy Ayers, 'Vibrations'."
     },
     {
       title: "Travel",
       text: "I have been fortunte to travel both domestically and internationally. My favorite places I have visited are New Orleans, and the Amazon river. I have been to Latin American countries such as Colombia, Guatemala, Mexico, Panama. My goal is to travel to a country where I don't know the native language. ",
       contentImg: <img className="w-100" src={travel} alt="travel" />,
+      mobileContentImg: <img className="w-100" src={travel} alt="travel" />,
       contentImgTxt: "Me participating in an amazing tour of the Amazon river, where Brazil, Ecuador, and Colombia align!"
     }
 
@@ -55,55 +63,59 @@ const modalContent = [
 
 const onClickPhotoArray = [
   {
-    title: "about-fun-fact",
-    img: funFact,
-    left: "14%",
-    bottom: "322px",
-  },
-  {
     title: "about-path",
     img: briefcase,
-    bottom: "589px",
-    right: "10%"
+    bottom: "532px",
+    left: "15%"
+  },
+  {
+    title: "about-fun-fact",
+    img: funFact,
+    right: "10%",
+    bottom: "295px",
   },
   {
     title: "about-culture",
     img: puertoRico,
-    bottom: "303px",
-    left: "82%",
+    bottom: "282px",
+    left: "78%",
   },
   {
     title: "about-performing-arts",
     img: performingArts,
-    bottom: "583px",
-    left: "57%"
+    bottom: "536px",
+    left: "54%"
   },
 ]
 const onClickPhotoTitleArray = [
   {
-    title: "Fun Fact",
-    bottom: "306px",
-    left: "19%"
+    title: "Path to Tech",
+    bottom: "537px",
+    left: "11%"
   },
   {
-    title: "Path to Tech",
-    bottom: "591px",
-    right: "5%"
+    title: "Fun Fact",
+    bottom: "291px",
+    right: "15%"
   },
   {
     title: "Culture",
-    left: "91%",
-    bottom: "296px"
+    left: "77%",
+    bottom: "284px"
   },
   {
     title: "Hobbies",
-    bottom: "579px",
-    left: "74%"
+    bottom: "537px",
+    left: "58%"
   },
 ]
 
 
 function AboutModal() {
+	const onOpenModal = () => setOpen(true);
+	const onCloseModal = () => setOpen(false);
+
+  const [open, setOpen] = useState(false);
   const [modalID, setModalID] = useState(0)
   return (
     <div className='about-container d-flex align-items-center' style={{height:"52vh"} }>
@@ -119,13 +131,19 @@ function AboutModal() {
         <div className='col-7 ps-0 onClick photos'>
           <div className='row'>
               <div className='col '>
+                 {/* onClick photos to open modal mobile view */}
                 {onClickPhotoArray.map((photoData,i)=>{
                   return(
                       <>
                         {i < 2 ? 
                           <>
+                          
                             <img
-                                onClick={() => setModalID(0)}
+                                onClick={() => {
+                                  onOpenModal();
+                                  setModalID(i)
+                                  }
+                                }
                                 style={{width:"65%"}}
                                 className={` my-2 rounded-circle glow position-relative  p-1 ${photoData.title}`}
                                 src={photoData.img}
@@ -146,13 +164,18 @@ function AboutModal() {
                 
               </div>
               <div className='col'>
+                 {/* onClick photos to open modal mobile view */}
               {onClickPhotoArray.map((photoData,i)=>{
                   return(
                       <>
                         {i > 1 ? 
                           <>
                             <img
-                                onClick={() => setModalID(0)}
+                               onClick={() => {
+                                onOpenModal();
+                                setModalID(i)
+                                }
+                              }
                                 style={{width:"65%"}}
                                 className={` my-2 rounded-circle glow position-relative  p-1 ${photoData.title}`}
                                 src={photoData.img}
@@ -181,7 +204,7 @@ function AboutModal() {
       </div>
       <div className='laptop content d-none d-md-block'>
 
-        {/* onClick photos to open modal */}
+        {/* onClick photos to open modal laptop view */}
         <div
           data-bs-toggle="modal"
           data-bs-target="#aboutModal"
@@ -199,7 +222,9 @@ function AboutModal() {
             return (
               <>
                 <img
-                  onClick={() => setModalID(index)}
+                  onClick={() => {
+                    console.log("testee")
+                    setModalID(index)}}
                   className={` rounded-circle glow position-relative w-25 p-1 ${onClickImgData.title}`}
                   src={onClickImgData.img}
                   alt={onClickImgData.title}
@@ -241,7 +266,32 @@ function AboutModal() {
 
 
 
-      {/* modal content */}
+      {/* modal content  mobile */}
+      <Modal open={open} onClose={onCloseModal} center>
+      {modalContent[modalID].map((modalArray, index) => {
+              return (
+                <div className=' border-dark border-bottom mt-3 mt-md-0'>
+                <h2> {index + 1 + "."} {modalArray.title}</h2>
+        <p>
+        {modalArray.text}
+        </p>
+        <div className=' mb-2 p-2' style={{ border: "solid 2px #A65746" }}>
+                        <small className='fs-6'>
+                          {modalArray.contentImgTxt}
+
+                        </small>
+
+                      </div>
+                      <div className='contentImgContainer d-flex justify-content-center  mb-4 mb-md-0'>
+                        {modalArray.mobileContentImg}
+
+                      </div>
+                 
+                </div>
+              );
+            })}
+      </Modal>
+      {/* modal content  laptop*/}
 
 
       <div className="modal fade " id="aboutModal" tabIndex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
