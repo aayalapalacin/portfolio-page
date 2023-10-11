@@ -130,7 +130,7 @@ const About = () => {
 					src={profile}
 					alt="profile"
 					style={{
-						bottom: "668px",
+						bottom: "691px",
 						left: "72%"
 					}}
 				/>
