@@ -27,6 +27,7 @@ import point from "../../assets/img/portrait/point.png"
 const Home = () => {
 	const [showPopover, setShowPopver] = useState(false)
 	const [songIndex, setSongIndex] = useState(0)
+	const [mobileSongIndex, setMobileSongIndex] = useState(0)
 	const [caroIndex, setCaroIndex] = useState(0)
 	let imgArray = [react,materialUi, boostrap, reactNative, reactNativePaper,javascript, css,  html, jekyll,  python, sql]
 	let songArray = [sonrisa, precious, blue]
@@ -208,33 +209,29 @@ const Home = () => {
 						<div className=" home-music-player d d-md-none row text-center">
 						<h6 className="my-2 ">Original Music</h6>
 						<div className="audioPopver d-flex">
-							<div className="w-100"
-								onMouseEnter={() => setShowPopver(!showPopover)}
-								onMouseLeave={() => setShowPopver(!showPopover)}
-							>
-
+							<div className="w-100">
 								<AudioPlayer
 									showJumpControls={false}
 									showSkipControls 
 									
 									onClickNext={(e) => {
-										if (songIndex != songArray.length - 1) {
-											setSongIndex(songIndex + 1)
+										if (mobileSongIndex != songArray.length - 1) {
+											setMobileSongIndex(mobileSongIndex + 1)
 										}
 										else {
-											setSongIndex(0)
+											setMobileSongIndex(0)
 										}
 									}}
 									onClickPrevious={(e) => {
-										console.log(songIndex, "previous")
-										if (songIndex != 0) {
-											setSongIndex(songIndex - 1)
+									
+										if (mobileSongIndex != 0) {
+											setMobileSongIndex(mobileSongIndex - 1)
 										}
 										else {
-											setSongIndex(songArray.length - 1)
+											setMobileSongIndex(songArray.length - 1)
 										}
 									}}
-									src={songArray[songIndex]}
+									src={songArray[mobileSongIndex]}
 									className="audio"
 								/>
 							</div>
