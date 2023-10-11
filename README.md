@@ -1,42 +1,40 @@
-# Hello World with React boilerplate
+# Portfolio Page of Alex Ayala Palacin
+This website is used to display my projects with relevant programming languages, libraries, links, and repos. Additionally gives users access to my contact information, resume, and a bit about my personal life.
+## Features
 
-Start coding a react application
+- Responsive for screen size and mobile devices
+- Audio player displaying original music of Alex Ayala Palacin
+- Tab functionality for easy viewing of all projects
 
-> If you are working locally instead of using codespaces or gitpod, please follow [local installation steps](#local-installation-skip-if-you-are-working-on-codespaces-or-gitpod) and come back to this part of the readme.
 
-## How to start coding?
+## Installation
 
-- Install the packages with `$ npm install`.
-- Run the webpack server with `$ npm run start`
+1. Clone the repository or download the source code.
+2. Make sure you have Node.js and npm (Node Package Manager) installed on your system.
+3. Open a terminal or command prompt and navigate to the project's root directory.
+4. Run the following command to install the project dependencies:
 
-You can update the `styles/index.css` or `js/index.js` depending on your needs.
-Add more files into your, `./src/js/components` or styles folder as you need them.
-
-## Local Installation (skip if you are working on codespaces or gitpod)
-
-Download the boilerplate using git
+```shell
+npm install
 
 ```
-$ git clone https://github.com/4GeeksAcademy/react-hello.git
-$ cd react-hello
+
+## Usage
+
+After completing the installation steps, run the following command to start the development server:
+
+```shell
+npm run start
+
 ```
 
-## Publish your website!
+Once the server is running, open your browser and visit http://localhost:3000 to access the todo list application.
 
-This boilerplate is 100% compatible with the free [github pages](https://pages.github.com/) and [vercel](https://vercel.com/) hosting.
+## License
 
-It takes just 2 minutes to deploy, [click here to start the process](https://github.com/4GeeksAcademy/react-hello/blob/master/docs/DEPLOY.md).
+This project is licensed under the MIT License. Feel free to use and modify the code according to your needs.
 
-## Other features
+## Acknowledgements
 
-- Automatic Code Formatting: Use of [Prettier](https://prettier.io/) for automatic code indentation and formatting.
-- Error reporting: Use of [eslint](https://eslint.org/) for better error reporting.
-- Hot Deploy: Use of [Webpack Development Server](https://webpack.js.org/configuration/dev-server/) for hot deploy and live reload.
-- One-command publish of the code to github pages with `npm run deploy:github`.
-- Babel 7 (really fast).
+This application was used with React.js, bootstrap and integrated npm libraries: react-xarrows, react-responsive-modal, and react-h5-audio-player.
 
-### Contributors
-
-This template was built as part of the 4Geeks Academy [Coding Bootcamp](https://4geeksacademy.com/us/coding-bootcamp) by [Alejandro Sanchez](https://twitter.com/alesanchezr) and many other contributors. Find out more about our [Full Stack Developer Course](https://4geeksacademy.com/us/coding-bootcamps/part-time-full-stack-developer), and [Data Science Bootcamp](https://4geeksacademy.com/us/coding-bootcamps/datascience-machine-learning).
-
-You can find other templates and resources like this at the [school github page](https://github.com/4geeksacademy/).
