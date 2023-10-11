@@ -67,9 +67,9 @@ const Home = () => {
 						</div>
 					</div>
 					{/* music player laptop view */}
-					<div className=" home-music-player d-none d-md-block row mt-5">
+					<div className=" home-music-player d-none d-md-block text-center row mt-5">
 						<h5 className="mb-3 ms-1">Original Music</h5>
-						<div className="audioPopver d-flex">
+						<div className="audioPopver d-flex justify-content-center">
 
 							<div className="w-50"
 								onMouseEnter={() => setShowPopver(!showPopover)}
@@ -205,7 +205,7 @@ const Home = () => {
 					</div>
 						{/* music player mobile view */}
 						
-						<div className=" home-music-player d-block d-md-none row text-center">
+						<div className=" home-music-player d d-md-none row text-center">
 						<h6 className="my-2 ">Original Music</h6>
 						<div className="audioPopver d-flex">
 							<div className="w-100"

@@ -44,7 +44,7 @@
     margin-top:2px;
   }
   .projectText{
-    font-size:3vw;
+    font-size:.9rem;
   }
   
   .project-container{
@@ -87,7 +87,7 @@
     justify-content: center;
   }
   .projectText{
-    /* font-size: .7rem; */
+     font-size: 3vw;
     margin-bottom: 3px;
   }
 }

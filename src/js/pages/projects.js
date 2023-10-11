@@ -111,7 +111,23 @@ const Projects = () => {
 
 								return (
 									<>
-										<button key={i} onClick={() => setActive(i)} className={`nav-link text-dark m-auto ${i == 0 ? 'active' : ''}`} id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill" data-bs-target={`#v-pills-${titleNoSpaces}`} type="button" role="tab" aria-controls={`v-pills-${titleNoSpaces}`} aria-selected="true">{item.title}</button>
+										<button 
+											key={i} 
+											onClick={() => setActive(i)} 
+											className={`nav-link text-dark m-auto  ${i == 0 ? 'active' : ''}`} 
+											id={`v-pills-${titleNoSpaces}-tab`} 
+											data-bs-toggle="pill" 
+											data-bs-target={`#v-pills-${titleNoSpaces}`} 
+											type="button"
+											role="tab"
+											aria-controls={`v-pills-${titleNoSpaces}`} 
+											aria-selected="true"
+											style={{fontSize:".7rem"}}
+											>
+											
+											
+											{item.title}
+										</button>
 									</>
 								);
 							})
@@ -142,7 +158,7 @@ const Projects = () => {
 													<h6 className=" d-none d-md-block me-2 fw-bold title" >Title:</h6>
 													{/* title mobile */}
 													<p className=" d-block d-md-none me-2 fw-bold projectText  title" >Title:</p>
-													<p className="projectText mb-3 mb-md-1">
+													<p className="projectTextmb-3 mb-md-1">
 														{project.title}
 													</p>
 												</div>
