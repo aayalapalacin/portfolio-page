@@ -32,8 +32,8 @@ const Home = () => {
 	
 	return (
 		<div 
-		className="container bg-faint-blue d-flex align-items-center  rounded py-md-3 py-2 ps-2 px-md-4"
-		style={{height:"75vh"}}
+		className="container home-container bg-faint-blue d-flex align-items-center  rounded py-md-3 py-2 ps-2 px-md-4"
+		
 		>
 			<div className="row">
 				<div className="col-6 ">

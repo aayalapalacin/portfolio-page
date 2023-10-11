@@ -1,12 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import Xarrow from "react-xarrows";
 import AboutModal from "../component/aboutModal";
 // about images imports
 import profile from "../../assets/img/portrait/profile.png"
-
+import 'react-responsive-modal/styles.css';
+import { Modal } from 'react-responsive-modal';
 import "../../styles/about.css"
 const About = () => {
+	const [open, setOpen] = useState(false);
 
+	const onOpenModal = () => setOpen(true);
+	const onCloseModal = () => setOpen(false);
 	let arrowData = [
 		{
 			end: "about-work",
@@ -78,7 +82,7 @@ const About = () => {
 				<h1>About Me</h1>
 				<p>Click to learn more about my personal life</p>
 			</div>
-
+			
 			<div className="content my-5 d-none d-md-block">
 				{arrowRows.map((item, i) => {
 					return (
@@ -126,7 +130,7 @@ const About = () => {
 					src={profile}
 					alt="profile"
 					style={{
-						bottom: "693px",
+						bottom: "668px",
 						left: "72%"
 					}}
 				/>

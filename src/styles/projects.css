@@ -79,7 +79,7 @@
  }
 
  /* mobile view */
- @media screen and (max-width: 380px) {
+ @media screen and (max-width: 415px) {
   .rhap_additional-controls, .rhap_volume-controls{
     display: none;
   }
