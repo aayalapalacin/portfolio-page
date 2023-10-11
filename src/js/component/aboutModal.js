@@ -29,7 +29,7 @@ const modalContent = [
   },
   {
     title: "Spirit Vegetable",
-    text: "Avocado is my spirit vegetable, something I identify with culturally and aesthetically. My musician name is AvoKeys (Avcado + Keyboard).To expand, avocdoes are a big stable of latin cuisine, being a key acompaniment to most popular dishes. Avocadoes are also assosciated with health, like using avocado oil for cooking, using products with avocado for the skin. It is a very positive force that I wanted to emulate in my music. ",
+    text: "Avocado is my spirit vegetable, something I identify with culturally and aesthetically. My musician name is AvoKeys (Avocado + Keyboard).To expand, avocdoes are a big stable of latin cuisine, being a key acompaniment to most popular dishes. Avocadoes are also assosciated with health, like using avocado oil for cooking, using products with avocado for the skin. It is a very positive force that I wanted to emulate in my music. ",
     contentImg: <img className="w-100" src={avoKeys} alt="avokeys" />,
     mobileContentImg: <img className="w-100" src={avoKeys} alt="avokeys" />,
     contentImgTxt: "Here is a logo that a collegue made for me, representing 'AvoKeys'"
@@ -52,7 +52,7 @@ const modalContent = [
     },
     {
       title: "Travel",
-      text: "I have been fortunte to travel both domestically and internationally. My favorite places I have visited are New Orleans, and the Amazon river. I have been to Latin American countries such as Colombia, Guatemala, Mexico, Panama. My goal is to travel to a country where I don't know the native language. ",
+      text: "I have been fortunate to travel both domestically and internationally. My favorite places I have visited are New Orleans, and the Amazon river. I have been to Latin American countries such as Colombia, Guatemala, Mexico, Panama. My goal is to travel to a country where I don't know the native language. ",
       contentImg: <img className="w-100" src={travel} alt="travel" />,
       mobileContentImg: <img className="w-100" src={travel} alt="travel" />,
       contentImgTxt: "Me participating in an amazing tour of the Amazon river, where Brazil, Ecuador, and Colombia align!"
