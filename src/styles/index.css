@@ -76,7 +76,7 @@ body{
     background-color: #D9CFA0;
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width:  415px) {
     .home-container{
         height: 75vh;
     }

@@ -52,7 +52,7 @@ const Projects = () => {
 	const [projectTitle, setProjectTitle] = useState(projectContent[0].title)
 
 	return (
-		<div className="container">
+		<div className="container project-box">
 			{/* dropdown mobile */}
 			<div className="dropdown-mobile text-center d-block d-md-none">
 

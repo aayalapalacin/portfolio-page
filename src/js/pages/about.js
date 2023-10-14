@@ -77,7 +77,7 @@ const About = () => {
 
 	]
 	return (
-		<div className="container  " >
+		<div className="container about-container " >
 			<div className="about-title text-center">
 				<h1>About Me</h1>
 				<p>Click to learn more about my personal life</p>
