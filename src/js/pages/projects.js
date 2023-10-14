@@ -57,7 +57,7 @@ const Projects = () => {
 			<div className="dropdown-mobile text-center d-block d-md-none">
 
 				<div className="dropdown">
-					<button className="btn bg-avo-green dropdown-toggle mb-2 "
+					<button className="btn bg-avo-green dropdown-toggle mb-5 "
 						type="button"
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
@@ -98,7 +98,7 @@ const Projects = () => {
 					</ul>
 				</div>
 			</div>
-			{/* <div className="content d-flex align-items-center" style={{height:"75vh"}}> */}
+	
 			<div className="row">
 				<div className="col-3 text-center d-none d-md-block">
 					<div className="benchPhoto mb-2 ">
@@ -150,7 +150,7 @@ const Projects = () => {
 										role="tabpanel"
 										aria-labelledby={`v-pills-${projectTitleNoSpaces}-tab`}
 										tabIndex="0">
-										<div className=" project-container d-flex align-items-center  rounded p-3 mb-5 " >
+										<div className=" project-container d-flex align-items-center  rounded p-3 mb-5  " >
 											<div className=" col-6 project-content-date ps-2 pe-5">
 
 												<div className=" d-block d-md-flex project-title">
@@ -228,7 +228,7 @@ const Projects = () => {
 				</div>
 			</div>
 
-			{/* </div> */}
+		
 
 		</div>
 	);
