@@ -26,16 +26,40 @@ const Navbar = () => {
         </button>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav" >
-            <Link onClick={handleToggler} to="/">
+            <Link 
+             onClick={()=>{
+              setToggleOrX(!toggleOrX)
+              handleToggler()
+              }
+            }  
+            to="/">
               <p className="nav-link active" aria-current="page" href="#">Home</p>
             </Link>
-            <Link onClick={handleToggler} to="projects/">
+            <Link 
+            onClick={()=>{
+              setToggleOrX(!toggleOrX)
+              handleToggler()
+              }
+            } 
+              to="projects/">
               <p className="nav-link" href="#">Projects</p>
             </Link>
-            <Link onClick={handleToggler}  to={resumeLink} target="_blank">
+            <Link 
+             onClick={()=>{
+              setToggleOrX(!toggleOrX)
+              handleToggler()
+              }
+            } 
+              to={resumeLink} target="_blank">
             <p className="nav-link" >Resume</p>
             </Link>
-            <Link onClick={handleToggler} to="/about">
+            <Link 
+             onClick={()=>{
+              setToggleOrX(!toggleOrX)
+              handleToggler()
+              }
+            }  
+            to="/about">
               <p className="nav-link" href="#">About</p>
             </Link>
 
