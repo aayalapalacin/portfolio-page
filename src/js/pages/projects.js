@@ -52,7 +52,7 @@ const Projects = () => {
 	const [filteredProjects, setFilteredProjects] = useState(projectContent)
 	const [projectTitle, setProjectTitle] = useState(projectContent[0].title)
 	const handleSearch = (event) => {
-		const searchWord = event.target.value.toUpperCase()
+		const searchWord = event.target.value.toUpperCase().trim()
 
 		const searchResult = projectContent.filter((project, i) => {
 			return project.languages.some((languageItem, i) => {
