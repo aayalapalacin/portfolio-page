@@ -49,13 +49,29 @@ let projectContent = [
 ]
 const Projects = () => {
 	const [active, setActive] = useState(0)
+	const [filteredProjects, setFilteredProjects] = useState(projectContent)
 	const [projectTitle, setProjectTitle] = useState(projectContent[0].title)
+	const handleSearch = (event) => {
+		const searchWord = event.target.value.toUpperCase()
 
+		const searchResult = projectContent.filter((project, i) => {
+			return project.languages.some((languageItem, i) => {
+				console.log(languageItem, searchWord)
+				return languageItem.includes(searchWord)
+			})
+
+		})
+		if (searchWord == "") {
+			setFilteredProjects(projectContent)
+		}
+		else {
+			setFilteredProjects(searchResult)
+		}
+	}
 	return (
 		<div className="container project-box">
-			{/* dropdown mobile */}
-			<div className="dropdown-mobile text-center d-block d-md-none">
 
+			<div className="dropdown-mobile text-center d-block d-md-none">
 				<div className="dropdown">
 					<button className="btn bg-avo-green dropdown-toggle mb-5 "
 						type="button"
@@ -98,34 +114,38 @@ const Projects = () => {
 					</ul>
 				</div>
 			</div>
-	
+
 			<div className="row">
 				<div className="col-3 text-center d-none d-md-block">
 					<div className="benchPhoto mb-2 ">
 						<img className="w-100 " src={benchcrop} alt="bench-pic" />
 					</div>
+					<div className="searchDiv mb-2">
+						<input onChange={(e) => handleSearch(e)} type="text" placeholder="Search languages, frameworks, and libraries" />
+					</div>
+
 					<div className=" titleScroll text-nowrap  ">
 						<div className="nav  nav-pills h-100 d-block " id="v-pills-tab" role="tablist" aria-orientation="vertical">
-							{projectContent.map((item, i) => {
+							{filteredProjects.map((item, i) => {
 								let titleNoSpaces = item.title.replace(/\s/g, '')
 
 								return (
 									<>
-										<button 
-											key={i} 
-											onClick={() => setActive(i)} 
-											className={`nav-link text-dark m-auto  ${i == 0 ? 'active' : ''}`} 
-											id={`v-pills-${titleNoSpaces}-tab`} 
-											data-bs-toggle="pill" 
-											data-bs-target={`#v-pills-${titleNoSpaces}`} 
+										<button
+											key={i}
+											onClick={() => setActive(i)}
+											className={`nav-link text-dark m-auto  ${i == 0 ? 'active' : ''}`}
+											id={`v-pills-${titleNoSpaces}-tab`}
+											data-bs-toggle="pill"
+											data-bs-target={`#v-pills-${titleNoSpaces}`}
 											type="button"
 											role="tab"
-											aria-controls={`v-pills-${titleNoSpaces}`} 
+											aria-controls={`v-pills-${titleNoSpaces}`}
 											aria-selected="true"
-											style={{fontSize:".7rem"}}
-											>
-											
-											
+											style={{ fontSize: ".7rem" }}
+										>
+
+
 											{item.title}
 										</button>
 									</>
@@ -228,7 +248,7 @@ const Projects = () => {
 				</div>
 			</div>
 
-		
+
 
 		</div>
 	);
