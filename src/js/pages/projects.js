@@ -53,13 +53,10 @@ const Projects = () => {
 	const [projectTitle, setProjectTitle] = useState(projectContent[0].title)
 	const handleSearch = (event) => {
 		const searchWord = event.target.value.toUpperCase().trim()
-
 		const searchResult = projectContent.filter((project, i) => {
 			return project.languages.some((languageItem, i) => {
-				console.log(languageItem, searchWord)
 				return languageItem.includes(searchWord)
 			})
-
 		})
 		if (searchWord == "") {
 			setFilteredProjects(projectContent)
