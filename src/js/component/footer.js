@@ -28,7 +28,7 @@ const Footer = () => {
       title:"Phone"
     },
   ]
-  
+
 	return (
 		<nav className=" navbar position-relative bottom-0">
   <form className=" container-fluid justify-content-evenly align-items-center bg-nav pt-3 pb-1 ">
@@ -38,7 +38,7 @@ const Footer = () => {
         {
           iconInfo.title == "Phone" ? 
           <div className={` ${showPopover ? "d-block" : "d-none"} popover bg-info  text-center mb-3`} style={{ boxShadow: "0px 1px 7px 0px white" }}>
-            <div className="p-2 "> +1 (413)-992-7563 </div>
+            <div className="p-2 "> +1 (413)-992-7563  </div>
          </div> 
          : ""
         }
