@@ -65,48 +65,48 @@ const onClickPhotoArray = [
   {
     title: "about-path",
     img: briefcase,
-    bottom: "532px",
+    bottom: "733px",
     left: "15%"
   },
   {
     title: "about-fun-fact",
     img: funFact,
     right: "10%",
-    bottom: "295px",
+    bottom: "389px",
   },
   {
     title: "about-culture",
     img: puertoRico,
-    bottom: "282px",
+    bottom: "394px",
     left: "78%",
   },
   {
     title: "about-performing-arts",
     img: performingArts,
-    bottom: "536px",
+    bottom: "729px",
     left: "54%"
   },
 ]
 const onClickPhotoTitleArray = [
   {
     title: "Path to Tech",
-    bottom: "537px",
-    left: "14%"
+    bottom: "733px",
+    left: "15%"
   },
   {
     title: "Fun Fact",
-    bottom: "291px",
-    right: "9%"
+    bottom: "382px",
+    right: "4%"
   },
   {
     title: "Culture",
-    left: "87%",
-    bottom: "284px"
+    left: "94.5%",
+    bottom: "389px"
   },
   {
     title: "Hobbies",
-    bottom: "537px",
-    left: "71%"
+    bottom: "721px",
+    left: "81%"
   },
 ]
 

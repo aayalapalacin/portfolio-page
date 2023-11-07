@@ -130,8 +130,8 @@ const About = () => {
 					src={profile}
 					alt="profile"
 					style={{
-						bottom: "691px",
-						left: "72%"
+						bottom: "858px",
+						left: "72.5%"
 					}}
 				/>
 			</div>
