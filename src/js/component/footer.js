@@ -29,7 +29,7 @@ const Footer = () => {
     },
   ]
 	return (
-		<nav className=" navbar">
+		<nav className=" navbar position-relative bottom-0">
   <form className=" container-fluid justify-content-evenly align-items-center bg-nav pt-3 pb-1 ">
     {footerIconArray.map((iconInfo,index)=>{
       return(
