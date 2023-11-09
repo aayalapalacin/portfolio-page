@@ -54,6 +54,14 @@ const About = () => {
 					title: "Path to Tech",
 				},
 				{
+					about: "profile",
+					width: "",
+					img: profile,
+					class:"mt-5 z-1 position-relative"
+					
+
+				},
+				{
 					about: "about-fun-fact",
 					width: "w-50",
 					img: funFact,
@@ -159,12 +167,18 @@ const About = () => {
 							
 								return (
 									<>
-										<div key={i} className={`${contentItem.about}-container ${contentItem.width}`} >
+										<div 
+										key={i} 
+										className={`${contentItem.about}-container ${contentItem.width} ${contentItem.about == "profile" ? contentItem.class : ""}`}
+										style={{width:`${contentItem.about == "profile" ? "71%" : ""}`}}
+										>
 											
 											<div>
 												<img
 													onClick={() => {
-														onOpenModal();
+														if(contentItem.about != "profile"){
+															onOpenModal();
+														}
 														if(contentItem.about == "about-work"){
 															setModalID(0)
 														}
@@ -177,10 +191,11 @@ const About = () => {
 														if(contentItem.about == "about-arts"){
 															setModalID(3)
 														}
+														
 													}}
 													id={contentItem.about}
-													style={{ width: "33%" }}
-													className={` mb-3 rounded-circle glow  p-1 `}
+													style={{ width: `${contentItem.about == "about-arts" || contentItem.about == "about-culture" ? "33%" : "50%"}` }}
+													className={` mb-3 rounded-circle ${contentItem.about == "profile" ? "" : "glow"}  p-1 `}
 													src={contentItem.img ? contentItem.img : ""}
 												/>
 												
@@ -225,7 +240,7 @@ const About = () => {
 				})}
 			</div>
 
-				<img
+				{/* <img
 
 					className=" about-photo position-relative rounded-circle "
 					src={profile}
@@ -236,7 +251,7 @@ const About = () => {
 						width:" 18%",
 					}}
 				/>
-			
+			 */}
 			
 				<AboutModal 
 				open={open} 
