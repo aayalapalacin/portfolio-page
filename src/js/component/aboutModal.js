@@ -62,7 +62,7 @@ const onClickPhotoTitleArray = [
 function AboutModal(props) {
 
   return (
-    <div className='about-container d-flex align-items-center' style={{ height: "52vh" }}>
+    <div className='about-container d-flex align-items-center' style={{ height: "38vh" }}>
       <div className='row d-flex d-md-none mobileContainer'>
         <div className='col-5 d-flex align-items-center justify-content-center profilePic text-center'>
           <img
@@ -84,8 +84,8 @@ function AboutModal(props) {
 
                         <img
                           onClick={() => {
-                            onOpenModal();
-                            setModalID(i)
+                            props.onOpenModal();
+                            props.setModalID(i)
                           }
                           }
                           style={{ width: "65%" }}
@@ -95,6 +95,7 @@ function AboutModal(props) {
                           key={0}
                         />
                         <div>
+                          
                           {onClickPhotoTitleArray[i].title}
                         </div>
                       </>
@@ -116,8 +117,8 @@ function AboutModal(props) {
                       <>
                         <img
                           onClick={() => {
-                            onOpenModal();
-                            setModalID(i)
+                            props.onOpenModal();
+                            props.setModalID(i)
                           }
                           }
                           style={{ width: "65%" }}
@@ -137,10 +138,6 @@ function AboutModal(props) {
               )
               }
             </div>
-          </div>
-
-          <div className='photos-row-2 text-center'>
-
           </div>
 
         </div>

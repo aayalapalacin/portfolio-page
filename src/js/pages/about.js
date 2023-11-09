@@ -156,11 +156,11 @@ const About = () => {
 					return (
 						<div key={i} className={` ${item.level} ${item.display} text-center `} style={{ height: "25vh" }}>
 							{item.content.map((contentItem, i) => {
-							console.log(contentItem,i)
+							
 								return (
 									<>
 										<div key={i} className={`${contentItem.about}-container ${contentItem.width}`} >
-											{/* <p  className="" >test</p> */}
+											
 											<div>
 												<img
 													onClick={() => {
@@ -183,7 +183,7 @@ const About = () => {
 													className={` mb-3 rounded-circle glow  p-1 `}
 													src={contentItem.img ? contentItem.img : ""}
 												/>
-												{modalID}
+												
 											</div>
 
 											<span
@@ -225,25 +225,26 @@ const About = () => {
 				})}
 			</div>
 
-			<div className=" d-none d-md-block photos" style={{ width: "59%" }}>
-				<AboutModal />
 				<img
 
 					className=" about-photo position-relative rounded-circle "
 					src={profile}
 					alt="profile"
 					style={{
-						bottom: "876px",
-						left: "69.5%",
-						width: "31%"
+						bottom: "529px",
+						left: "41.5%",
+						width:" 18%",
 					}}
 				/>
-			</div>
-			<div
-				className="mobilePhotos d-flex d-md-none"
-			>
-				<AboutModal open={open} modalContent={modalContent[modalID]} onCloseModal={onCloseModal} />
-			</div>
+			
+			
+				<AboutModal 
+				open={open} 
+				modalContent={modalContent[modalID]} 
+				onCloseModal={onCloseModal} 
+				onOpenModal={onOpenModal} 
+				setModalID={setModalID}
+				/>
 		</div>
 	);
 };
