@@ -22,6 +22,7 @@ import react from "../../assets/img/prog-languages/react.png"
 import sql from "../../assets/img/prog-languages/sql.png"
 
 
+import shadow from "../../assets/img/webpage/shadow.png"
 import point from "../../assets/img/portrait/point.png"
 
 const Home = () => {
@@ -160,8 +161,9 @@ const Home = () => {
 
 										return (
 											<div key={i} className={`carousel-item   ${i == caroIndex ? 'active' : ''}`}>
-												<img src={item} className=" object-fit-contain d-block w-100 " alt={item.split("/")[1]} style={{ height: "220px" }} />
-											
+												<img src={item} className=" object-fit-contain d-block w-100 " alt={item.split("/")[1]} style={{ height: "200px" }} />
+												<img src={shadow} className=" dropShadow object-fit-contain d-block w-100 " alt="shadow"  />
+												{/* <img src={shadow} alt="shadow" /> */}
 											</div>
 
 										);
