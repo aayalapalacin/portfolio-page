@@ -115,7 +115,7 @@ const Home = () => {
 									{imgArray.map((item, i) => {
 
 										return (
-											<div key={i} className={`carousel-item  data-bs-interval="1" ${i == 0 ? 'active' : ''}`}>
+											<div key={i} className={`carousel-item  mt-3 data-bs-interval="1" ${i == 0 ? 'active' : ''}`}>
 												<img src={item} className=" object-fit-contain d-block w-100 " alt={item.split("/")[1]} style={{ height: "130px" }} />
 												<img src={shadow} className=" dropShadow object-fit-contain d-block w-100 " alt="shadow"  />
 											</div>
