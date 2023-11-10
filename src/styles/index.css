@@ -81,3 +81,8 @@ body{
         height: 75vh;
     }
 }
+@media screen and (max-width:  415px) {
+    .home-container{
+        height: 75vh;
+    }
+}

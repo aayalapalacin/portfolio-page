@@ -7,6 +7,8 @@ import cna from "../../assets/img/projects/cna.png"
 import cnaMobile from "../../assets/img/projects/cnaMobile.png"
 import skillshop from "../../assets/img/projects/skillshop.png"
 import skillshopMobile from "../../assets/img/projects/skillshopMobile.png"
+import portfolio from "../../assets/img/projects/portfolio.png"
+import portfolioMobile from "../../assets/img/projects/portfolioMobile.png"
 import "../../styles/projects.css"
 let projectContent = [
 
@@ -16,7 +18,7 @@ let projectContent = [
 		"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
 		"link": "https://levis-the-archive.vercel.app/",
 		"code": "https://github.com/aayalapalacin/theArchive",
-		"photo": <img className="d-none d-md-block" src={archive} alt="archive" style={{ width: "211px", height: "387px", objectFit: " contain" }} />,
+		"photo": <img className="d-none d-md-block  h-100" src={archive} alt="archive" style={{ objectFit: " contain" }} />,
 		"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{ height: "86%", objectFit: " contain" }} />
 	},
 	{
@@ -25,8 +27,17 @@ let projectContent = [
 		"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
 		"link": "https://expo.dev/@alexayala91/Ambee?serviceType=classic&distribution=expo-go",
 		"code": "https://github.com/aayalapalacin/Ambee",
-		"photo": <img className="d-none d-md-block" src={ambee} alt="ambee" style={{ width: "195px", height: "387px", objectFit: " contain" }} />,
-		"photoMobileView": <img className="w-100 d-block d-md-none" src={ambee} alt="ambee" style={{ height: "93%", objectFit: " contain" }} />
+		"photo": <img className="d-none d-md-block h-100" src={ambee} alt="ambee" style={{ objectFit: " contain" }} />,
+		"photoMobileView": <img className="w-100 d-block d-md-none" src={ambee} alt="ambee" style={{ height: "87%", objectFit: " contain" }} />
+	},
+	{
+		"title": "Portfolio",
+		"description": "Portfolio page showing projects in dynamic layout using react.js, bootstrap, and responsive styling",
+		"languages": ["REACT", "BOOTSTRAP", "HTML", "JAVASCRIPT", "NPM REACT X-ARROWS", "NPM H-5 AUDIO PLAYER"],
+		"link": "https://alexayalapalacin.vercel.app/",
+		"code": "https://github.com/aayalapalacin/portfolio-page",
+		"photo": <img className="d-none d-md-block" src={portfolio} alt="portfolio" style={{ height: "52%", objectFit: " contain" }} />,
+		"photoMobileView": <img className="d-block d-md-none w-100" src={portfolioMobile} alt="portfolio mobile" style={{ height: "83%", objectFit: " contain" }} />
 	},
 	{
 		"title": "Miami Dade College CNA ",
@@ -34,7 +45,7 @@ let projectContent = [
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 		"link": "https://ce.mdc.edu/contentManagement.do?method=load&code=CM000007",
 		"code": "n/a",
-		"photo": <img className="d-none d-md-block" src={cna} alt="cna" style={{ height: "228px", objectFit: " contain" }} />,
+		"photo": <img className="d-none d-md-block " src={cna} alt="cna" style={{ height: "66%", objectFit: " contain" }} />,
 		"photoMobileView": <img className="d-block d-md-none w-100" src={cnaMobile} alt="cna mobile" style={{ height: "75%", objectFit: " contain" }} />
 	},
 	{
@@ -43,7 +54,7 @@ let projectContent = [
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 		"link": "https://www.mdc.edu/skillshop/",
 		"code": "n/a",
-		"photo": <img className="d-none d-md-block" src={skillshop} alt="skillshop" style={{ height: "252px", objectFit: " contain" }} />,
+		"photo": <img className="d-none d-md-block h-75" src={skillshop} alt="skillshop" style={{ objectFit: " contain" }} />,
 		"photoMobileView": <img className="d-block d-md-none w-100" src={skillshopMobile} alt="skillshop mobile" style={{ height: "75%", objectFit: " contain" }} />
 	},
 ]
