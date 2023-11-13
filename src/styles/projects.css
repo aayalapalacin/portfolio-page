@@ -46,7 +46,11 @@
   .projectText{
     font-size:.9rem;
   }
-  
+   .searchInput::placeholder{
+    font-size:9px;
+    color:#000000;
+   }
+   
   .project-container{
     background:#0070ff38;
   }

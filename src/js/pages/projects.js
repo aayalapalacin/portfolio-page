@@ -13,6 +13,7 @@ import "../../styles/projects.css"
 let projectContent = [
 
 	{
+		"id":0,
 		"title": "The Archive",
 		"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
 		"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
@@ -22,6 +23,7 @@ let projectContent = [
 		"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{ height: "86%", objectFit: " contain" }} />
 	},
 	{
+		"id":1,
 		"title": "Ambee",
 		"description": "Mobile app to help users find new movie to watch based on genre, process of elimination with tinder swiping feature, and movies available on netflix via Movies of the Night API.",
 		"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
@@ -31,30 +33,33 @@ let projectContent = [
 		"photoMobileView": <img className="w-100 d-block d-md-none" src={ambee} alt="ambee" style={{ height: "87%", objectFit: " contain" }} />
 	},
 	{
+		"id":2,
 		"title": "Portfolio",
 		"description": "Portfolio page showing projects in dynamic layout using react.js, bootstrap, and responsive styling",
 		"languages": ["REACT", "BOOTSTRAP", "HTML", "JAVASCRIPT", "NPM REACT X-ARROWS", "NPM H-5 AUDIO PLAYER"],
 		"link": "https://alexayalapalacin.vercel.app/",
 		"code": "https://github.com/aayalapalacin/portfolio-page",
-		"photo": <img className="d-none d-md-block" src={portfolio} alt="portfolio" style={{ height: "52%", objectFit: " contain" }} />,
+		"photo": <img className="d-none d-md-block" src={portfolio} alt="portfolio" style={{ height: "46%", objectFit: " contain" }} />,
 		"photoMobileView": <img className="d-block d-md-none w-100" src={portfolioMobile} alt="portfolio mobile" style={{ height: "83%", objectFit: " contain" }} />
 	},
 	{
+		"id":3,
 		"title": "Miami Dade College CNA ",
 		"description": "Miami Dade College website for nursing students executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes",
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 		"link": "https://ce.mdc.edu/contentManagement.do?method=load&code=CM000007",
 		"code": "n/a",
-		"photo": <img className="d-none d-md-block " src={cna} alt="cna" style={{ height: "66%", objectFit: " contain" }} />,
+		"photo": <img className="d-none d-md-block " src={cna} alt="cna" style={{ height: "56%", objectFit: " contain" }} />,
 		"photoMobileView": <img className="d-block d-md-none w-100" src={cnaMobile} alt="cna mobile" style={{ height: "75%", objectFit: " contain" }} />
 	},
 	{
+		"id":4,
 		"title": "Miami Dade College Skillshop ",
 		"description": "Miami Dade College website for enrolled sign up for courses. executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes.",
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 		"link": "https://www.mdc.edu/skillshop/",
 		"code": "n/a",
-		"photo": <img className="d-none d-md-block h-75" src={skillshop} alt="skillshop" style={{ objectFit: " contain" }} />,
+		"photo": <img className="d-none d-md-block " src={skillshop} alt="skillshop" style={{ height: "65%",objectFit: " contain" }} />,
 		"photoMobileView": <img className="d-block d-md-none w-100" src={skillshopMobile} alt="skillshop mobile" style={{ height: "75%", objectFit: " contain" }} />
 	},
 ]
@@ -90,10 +95,8 @@ const Projects = () => {
 						{projectTitle}
 					</button>
 					<ul className="dropdown-menu bg-soft-green " >
-
 						{projectContent.map((item, i) => {
 							let titleNoSpaces = item.title.replace(/\s/g, '')
-
 							return (
 								<>
 
@@ -101,7 +104,7 @@ const Projects = () => {
 										key={i}
 										onClick={() => {
 											setProjectTitle(item.title)
-											setActive(i)
+											setActive(item.id)
 										}}
 										className={`dropdown-item  m-auto rounded px-0 ${i == 0 ? 'active' : ''}`}
 										id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill"
@@ -118,18 +121,27 @@ const Projects = () => {
 							);
 						})
 						}
-
 					</ul>
 				</div>
 			</div>
-
 			<div className="row">
 				<div className="col-3 text-center d-none d-md-block">
 					<div className="benchPhoto mb-2 ">
 						<img className="w-100 " src={benchcrop} alt="bench-pic" />
 					</div>
 					<div className="searchDiv mb-2">
-						<input onChange={(e) => handleSearch(e)} type="text" placeholder="Search languages, frameworks, and libraries" />
+						<input
+						style={{
+							background: "#b2ff72a3",
+							padding: "0px 5% 2% 5%",
+							boxShadow: "0px 1px 3px 0px",
+							border:"none",
+							outline:"none"
+						}}
+						className="searchInput text-center border-0 rounded" 
+						onChange={(e) => handleSearch(e)} 
+						type="text" 
+						placeholder="Search languages/frameworks/libraries" />
 					</div>
 
 					<div className=" titleScroll text-nowrap  ">
@@ -141,7 +153,7 @@ const Projects = () => {
 									<>
 										<button
 											key={i}
-											onClick={() => setActive(i)}
+											onClick={() => setActive(item.id)}
 											className={`nav-link text-dark m-auto  ${i == 0 ? 'active' : ''}`}
 											id={`v-pills-${titleNoSpaces}-tab`}
 											data-bs-toggle="pill"
@@ -152,8 +164,6 @@ const Projects = () => {
 											aria-selected="true"
 											style={{ fontSize: ".7rem" }}
 										>
-
-
 											{item.title}
 										</button>
 									</>
@@ -172,7 +182,7 @@ const Projects = () => {
 							return (
 								<>
 									<div
-										className={`tab-pane fade   ${index == active ? 'show active' : ''}`}
+										className={`tab-pane fade   ${project.id == active ? 'show active' : ''}`}
 										key={index}
 										id={`v-pills-${projectTitleNoSpaces}`}
 										role="tabpanel"
@@ -224,20 +234,30 @@ const Projects = () => {
 												</div>
 												<div className=" d-block d-md-flex  project-link">
 													{/* title laptop */}
-													<h6 className=" d-none d-md-block me-2 title fw-bold">Link: </h6>
+													<h6 className=" d-none d-md-block me-2 title fw-bold">Live Link: </h6>
 													{/* title mobile */}
-													<p className=" d-block d-md-none me-2 title projectText fw-bold">Link: </p>
+													<p className=" d-block d-md-none me-2 title projectText fw-bold">Live Link: </p>
 													<p className="projectText mb-2 mb-md-1">
 														<a href={project.link} target="_blank" className="text-success text-decoration-underline-hover">Click Here</a>
 													</p>
 												</div>
 												<div className=" d-block d-md-flex project-code">
 													{/* title laptop */}
-													<h6 className=" d-none d-md-block me-2 title  fw-bold" >Code:</h6>
+													<h6 className=" d-none d-md-block me-2 title  fw-bold" >Github:</h6>
 													{/* title mobile */}
-													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Code:</p>
-													<p className="projectText">
-														{project.code}
+													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Github:</p>
+													<p className="projectText mb-2 mb-md-1">
+														{project.code != "n/a" ? 
+														<a 
+														href={project.code} 
+														target="_blank" 
+														className="wood text-decoration-underline-hover"
+														>
+															Click Here
+														</a>
+														:
+														"N/A"
+														 }
 													</p>
 												</div>
 											</div>
