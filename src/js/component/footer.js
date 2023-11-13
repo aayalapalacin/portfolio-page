@@ -15,6 +15,7 @@ const Footer = () => {
     {
       icon: faGithub,
       link: "https://github.com/aayalapalacin",
+      title:"Github"
    
     },
     {
