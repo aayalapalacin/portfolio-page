@@ -95,7 +95,19 @@ const Projects = () => {
 						{projectTitle}
 					</button>
 					<ul className="dropdown-menu bg-soft-green " >
-						{projectContent.map((item, i) => {
+					<div className="searchDiv mb-2">
+						<input
+						style={{
+							padding: "0px 5% 2% 5%",
+							boxShadow: "0px 2px 7px 0px",
+							outline:"none"
+						}}
+						className="w-100  searchInput text-center border-0 rounded" 
+						onChange={(e) => handleSearch(e)} 
+						type="text" 
+						placeholder="Search languages/frameworks/libraries" />
+					</div>
+						{filteredProjects.map((item, i) => {
 							let titleNoSpaces = item.title.replace(/\s/g, '')
 							return (
 								<>
@@ -132,10 +144,8 @@ const Projects = () => {
 					<div className="searchDiv mb-2">
 						<input
 						style={{
-							background: "#b2ff72a3",
 							padding: "0px 5% 2% 5%",
 							boxShadow: "0px 1px 3px 0px",
-							border:"none",
 							outline:"none"
 						}}
 						className="searchInput text-center border-0 rounded" 
