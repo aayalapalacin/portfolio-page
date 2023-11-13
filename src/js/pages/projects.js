@@ -67,8 +67,10 @@ const Projects = () => {
 	const [active, setActive] = useState(0)
 	const [filteredProjects, setFilteredProjects] = useState(projectContent)
 	const [projectTitle, setProjectTitle] = useState(projectContent[0].title)
+	const [searchBarTitle, setSearchBarTitle] = useState("")
 	const handleSearch = (event) => {
-		const searchWord = event.target.value.toUpperCase().trim()
+		setSearchBarTitle(event.target.value);
+		const searchWord = searchBarTitle.toUpperCase().trim()
 		const searchResult = projectContent.filter((project, i) => {
 			return project.languages.some((languageItem, i) => {
 				return languageItem.includes(searchWord)
@@ -104,6 +106,7 @@ const Projects = () => {
 						}}
 						className="w-100  searchInput text-center border-0 rounded" 
 						onChange={(e) => handleSearch(e)} 
+						value={searchBarTitle}
 						type="text" 
 						placeholder="Search languages/frameworks/libraries" />
 					</div>
@@ -116,6 +119,8 @@ const Projects = () => {
 										key={i}
 										onClick={() => {
 											setProjectTitle(item.title)
+											setSearchBarTitle("")
+											setFilteredProjects(projectContent)
 											setActive(item.id)
 										}}
 										className={`dropdown-item  m-auto rounded px-0 ${i == 0 ? 'active' : ''}`}
@@ -149,8 +154,11 @@ const Projects = () => {
 							outline:"none"
 						}}
 						className="searchInput text-center border-0 rounded" 
-						onChange={(e) => handleSearch(e)} 
+						onChange={(e) => {
+							handleSearch(e)
+						}} 
 						type="text" 
+						value={searchBarTitle}
 						placeholder="Search languages/frameworks/libraries" />
 					</div>
 
@@ -158,13 +166,17 @@ const Projects = () => {
 						<div className="nav  nav-pills h-100 d-block " id="v-pills-tab" role="tablist" aria-orientation="vertical">
 							{filteredProjects.map((item, i) => {
 								let titleNoSpaces = item.title.replace(/\s/g, '')
-
+									console.log(item.id, active)
 								return (
 									<>
 										<button
 											key={i}
-											onClick={() => setActive(item.id)}
-											className={`nav-link text-dark m-auto  ${i == 0 ? 'active' : ''}`}
+											onClick={() => {
+												setActive(item.id)
+												setSearchBarTitle("")
+												setFilteredProjects(projectContent)
+											}}
+											className={`nav-link text-dark m-auto  ${active == item.id ? 'active' : ''}`}
 											id={`v-pills-${titleNoSpaces}-tab`}
 											data-bs-toggle="pill"
 											data-bs-target={`#v-pills-${titleNoSpaces}`}

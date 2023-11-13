@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import "../../styles/footer.css"
 //include images into your bundle
 //create your first component
 const Footer = () => {
@@ -33,7 +34,7 @@ const Footer = () => {
   ]
 
   return (
-    <nav className=" navbar position-relative bottom-0 w-100">
+    <nav className=" navbar footer  bottom-0 w-100">
       <form className=" container-fluid justify-content-evenly align-items-center bg-nav pt-3 pb-1 ">
         {footerIconArray.map((iconInfo, index) => {
           return (
