@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import benchcrop from "../../assets/img/portrait/benchcrop.jpg"
 // project img
 import archive from "../../assets/img/projects/archive.png"
@@ -83,6 +83,13 @@ const Projects = () => {
 			setFilteredProjects(searchResult)
 		}
 	}
+	useEffect(()=>{
+		document.querySelectorAll(".nav-link").forEach((elem)=>{
+			if(projectContent[active].title != elem.textContent)
+			elem.classList.remove("active")
+		})
+	
+	},[active])
 	return (
 		<div className="container project-box">
 
@@ -120,10 +127,10 @@ const Projects = () => {
 										onClick={() => {
 											setProjectTitle(item.title)
 											setSearchBarTitle("")
-											setFilteredProjects(projectContent)
 											setActive(item.id)
+											setFilteredProjects(projectContent)
 										}}
-										className={`dropdown-item  m-auto rounded px-0 ${i == 0 ? 'active' : ''}`}
+										className={`dropdown-item  m-auto rounded px-0 ${active == item.id ? 'active' : ''}`}
 										id={`v-pills-${titleNoSpaces}-tab`} data-bs-toggle="pill"
 										data-bs-target={`#v-pills-${titleNoSpaces}`}
 										role="tab" aria-controls={`v-pills-${titleNoSpaces}`}
@@ -166,15 +173,18 @@ const Projects = () => {
 						<div className="nav  nav-pills h-100 d-block " id="v-pills-tab" role="tablist" aria-orientation="vertical">
 							{filteredProjects.map((item, i) => {
 								let titleNoSpaces = item.title.replace(/\s/g, '')
-									console.log(item.id, active)
+									
 								return (
 									<>
 										<button
 											key={i}
 											onClick={() => {
-												setActive(item.id)
+										
+												setProjectTitle(item.title)
 												setSearchBarTitle("")
+												setActive(item.id)
 												setFilteredProjects(projectContent)
+												
 											}}
 											className={`nav-link text-dark m-auto  ${active == item.id ? 'active' : ''}`}
 											id={`v-pills-${titleNoSpaces}-tab`}
