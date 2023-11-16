@@ -24,6 +24,8 @@ import sql from "../../assets/img/prog-languages/sql.png"
 
 import shadow from "../../assets/img/webpage/shadow.png"
 import point from "../../assets/img/portrait/point.png"
+import { LanguageCarousel } from "../component/languageCarousel";
+
 
 const Home = () => {
 	const [showPopover, setShowPopver] = useState(false)
@@ -155,56 +157,7 @@ const Home = () => {
 							
 						{/* programming languages laptop view */}
 						<div className=" home-prog-languages col-7 d-none d-md-flex  align-items-center ">
-							<div id="programmingLanguage" data-bs-ride="carousel" className="carousel slide carousel-fade  ">
-								<div className="carousel-inner">
-
-									{imgArray.map((item, i) => {
-
-										return (
-											<div key={i} className={`carousel-item   ${i == caroIndex ? 'active' : ''}`}>
-												<img src={item} className=" object-fit-contain d-block w-100 " alt={item.split("/")[1]} style={{ height: "200px" }} />
-												<img src={shadow} className=" dropShadow object-fit-contain d-block w-100 " alt="shadow"  />
-												{/* <img src={shadow} alt="shadow" /> */}
-											</div>
-
-										);
-									})}
-
-								</div>
-								<button className="carousel-control-prev" type="button" data-bs-target="#programmingLanguage" data-bs-slide="prev">
-									<span className="carousel-control-prev-icon"
-									 aria-hidden="true"
-									 onClick={()=> {
-										if(caroIndex == 0){
-											setCaroIndex(imgArray.length-1)
-										}
-										else{
-
-											setCaroIndex(caroIndex-1)
-										}
-							
-										console.log(caroIndex,"caro")
-											}
-										}
-									 ></span>
-									<span className="visually-hidden" >Previous</span>
-								</button>
-								<button className="carousel-control-next" type="button" data-bs-target="#programmingLanguage" data-bs-slide="next">
-									<span 
-									className="carousel-control-next-icon" 
-									aria-hidden="true"
-									onClick={()=> {
-										if(caroIndex == imgArray.length-1){
-											setCaroIndex(0)
-										}
-										else{
-
-											setCaroIndex(caroIndex+1)}}
-										}
-									></span>
-									<span className="visually-hidden" >Next</span>
-								</button>
-							</div>
+			<LanguageCarousel />
 						</div>
 					</div>
 						{/* music player mobile view */}
