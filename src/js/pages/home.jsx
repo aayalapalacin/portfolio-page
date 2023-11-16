@@ -40,9 +40,9 @@ const Home = () => {
 		className="container home-container bg-faint-blue d-flex align-items-center  rounded py-md-3 py-2 ps-2 px-md-4"
 		
 		>
-			<div className="row">
-				<div className="col-6 ">
-					<div className="name-title-desc-container border rounded p-md-3 p-2 ">
+			<div className="row ">
+				<div className="col-6 mt-3 mt-md-0 ">
+					<div className="name-title-desc-container  rounded p-md-3 p-3 ">
 						<div className=" home-name row  ">
 							{/* laptop view */}
 							<h2 className="d-none d-md-block  ">Alexander Ayala Palacin</h2>
@@ -72,7 +72,10 @@ const Home = () => {
 					</div>
 					{/* music player laptop view */}
 					<div className=" home-music-player d-none d-md-block text-start row mt-4">
-						<h5 className="mb-3 ms-1">Original Music</h5>
+						<h5 
+						className="mb-3 ms-1"
+						style={{textShadow:"1px 2px 0px rgba(0,0,0,0.2)"}}
+						>Original Music</h5>
 						<div className="audioPopver d-flex justify-content-start mb-4">
 
 							<div className="w-50"
@@ -110,7 +113,7 @@ const Home = () => {
 						</div>
 					</div>
 					{/* program languages  mobile view */}
-					<div className=" home-prog-languages d-flex d-md-none w-75 m-auto align-items-center mb-3">
+					<div className=" home-prog-languages d-flex d-md-none px-3 my-3 w-100 m-auto align-items-center ">
 							<div id="programmingLanguage" data-bs-ride="carousel" className="carousel slide carousel-fade ">
 								<div className="carousel-inner">
 
@@ -138,7 +141,7 @@ const Home = () => {
 						</div>
 				</div>
 				<div className="col-6">
-					<div className="row">
+					<div className="row mb-5 mt-4">
 						{/* point  img laptop view */}
 						<div className=" home-img d-md-block d-none col-5">
 							<img
@@ -163,7 +166,7 @@ const Home = () => {
 						{/* music player mobile view */}
 						
 						<div className=" home-music-player d d-md-none row text-center">
-						<h6 className="my-2 ">Original Music</h6>
+						<h6 className="mt-2 mb-3 ">Original Music</h6>
 						<div className="audioPopver d-flex">
 							<div className="w-100">
 								<AudioPlayer

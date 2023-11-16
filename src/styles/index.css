@@ -2,6 +2,13 @@ body{
     font-family: 'Victor Mono', monospace;
 }
 
+.home-prog-languages{
+    border-radius: 15%;
+    background: radial-gradient(#ffffffdb, transparent);
+}
+.name-title-desc-container{
+    background: radial-gradient(#ffffffbf, transparent);
+}
 /* color palette  */
 .army-green{
     color: #2C4001;

@@ -39,8 +39,8 @@ export const LanguageCarousel = () => {
         <Carousel
             showStatus={false}
             showThumbs={false}
-            
-            // autoPlay  
+            infiniteLoop
+            autoPlay  
         >
             {imgArray.map((item,i)=>{
                 return(
