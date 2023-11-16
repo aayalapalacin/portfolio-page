@@ -19,8 +19,8 @@ let projectContent = [
 		"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
 		"link": "https://levis-the-archive.vercel.app/",
 		"code": "https://github.com/aayalapalacin/theArchive",
-		"photo": <img className="d-none d-md-block  h-100" src={archive} alt="archive" style={{ objectFit: " contain" }} />,
-		"photoMobileView": <img className="d-block d-md-none w-100" src={archive} alt="archive" style={{ height: "86%", objectFit: " contain" }} />
+		"photo": <img className="projectPhoto d-none d-md-block  h-100" src={archive} alt="archive" style={{ objectFit: " contain" }} />,
+		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={archive} alt="archive" style={{  objectFit: " contain" }} />
 	},
 	{
 		"id":1,
@@ -29,8 +29,8 @@ let projectContent = [
 		"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
 		"link": "https://expo.dev/@alexayala91/Ambee?serviceType=classic&distribution=expo-go",
 		"code": "https://github.com/aayalapalacin/Ambee",
-		"photo": <img className="d-none d-md-block h-100" src={ambee} alt="ambee" style={{ objectFit: " contain" }} />,
-		"photoMobileView": <img className="w-100 d-block d-md-none" src={ambee} alt="ambee" style={{ height: "87%", objectFit: " contain" }} />
+		"photo": <img className="projectPhoto d-none d-md-block h-100" src={ambee} alt="ambee" style={{ objectFit: " contain" }} />,
+		"photoMobileView": <img className="projectPhoto w-100  mt-3 d-block d-md-none" src={ambee} alt="ambee" style={{ objectFit: " contain" }} />
 	},
 	{
 		"id":2,
@@ -39,8 +39,8 @@ let projectContent = [
 		"languages": ["REACT", "BOOTSTRAP", "HTML", "JAVASCRIPT", "NPM REACT X-ARROWS", "NPM H-5 AUDIO PLAYER"],
 		"link": "https://alexayalapalacin.vercel.app/",
 		"code": "https://github.com/aayalapalacin/portfolio-page",
-		"photo": <img className="d-none d-md-block" src={portfolio} alt="portfolio" style={{ height: "46%", objectFit: " contain" }} />,
-		"photoMobileView": <img className="d-block d-md-none w-100" src={portfolioMobile} alt="portfolio mobile" style={{ height: "83%", objectFit: " contain" }} />
+		"photo": <img className="projectPhoto d-none d-md-block" src={portfolio} alt="portfolio" style={{ height: "46%", objectFit: " contain" }} />,
+		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={portfolioMobile} alt="portfolio mobile" style={{  objectFit: " contain" }} />
 	},
 	{
 		"id":3,
@@ -49,8 +49,8 @@ let projectContent = [
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 		"link": "https://ce.mdc.edu/contentManagement.do?method=load&code=CM000007",
 		"code": "n/a",
-		"photo": <img className="d-none d-md-block " src={cna} alt="cna" style={{ height: "56%", objectFit: " contain" }} />,
-		"photoMobileView": <img className="d-block d-md-none w-100" src={cnaMobile} alt="cna mobile" style={{ height: "75%", objectFit: " contain" }} />
+		"photo": <img className="projectPhoto d-none d-md-block " src={cna} alt="cna" style={{ height: "56%", objectFit: " contain" }} />,
+		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={cnaMobile} alt="cna mobile" style={{ objectFit: " contain" }} />
 	},
 	{
 		"id":4,
@@ -59,8 +59,8 @@ let projectContent = [
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 		"link": "https://www.mdc.edu/skillshop/",
 		"code": "n/a",
-		"photo": <img className="d-none d-md-block " src={skillshop} alt="skillshop" style={{ height: "65%",objectFit: " contain" }} />,
-		"photoMobileView": <img className="d-block d-md-none w-100" src={skillshopMobile} alt="skillshop mobile" style={{ height: "75%", objectFit: " contain" }} />
+		"photo": <img className="projectPhoto d-none d-md-block " src={skillshop} alt="skillshop" style={{ height: "65%",objectFit: " contain" }} />,
+		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={skillshopMobile} alt="skillshop mobile" style={{ objectFit: " contain" }} />
 	},
 ]
 const Projects = () => {
@@ -95,7 +95,7 @@ const Projects = () => {
 
 			<div className="dropdown-mobile text-center d-block d-md-none">
 				<div className="dropdown">
-					<button className="btn bg-avo-green dropdown-toggle mb-5 "
+					<button className="btn bg-avo-green dropdown-toggle mb-4 "
 						type="button"
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
