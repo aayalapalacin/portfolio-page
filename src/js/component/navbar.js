@@ -2,10 +2,11 @@ import React, {useState} from "react";
 import "../../styles/index.css"
 import avocado from "../../assets/img/webpage/avo.png"
 import { Link } from "react-router-dom";
-
+import "../../styles/navbar.css"
 const resumeLink = "https://docs.google.com/document/d/1I-mOHTXc_QFSnbGZAiFSDvcoQgbyPKpg1Sa6f8YrI0w/edit?usp=sharing"
 const Navbar = () => {
   const [toggleOrX, setToggleOrX]= useState(false)
+  const [active, setActive]= useState("home")
  const handleToggler = ()=>{
   const navbar = document.querySelector(".navbar-collapse")
   if(navbar.classList.contains("show")){
@@ -30,37 +31,41 @@ const Navbar = () => {
              onClick={()=>{
               setToggleOrX(!toggleOrX)
               handleToggler()
-              }
-            }  
-            to="/">
-              <p className="nav-link active" aria-current="page" href="#">Home</p>
-            </Link>
-            <Link 
-            onClick={()=>{
-              setToggleOrX(!toggleOrX)
-              handleToggler()
-              }
-            } 
-              to="projects/">
-              <p className="nav-link" href="#">Projects</p>
+              setActive("home")
+            }
+          }  
+          to="/">
+              <span className={`${active == "home" ? "active-link " : ""} nav-link bounce`} aria-current="page" href="#">Home</span>
             </Link>
             <Link 
              onClick={()=>{
               setToggleOrX(!toggleOrX)
               handleToggler()
+              setActive("projects")
+            }
+          }  
+          to="/projects">
+              <p className={`${active == "projects" ? "active-link " : ""} nav-link bounce`} aria-current="page" href="#">Projects</p>
+            </Link>
+       
+            <Link 
+             onClick={()=>{
+               setToggleOrX(!toggleOrX)
+               handleToggler()
               }
             } 
-              to={resumeLink} target="_blank">
-            <p className="nav-link" >Resume</p>
+            to={resumeLink} target="_blank">
+            <p className=" nav-link bounce" >Resume</p>
             </Link>
             <Link 
              onClick={()=>{
-              setToggleOrX(!toggleOrX)
-              handleToggler()
+               setToggleOrX(!toggleOrX)
+               handleToggler()
+               setActive("about")
               }
             }  
             to="/about">
-              <p className="nav-link" href="#">About</p>
+              <p className={`${active == "about" ? "active-link " : ""} nav-link bounce `} href="#">About</p>
             </Link>
 
           </div>

@@ -1,0 +1,17 @@
+.bounce{
+    transition:.5s;
+}
+.bounce:hover{
+ transform:  translateY(-4px) 
+}
+.active-link{
+    width:23%;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2)
+}
+@media screen and (min-width:  1024px) {
+    .active-link{
+        width:100%;
+        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2)
+    }
+    
+}
