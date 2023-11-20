@@ -46,6 +46,31 @@
   .projectText{
     font-size:.9rem;
   }
+  @keyframes rotateRight {
+    from {
+      transform: rotate3d(0, 1, 0, 49deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes rotateUp {
+    from {
+      transform: rotate3d(53, 0, 0, 53deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+.animation-right{
+  animation: rotateRight 1.5s ease
+}
+
+.animation-up{
+  animation: rotateUp 1.5s ease
+}
+  
    .searchInput::placeholder{
     font-size:9px;
     color:#000000;
@@ -85,6 +110,21 @@
  .projectPhoto{
   box-shadow: 0px 3px 20px 6px #616161;
  }
+
+ @keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.animation-fade{
+  animation: opacity 2.2s ease ;
+ }
+
  /* mobile view */
  @media screen and (max-width: 768px) {
   .rhap_additional-controls, .rhap_volume-controls{
@@ -96,7 +136,47 @@
   .projectText{
      font-size: 3vw;
     margin-bottom: 3px;
+   
   }
+
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+
+  .animation-fade{
+    animation: opacity 1s ease ;
+   }
+  @keyframes rotateRight {
+    from {
+      transform: rotate3d(0, 1, 0, 49deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+  @keyframes rotateUp {
+    from {
+      transform: rotate3d(53, 0, 0, 53deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+.animation-right{
+  animation: rotateRight 1s ease
+}
+
+.animation-up{
+  animation: rotateUp 1s ease
+}
+  
   .project-box{
     height:75vh;
   }

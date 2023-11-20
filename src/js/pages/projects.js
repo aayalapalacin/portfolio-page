@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import benchcrop from "../../assets/img/portrait/benchcrop.jpg"
 // project img
 import archive from "../../assets/img/projects/archive.png"
@@ -13,17 +13,17 @@ import "../../styles/projects.css"
 let projectContent = [
 
 	{
-		"id":0,
+		"id": 0,
 		"title": "The Archive",
 		"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
 		"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
 		"link": "https://levis-the-archive.vercel.app/",
 		"code": "https://github.com/aayalapalacin/theArchive",
 		"photo": <img className="projectPhoto d-none d-md-block  h-100" src={archive} alt="archive" style={{ objectFit: " contain" }} />,
-		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={archive} alt="archive" style={{  objectFit: " contain" }} />
+		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={archive} alt="archive" style={{ objectFit: " contain" }} />
 	},
 	{
-		"id":1,
+		"id": 1,
 		"title": "Ambee",
 		"description": "Mobile app to help users find new movie to watch based on genre, process of elimination with tinder swiping feature, and movies available on netflix via Movies of the Night API.",
 		"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
@@ -33,17 +33,17 @@ let projectContent = [
 		"photoMobileView": <img className="projectPhoto w-100  mt-3 d-block d-md-none" src={ambee} alt="ambee" style={{ objectFit: " contain" }} />
 	},
 	{
-		"id":2,
+		"id": 2,
 		"title": "Portfolio",
 		"description": "Portfolio page showing projects in dynamic layout using react.js, bootstrap, and responsive styling",
 		"languages": ["REACT", "BOOTSTRAP", "HTML", "JAVASCRIPT", "NPM REACT X-ARROWS", "NPM H-5 AUDIO PLAYER"],
 		"link": "https://alexayalapalacin.vercel.app/",
 		"code": "https://github.com/aayalapalacin/portfolio-page",
 		"photo": <img className="projectPhoto d-none d-md-block" src={portfolio} alt="portfolio" style={{ height: "46%", objectFit: " contain" }} />,
-		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={portfolioMobile} alt="portfolio mobile" style={{  objectFit: " contain" }} />
+		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={portfolioMobile} alt="portfolio mobile" style={{ objectFit: " contain" }} />
 	},
 	{
-		"id":3,
+		"id": 3,
 		"title": "Miami Dade College CNA ",
 		"description": "Miami Dade College website for nursing students executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes",
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
@@ -53,13 +53,13 @@ let projectContent = [
 		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={cnaMobile} alt="cna mobile" style={{ objectFit: " contain" }} />
 	},
 	{
-		"id":4,
+		"id": 4,
 		"title": "Miami Dade College Skillshop ",
 		"description": "Miami Dade College website for enrolled sign up for courses. executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes.",
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
 		"link": "https://www.mdc.edu/skillshop/",
 		"code": "n/a",
-		"photo": <img className="projectPhoto d-none d-md-block " src={skillshop} alt="skillshop" style={{ height: "65%",objectFit: " contain" }} />,
+		"photo": <img className="projectPhoto d-none d-md-block " src={skillshop} alt="skillshop" style={{ height: "65%", objectFit: " contain" }} />,
 		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={skillshopMobile} alt="skillshop mobile" style={{ objectFit: " contain" }} />
 	},
 ]
@@ -83,13 +83,13 @@ const Projects = () => {
 			setFilteredProjects(searchResult)
 		}
 	}
-	useEffect(()=>{
-		document.querySelectorAll(".nav-link").forEach((elem)=>{
-			if(projectContent[active].title != elem.textContent)
-			elem.classList.remove("active")
+	useEffect(() => {
+		document.querySelectorAll(".nav-link").forEach((elem) => {
+			if (projectContent[active].title != elem.textContent)
+				elem.classList.remove("active")
 		})
-	
-	},[active])
+
+	}, [active])
 	return (
 		<div className="container project-box">
 
@@ -104,19 +104,19 @@ const Projects = () => {
 						{projectTitle}
 					</button>
 					<ul className="dropdown-menu bg-soft-green " >
-					<div className="searchDiv mb-2">
-						<input
-						style={{
-							padding: "0px 5% 2% 5%",
-							boxShadow: "0px 2px 7px 0px",
-							outline:"none"
-						}}
-						className="w-100  searchInput text-center border-0 rounded" 
-						onChange={(e) => handleSearch(e)} 
-						value={searchBarTitle}
-						type="text" 
-						placeholder="Search languages/frameworks/libraries" />
-					</div>
+						<div className="searchDiv mb-2">
+							<input
+								style={{
+									padding: "0px 5% 2% 5%",
+									boxShadow: "0px 2px 7px 0px",
+									outline: "none"
+								}}
+								className="w-100  searchInput text-center border-0 rounded"
+								onChange={(e) => handleSearch(e)}
+								value={searchBarTitle}
+								type="text"
+								placeholder="Search languages/frameworks/libraries" />
+						</div>
 						{filteredProjects.map((item, i) => {
 							let titleNoSpaces = item.title.replace(/\s/g, '')
 							return (
@@ -155,36 +155,36 @@ const Projects = () => {
 					</div>
 					<div className="searchDiv mb-2">
 						<input
-						style={{
-							padding: "0px 5% 2% 5%",
-							boxShadow: "0px 1px 3px 0px",
-							outline:"none"
-						}}
-						className="searchInput text-center border-0 rounded" 
-						onChange={(e) => {
-							handleSearch(e)
-						}} 
-						type="text" 
-						value={searchBarTitle}
-						placeholder="Search languages/frameworks/libraries" />
+							style={{
+								padding: "0px 5% 2% 5%",
+								boxShadow: "0px 1px 3px 0px",
+								outline: "none"
+							}}
+							className="searchInput text-center border-0 rounded"
+							onChange={(e) => {
+								handleSearch(e)
+							}}
+							type="text"
+							value={searchBarTitle}
+							placeholder="Search languages/frameworks/libraries" />
 					</div>
 
 					<div className=" titleScroll text-nowrap  ">
 						<div className="nav  nav-pills h-100 d-block " id="v-pills-tab" role="tablist" aria-orientation="vertical">
 							{filteredProjects.map((item, i) => {
 								let titleNoSpaces = item.title.replace(/\s/g, '')
-									
+
 								return (
 									<>
 										<button
 											key={i}
 											onClick={() => {
-										
+
 												setProjectTitle(item.title)
 												setSearchBarTitle("")
 												setActive(item.id)
 												setFilteredProjects(projectContent)
-												
+
 											}}
 											className={`nav-link text-dark m-auto  ${active == item.id ? 'active' : ''}`}
 											id={`v-pills-${titleNoSpaces}-tab`}
@@ -228,7 +228,7 @@ const Projects = () => {
 													<h6 className=" d-none d-md-block me-2 fw-bold title" >Title:</h6>
 													{/* title mobile */}
 													<p className=" d-block d-md-none me-2 fw-bold projectText  title" >Title:</p>
-													<p className="projectTextmb-3 mb-md-1">
+													<p className={`projectText  mb-3 mb-md-1 ${project.id == active ? 'animation-up' : ''}`}>
 														{project.title}
 													</p>
 												</div>
@@ -238,11 +238,11 @@ const Projects = () => {
 													{/* title mobile */}
 													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Descripton: </p>
 													{/* content laptop */}
-													<p className="projectText d-none d-md-block">
+													<p className={`projectText d-none d-md-block ${project.id == active ? 'animation-right' : ''}`}>
 														{project.description}
 													</p>
 													{/* content mobile */}
-													<p className="projectText d-block d-md-none overflow-y-scroll mb-3" style={{ height: "106px" }}>
+													<p className={`projectText d-block d-md-none overflow-y-scroll mb-3 ${project.id == active ? 'animation-right' : ''}`} style={{ height: "106px" }}>
 														{project.description}
 													</p>
 												</div>
@@ -256,7 +256,7 @@ const Projects = () => {
 														{project.languages.map((language, i) => {
 															return (
 																<>
-																	<p key={i} className="me-1 projectText">
+																	<p key={i} className={`me-1 projectText ${project.id == active ? 'animation-up' : ''}`}>
 																		{i == project.languages.length - 1 ? language + "." : language + ","}
 																	</p>
 																</>
@@ -269,31 +269,35 @@ const Projects = () => {
 													<h6 className=" d-none d-md-block me-2 title fw-bold">Live Link: </h6>
 													{/* title mobile */}
 													<p className=" d-block d-md-none me-2 title projectText fw-bold">Live Link: </p>
-													<p className="projectText mb-2 mb-md-1">
+													<p className={`projectText mb-2 mb-md-1 ${project.id == active ? 'animation-right' : ''}`}>
 														<a href={project.link} target="_blank" className="text-success text-decoration-underline-hover">Click Here</a>
 													</p>
 												</div>
-												<div className=" d-block d-md-flex project-code">
+												<div className=" d-block d-md-flex  project-code">
 													{/* title laptop */}
-													<h6 className=" d-none d-md-block me-2 title  fw-bold" >Github:</h6>
+													<h6 className=" d-none d-md-block me-2 title fw-bold">Github: </h6>
 													{/* title mobile */}
-													<p className=" d-block d-md-none me-2 title projectText fw-bold" >Github:</p>
-													<p className="projectText mb-2 mb-md-1">
-														{project.code != "n/a" ? 
-														<a 
-														href={project.code} 
-														target="_blank" 
-														className="wood text-decoration-underline-hover"
-														>
-															Click Here
-														</a>
-														:
-														"N/A"
-														 }
+													<p className=" d-block d-md-none me-2 title projectText fw-bold">Github: </p>
+													<p className={`projectText mb-2 mb-md-1 ${project.id == active ? 'animation-up' : ''}`}>
+													{project.code != "n/a" ?
+															<a
+																href={project.code}
+																target="_blank"
+																className={`wood text-decoration-underline-hover ${project.id == active ? 'animation-up' : ''} `}
+															>
+																Click Here
+															</a>
+															:
+															"N/A"
+														}
 													</p>
 												</div>
+											
 											</div>
-											<div className="project-content-photo text-center align-items-md-center align-items-start d-flex justify-content-center col-6" style={{ height: "394px" }}>
+											<div 
+											className={`project-content-photo text-center align-items-md-center align-items-start d-flex justify-content-center col-6 ${project.id == active ? 'animation-fade' : ''}`}
+											 style={{ height: "394px" }}
+											 >
 												{project.photo}
 												{project.photoMobileView}
 											</div>
