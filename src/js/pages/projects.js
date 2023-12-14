@@ -25,7 +25,7 @@ let projectContent = [
 		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={schedule_shifter_mobile} alt="schedule_shifter_mobile" style={{ objectFit: " contain" }} />
 	},
 	{
-		"id": 0,
+		"id": 1,
 		"title": "The Archive",
 		"description": "4th place winner submission for 1 week hackathon to find solution for online shoppers not finding the right fitting jeans. Came in 4th overall place providing unique solution using Levi's database and creating algorithm to determine best fit",
 		"languages": ["HTML", "CSS", "REACT", "BOOTSTRAP", "JAVASCRIPT", "NPM PROGRESS BAR"],
@@ -35,7 +35,7 @@ let projectContent = [
 		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={archive} alt="archive" style={{ objectFit: " contain" }} />
 	},
 	{
-		"id": 1,
+		"id": 2,
 		"title": "Ambee",
 		"description": "Mobile app to help users find new movie to watch based on genre, process of elimination with tinder swiping feature, and movies available on netflix via Movies of the Night API.",
 		"languages": ["REACT NATIVE", "MOVIES OF THE NIGHT API", "REACT NATIVE PAPER", "EXPO GO"],
@@ -45,7 +45,7 @@ let projectContent = [
 		"photoMobileView": <img className="projectPhoto w-100  mt-3 d-block d-md-none" src={ambee} alt="ambee" style={{ objectFit: " contain" }} />
 	},
 	{
-		"id": 2,
+		"id": 3,
 		"title": "Portfolio",
 		"description": "Portfolio page showing projects in dynamic layout using react.js, bootstrap, and responsive styling",
 		"languages": ["REACT", "BOOTSTRAP", "HTML", "JAVASCRIPT", "NPM REACT X-ARROWS", "NPM H-5 AUDIO PLAYER"],
@@ -55,7 +55,7 @@ let projectContent = [
 		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={portfolioMobile} alt="portfolio mobile" style={{ objectFit: " contain" }} />
 	},
 	{
-		"id": 3,
+		"id": 4,
 		"title": "Miami Dade College CNA ",
 		"description": "Miami Dade College website for nursing students executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes",
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
@@ -65,7 +65,7 @@ let projectContent = [
 		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={cnaMobile} alt="cna mobile" style={{ objectFit: " contain" }} />
 	},
 	{
-		"id": 4,
+		"id": 5,
 		"title": "Miami Dade College Skillshop ",
 		"description": "Miami Dade College website for enrolled sign up for courses. executed with clean and readable code in HTML. Clean and professional look with bootstrap and CSS styling, and dynamic with media queries for all screen sizes.",
 		"languages": ["HTML", "CSS", "JQUERY", "BOOTSTRAP", "JAVASCRIPT"],
