@@ -21,7 +21,7 @@ let projectContent = [
 		"languages": ["REACT", "POSTGRESQL", "BOOTSTRAP","HTML", "CSS",  "JAVASCRIPT"],
 		"link": "https://sample-service-name-iewa.onrender.com/",
 		"code": "https://github.com/aayalapalacin/shifting_schedule",
-		"photo": <img className="projectPhoto d-none d-md-block  h-100" src={schedule_shifter} alt="schedule_shifter" style={{ objectFit: " contain" }} />,
+		"photo": <img className="projectPhoto d-none d-md-block " src={schedule_shifter} alt="schedule_shifter" style={{ objectFit: " contain",height:"56%" }} />,
 		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={schedule_shifter_mobile} alt="schedule_shifter_mobile" style={{ objectFit: " contain" }} />
 	},
 	{
