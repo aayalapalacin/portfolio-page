@@ -3,6 +3,8 @@ import benchcrop from "../../assets/img/portrait/benchcrop.jpg"
 // project img
 import archive from "../../assets/img/projects/archive.png"
 import ambee from "../../assets/img/projects/ambee.jpg"
+import schedule_shifter from "../../assets/img/projects/schedule_shifter.png"
+import schedule_shifter_mobile from "../../assets/img/projects/schedule_shifter_mobile.png"
 import cna from "../../assets/img/projects/cna.png"
 import cnaMobile from "../../assets/img/projects/cnaMobile.png"
 import skillshop from "../../assets/img/projects/skillshop.png"
@@ -12,6 +14,16 @@ import portfolioMobile from "../../assets/img/projects/portfolioMobile.png"
 import "../../styles/projects.css"
 let projectContent = [
 
+	{
+		"id": 0,
+		"title": "Schedule Shifter",
+		"description": "Website that dynamically gives visual representation of programs start/end times in a week, name, and description ",
+		"languages": ["REACT", "POSTGRESQL", "BOOTSTRAP","HTML", "CSS",  "JAVASCRIPT"],
+		"link": "https://sample-service-name-iewa.onrender.com/",
+		"code": "https://github.com/aayalapalacin/shifting_schedule",
+		"photo": <img className="projectPhoto d-none d-md-block  h-100" src={schedule_shifter} alt="schedule_shifter" style={{ objectFit: " contain" }} />,
+		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={schedule_shifter_mobile} alt="schedule_shifter_mobile" style={{ objectFit: " contain" }} />
+	},
 	{
 		"id": 0,
 		"title": "The Archive",
