@@ -14,7 +14,7 @@ let projectContent = [
 		"title": "Schedule Shifter",
 		"description": "Website that dynamically gives visual representation of programs start/end times in a week, name, and description ",
 		"languages": ["REACT", "POSTGRESQL", "BOOTSTRAP", "HTML", "CSS", "JAVASCRIPT"],
-		"link": "https://sample-service-name-iewa.onrender.com/",
+		"link": "https://shifting-schedule.vercel.app/",
 		"code": "https://github.com/aayalapalacin/shifting_schedule",
 		"photo": <img className="projectPhoto d-none d-md-block " src={schedule_shifter} alt="schedule_shifter" style={{ objectFit: " contain", height: "56%" }} />,
 		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={schedule_shifter_mobile} alt="schedule_shifter_mobile" style={{ objectFit: " contain" }} />
