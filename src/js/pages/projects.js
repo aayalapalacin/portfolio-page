@@ -6,6 +6,11 @@ import schedule_shifter_mobile from "../../assets/img/projects/schedule_shifter_
 
 import portfolio from "../../assets/img/projects/portfolio.png"
 import portfolioMobile from "../../assets/img/projects/portfolioMobile.png"
+
+
+import brighterBeginnings from "../../assets/img/projects/brighter-beginnings-web.png"
+import brighterBeginningsMobile from "../../assets/img/projects/brighter-beginnings-mobile.png"
+
 import "../../styles/projects.css"
 let projectContent = [
 
@@ -30,6 +35,16 @@ let projectContent = [
 		"code": "https://github.com/aayalapalacin/portfolio-page",
 		"photo": <img className="projectPhoto d-none d-md-block" src={portfolio} alt="portfolio" style={{ height: "46%", objectFit: " contain" }} />,
 		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={portfolioMobile} alt="portfolio mobile" style={{ objectFit: " contain" }} />
+	},
+	{
+		"id": 2,
+		"title": "Brighter Beginnings",
+		"description": "Modern website that has engaging user experience, responsivness, and consistent css styling themes",
+		"languages": ["REACT", "BOOTSTRAP", "HTML", "JAVASCRIPT", "CSS ANIMATIONS", "NPM REACT PHOTO ALBUM"],
+		"link": "https://brighterbeginnings.vercel.app/",
+		"code": "https://github.com/aayalapalacin/brighter-beginnings-app",
+		"photo": <img className="projectPhoto d-none d-md-block" src={brighterBeginnings} alt="brighter-beginnings" style={{ height: "46%", objectFit: " contain" }} />,
+		"photoMobileView": <img className="projectPhoto mt-5 d-block d-md-none w-100" src={brighterBeginningsMobile} alt="brighter beginnings mobile" style={{ objectFit: " contain" }} />
 	},
 
 
